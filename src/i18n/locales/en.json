@@ -1,0 +1,44 @@
+{
+  "common": {
+    "shopNow": "Shop Now",
+    "viewDetails": "View Details",
+    "addToCart": "Add to Cart",
+    "buyNow": "Buy Now",
+    "checkout": "Checkout"
+  },
+  "banner": {
+    "text": "Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!",
+    "menu": {
+      "ar": "Arabic",
+      "en": "English"
+    }
+  },
+  "header": {
+    "title": "Exclusive",
+    "searchPlaceholder": "What are you looking for?",
+    "nav": {
+      "home": "Home",
+      "contact": "Contact",
+      "about": "About",
+      "signup": "SignUp"
+    },
+    "menu": {
+      "manage": "Manage My Account",
+      "order": "My Order",
+      "cancellations": "My Cancellations",
+      "reviews": "My Reviews",
+      "logout": "Logout"
+    }
+  },
+  "sidebar": {
+    "one": "Woman’s Fashion", 
+    "two": "Men’s Fashion",
+    "three": "Electronics",
+    "four": "Home & Lifestyle",
+    "five": "Medicine",
+    "six": "Sports & Outdoor",
+    "seven": "Baby’s & Toys",
+    "eight": "Groceries & Pets",
+    "nine": "Health & Beauty"
+  }
+}
