@@ -1,0 +1,11 @@
+export { default as About } from "./About";
+export { default as Account } from "./Account";
+export { default as Cart } from "./Cart";
+export { default as CheckOut } from "./CheckOut";
+export { default as Contact } from "./Contact";
+export { default as HomePage } from "./HomePage";
+export { default as Login } from "./Login";
+export { default as NotFound } from "./NotFound";
+export { default as ProductDetailsPage } from "./ProductDetailsPage";
+export { default as SignUp } from "./SignUp";
+export { default as WishList } from "./WishList";
