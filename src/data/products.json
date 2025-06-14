@@ -1,0 +1,18 @@
+{
+  "products": [
+    {"id": 1, "img": "/products/controller-havic.png", "title": "HAVIC HV-G92 Gamepad", "price": 120, "oldPrice": 160, "rating": 5, "reviewsCount": 88},
+    {"id": 1, "img": "/products/keyboard.png", "title": "AK-900 Wired Keyboard", "price": 960, "oldPrice": 1160, "rating": 4, "reviewsCount": 75},
+    {"id": 1, "img": "/products/msi-monitor.png", "title": "IPS LCD Gaming Monitor", "price": 370, "oldPrice": 400, "rating": 5, "reviewsCount": 88},
+    {"id": 1, "img": "/products/comfort-chair.png", "title": "S-Series Comfort Chair ", "price": 110, "oldPrice": 155, "rating": 3, "reviewsCount": 1025},
+    {"id": 1, "img": "/products/controller-havic.png", "title": "HAVIC HV-G92 Gamepad", "price": 120, "oldPrice": 160, "rating": 5, "reviewsCount": 88},
+    {"id": 1, "img": "/products/controller-havic.png", "title": "HAVIC HV-G92 Gamepad", "price": 120, "oldPrice": 160, "rating": 5, "reviewsCount": 88},
+    {"id": 1, "img": "/products/controller-havic.png", "title": "HAVIC HV-G92 Gamepad", "price": 120, "oldPrice": 160, "rating": 5, "reviewsCount": 88},
+    {"id": 1, "img": "/products/controller-havic.png", "title": "HAVIC HV-G92 Gamepad", "price": 120, "oldPrice": 160, "rating": 5, "reviewsCount": 88},
+    {"id": 1, "img": "/products/controller-havic.png", "title": "HAVIC HV-G92 Gamepad", "price": 120, "oldPrice": 160, "rating": 5, "reviewsCount": 88},
+    {"id": 1, "img": "/products/controller-havic.png", "title": "HAVIC HV-G92 Gamepad", "price": 120, "oldPrice": 160, "rating": 5, "reviewsCount": 88},
+    {"id": 1, "img": "/products/controller-havic.png", "title": "HAVIC HV-G92 Gamepad", "price": 120, "oldPrice": 160, "rating": 5, "reviewsCount": 88},
+    {"id": 1, "img": "/products/controller-havic.png", "title": "HAVIC HV-G92 Gamepad", "price": 120, "oldPrice": 160, "rating": 5, "reviewsCount": 88},
+    {"id": 1, "img": "/products/controller-havic.png", "title": "HAVIC HV-G92 Gamepad", "price": 120, "oldPrice": 160, "rating": 5, "reviewsCount": 88},
+    {"id": 1, "img": "/products/controller-havic.png", "title": "HAVIC HV-G92 Gamepad", "price": 120, "oldPrice": 160, "rating": 5, "reviewsCount": 88}
+  ]
+}

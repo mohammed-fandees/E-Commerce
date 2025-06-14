@@ -1,10 +1,13 @@
 {
   "common": {
     "shopNow": "Shop Now",
+    "viewAll": "View All",
+    "viewAllProducts": "View All Products",
     "viewDetails": "View Details",
     "addToCart": "Add to Cart",
     "buyNow": "Buy Now",
-    "checkout": "Checkout"
+    "checkout": "Checkout",
+    "subscribe": "Subscribe"
   },
   "banner": {
     "text": "Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!",
@@ -31,7 +34,7 @@
     }
   },
   "sidebar": {
-    "one": "Woman’s Fashion", 
+    "one": "Woman’s Fashion",
     "two": "Men’s Fashion",
     "three": "Electronics",
     "four": "Home & Lifestyle",
@@ -40,5 +43,105 @@
     "seven": "Baby’s & Toys",
     "eight": "Groceries & Pets",
     "nine": "Health & Beauty"
+  },
+  "home": {
+    "offers": {
+      "title": "Today's",
+      "description": "Flash Sales",
+      "countdown": {
+        "d": "Days",
+        "h": "Hours",
+        "m": "Minutes",
+        "s": "Seconds"
+      }
+    },
+    "categories": {
+      "title": "Categories",
+      "description": "Browse By Category",
+      "items": {
+        "1": "Phones",
+        "2": "Computers",
+        "3": "Smartwatch",
+        "4": "Camera",
+        "5": "Headphones",
+        "6": "Gaming"
+      }
+    },
+    "monthProducts": {
+      "title": "Month Products",
+      "description": "Best Selling Products",
+      "bannerTitle": "Enhance Your Music Experience",
+      "bannerCategory": "Sound Experience"
+    },
+    "products": {
+      "title": "Our Products", 
+      "description": "Explore Our Products"
+    },
+    "featured": {
+      "title": "Featured", 
+      "description": "New Arrival",
+      "cards": {
+        "one": {
+          "title": "PlayStation 5",
+          "description": "Black and White version of the PS5 coming out on sale."
+        },
+        "two": {
+          "title": "Women's Collections",
+          "description": "Featured woman collections that give you another vibe."
+        },
+        "three": {
+          "title": "Speakers",
+          "description": "Amazon wireless speakers"
+        },
+        "four": {
+          "title": "Perfum",
+          "description": "GUCCI INTENSE OUD EDP"
+        }
+      },
+      "advantages": {
+        "one": {
+          "title": "FREE AND FAST DELIVERY",
+          "description": "Free delivery for all orders over $140"
+        },
+        "two": {
+          "title": "24/7 CUSTOMER SERVICE",
+          "description": "Friendly 24/7 customer support"
+        },
+        "three": {
+          "title": "MONEY BACK GUARANTEE",
+          "description": "We return money within 30 days"
+        }
+      }
+    }
+  },
+  "footer": {
+    "col-1": {
+      "title": "Exclusive",
+      "discount": "Get 10% off your first order",
+      "placeholder": "Enter Your Email"
+    },
+    "col-2": {
+      "title": "Support",
+      "address": "111 Bijoy sarani, Dhaka, DH 1515, Bangladesh."
+    },
+    "col-3": {
+      "title": "Account",
+      "link-1/1": "My Account",
+      "link-1/2": "Login / Register",
+      "link-2": "Cart",
+      "link-3": "Wishlist",
+      "link-4": "Shop"
+    },
+    "col-4": {
+      "title": "Quick Links",
+      "link-1": "Privacy Policy",
+      "link-2": "Terms Of Use",
+      "link-3": "FAQ",
+      "link-4": "Contact"
+    },
+    "col-5": {
+      "title": "Download App",
+      "award": "Save $3 with App! (New Users Only)"
+    }
   }
 }

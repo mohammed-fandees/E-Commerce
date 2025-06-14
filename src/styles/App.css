@@ -1,0 +1,17 @@
+#root > div:has(.supabase-auth-ui_ui-container) {
+  max-width: 500px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.add-to-card {
+  transition: all .3s ease-out;
+  cursor: pointer;
+}
+
+.product-card:hover .add-to-card {
+  transform: translateY(-52px);
+}

@@ -1,11 +1,34 @@
+import LimitedOffers from "@/components/HomePage/LimitedOffers";
+import { Sidebar } from "../components";
+import Categories from "@/components/HomePage/Categories";
+import MonthProducts from "@/components/HomePage/MonthProducts";
+import Products from "@/components/HomePage/Products";
+import Featured from "@/components/HomePage/Featured";
+
 export default function HomePage() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold mb-4">Welcome to Exclusive E-Commerce</h1>
-      <p className="text-lg text-gray-700 mb-8">Your one-stop shop for exclusive products.</p>
-      <button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300">
-        Shop Now
-      </button>
+    <div className="">
+      <div className="landing max-h-[400px] flex gap-10 mb-35">
+        <Sidebar className="min-w-[250px] h-fit" />
+        <div className="banner w-full  bg-black mt-10 flex justify-between items-center">
+          <div className="text text-white">
+            Iphone
+          </div>
+          <img
+            src="/products/iphone.jpg"
+            className="img-fluid rounded-top h-[80%] mx-25"
+            alt=""
+          />
+          
+        </div>
+      </div>
+      <LimitedOffers />
+      <hr className="my-15" />
+      <Categories />
+      <hr className="my-15" />
+      <MonthProducts />
+      <Products />
+      <Featured />
     </div>
   );
 }
