@@ -1,17 +1,55 @@
+import Button from "@/components/common/Button";
+import ProductsSwiper from "@/components/common/ProductsSwiper";
+import data from "../data/products.json";
+import { useTranslation } from "react-i18next";
+import SectionHeader from "@/components/common/SectionHeader";
+import ProductCard from "@/components/common/ProductCard";
+
 export default function WishList() {
+  const { t } = useTranslation();
+  const wishes = data.products.slice(0, 6);
+  const forYou = data.products.slice(6, 10);
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold mb-4">Your Wish List</h1>
-      <p className="text-lg text-gray-700 mb-8">Here you can find all the products you wish to purchase.</p>
-      <div className="w-full max-w-md bg-white shadow-md rounded-lg p-6">
-        <ul className="list-disc pl-5">
-          <li className="mb-2">Product 1</li>
-          <li className="mb-2">Product 2</li>
-          <li className="mb-2">Product 3</li>
-        </ul>
-        <button className="mt-4 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300">
-          Continue Shopping
-        </button>
+    <div className="my-20">
+      <div className="flex justify-between items-center mb-15">
+        <h2 className="text-xl">{t("wishlist.title")} (5)</h2>
+        <Button className="bg-transparent border-1 border-[#0000004D] !text-black">{t("common.moveAllToBag")}</Button>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+        {wishes?.map((product, i) => (
+          <ProductCard
+            key={i}
+            wish={true}
+            id={product.id}
+            image={product.img || null}
+            title={product.title}
+            price={product.price}
+            oldPrice={product.oldPrice || null}
+            rating={product.rating || 0}
+            reviewsCount={product.reviewsCount || 0}
+          />
+        ))}
+      </div>
+      <div className="mt-15">
+        <div className="flex justify-between items-start">
+          <SectionHeader title={t("wishlist.title2")} />
+          <Button className="bg-transparent border-1 border-[#0000004D] !text-black">{t("common.viewAll")}</Button>
+        </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+        {forYou?.map((product, i) => (
+          <ProductCard
+            key={i}
+            id={product.id}
+            image={product.img || null}
+            title={product.title}
+            price={product.price}
+            oldPrice={product.oldPrice || null}
+            rating={product.rating || 0}
+            reviewsCount={product.reviewsCount || 0}
+          />
+        ))}
+      </div>
       </div>
     </div>
   );
