@@ -1,5 +1,6 @@
 {
   "common": {
+    "backToHomePage": "Back To Home Page",
     "shopNow": "Shop Now",
     "viewAll": "View All",
     "viewAllProducts": "View All Products",
@@ -7,7 +8,20 @@
     "addToCart": "Add to Cart",
     "buyNow": "Buy Now",
     "checkout": "Checkout",
-    "subscribe": "Subscribe"
+    "subscribe": "Subscribe",
+    "moveAllToBag": "Move All To Bag"
+  },
+  "pages": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "myAccount": "myAccount",
+    "products": "Products",
+    "viewCart": "View Cart",
+    "checkout": "Checkout",
+    "cart": "Cart",
+    "wishlist": "Wishlist",
+    "notFound": "404 Error"
   },
   "banner": {
     "text": "Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!",
@@ -113,6 +127,14 @@
         }
       }
     }
+  },
+  "wishlist": {
+    "title": "Wishlist",
+    "title2": "Just For You"
+  },
+  "notFound": {
+    "404": "404 Not Found",
+    "desc": "Your visited page not found. You may go home page."
   },
   "footer": {
     "col-1": {

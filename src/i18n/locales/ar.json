@@ -1,5 +1,6 @@
 {
   "common": {
+    "backToHomePage": "عد للصفحة الرئيسية",
     "shopNow": "تسوق الآن",
     "viewAll": "عرض الجميع",
     "viewAllProducts": "عرض جميع المنتجات",
@@ -7,7 +8,8 @@
     "addToCart": "أضف إلى السلة",
     "buyNow": "اشتري الآن",
     "checkout": "الدفع",
-    "subscribe": "اشترك الآن"
+    "subscribe": "اشترك الآن",
+    "moveAllToBag": "إضافة جميع المنتجات إلى السلة"
   },
   "banner": {
     "text": "تخفيضات الصيف على جميع بدلات السباحة وتوصيل سريع مجاني - خصم 50%!",
@@ -113,6 +115,14 @@
         }
       }
     }
+  },
+  "wishlist": {
+    "title": "المفضلة",
+    "title2": "منتجات مخصصة لأجلك"
+  },
+  "notFound": {
+    "404": "404 Not Found",
+    "desc": "Your visited page not found. You may go home page."
   },
   "footer": {
     "col-1": {

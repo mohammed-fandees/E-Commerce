@@ -15,3 +15,7 @@
 .product-card:hover .add-to-card {
   transform: translateY(-52px);
 }
+
+.product-card:hover .on-wish-list {
+  transform: unset;
+}
