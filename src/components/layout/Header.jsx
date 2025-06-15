@@ -6,15 +6,9 @@ import { getCurrentLanguage } from "../../utils/change-lang";
 import { Link } from "react-router-dom";
 
 
-export default function Header() {
+export default function Header({ navLinks }) {
   const { t } = useTranslation();
   const isRTL = getCurrentLanguage() == "ar";
-  const navLinks = [
-    { label: "header.nav.home", path: "/" },
-    { label: "header.nav.contact", path: "/contact" },
-    { label: "header.nav.about", path: "/about" },
-    { label: "header.nav.signup", path: "/signup" },
-  ];
 
   return (
     <header className="p-4 max-h-[70px] mt-6 border-b-1 border-[rgba(0, 0, 0, 1)] sticky top-0 bg-white z-10">

@@ -1,6 +1,6 @@
 import { ArrowLeft, ArrowRight } from "lucide-react"
 
-export default function Pagenation() {
+export default function Navigation() {
   const functions = {
     onPrev: () => document.querySelector(`.swiper-button-prev-offers`)?.click(),
     onNext: () => document.querySelector(`.swiper-button-next-offers`)?.click()

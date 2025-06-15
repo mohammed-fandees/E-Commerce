@@ -2,12 +2,23 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HomePage, WishList, Contact, SignUp, NotFound, Login, ProductDetailsPage, Cart, CheckOut, About, Account } from '../pages';
 import { Banner, Header } from '../components';
 import Footer from '@/components/layout/Footer';
+import { useIsMobile } from '@/hooks/use-mobile';
+import MobileHeader from '@/components/layout/MobileHeader';
 
 export default function AppRouter() {
+  const isMobile = useIsMobile();
+
+  const navLinks = [
+    { label: "header.nav.home", path: "/" },
+    { label: "header.nav.contact", path: "/contact" },
+    { label: "header.nav.about", path: "/about" },
+    { label: "header.nav.signup", path: "/signup" },
+  ];
+
   return (
     <Router>
       <Banner />
-      <Header />
+      {isMobile ? <MobileHeader navLinks={navLinks} /> : <Header navLinks={navLinks} />}
       <div className='container mx-auto px-4 max-w-[1440px]'>
         <Routes>
           <Route path="/" element={<HomePage />} />
