@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { ImageOff, Eye, Heart } from "lucide-react";
+import { ImageOff, Eye, Heart, Trash2 } from "lucide-react";
 import Skeleton from "@mui/material/Skeleton";
 import { Link } from "react-router";
 import { useTranslation } from "react-i18next";
 
-export default function ProductCard({ id, title, image, price, oldPrice, rating, reviewsCount, loading = false }) {
+export default function ProductCard({ id, title, image, price, oldPrice, rating, wish = false, reviewsCount, loading = false }) {
   const [imgError, setImgError] = useState(false);
   const { t } = useTranslation();
 
@@ -26,12 +26,20 @@ export default function ProductCard({ id, title, image, price, oldPrice, rating,
           )}
 
           <div className="absolute top-2 right-2 flex flex-col gap-2">
-            <button className="cursor-pointer bg-white p-1 rounded-full shadow">
-              <Heart size="24" />
-            </button>
-            <button className="cursor-pointer bg-white p-1 rounded-full shadow">
-              <Eye size='24' />
-            </button>
+            {wish ? (
+              <button className="cursor-pointer bg-white p-1 rounded-full shadow">
+                <Trash2 size="24" />
+              </button>
+            ) : (
+              <>
+                <button className="cursor-pointer bg-white p-1 rounded-full shadow">
+                  <Heart size="24" />
+                </button>
+                <button className="cursor-pointer bg-white p-1 rounded-full shadow">
+                  <Eye size='24' />
+                </button>
+              </>
+            )}
           </div>
 
           <div className="rounded-sm h-[250px] overflow-hidden bg-[#F5F5F5]">
@@ -49,7 +57,7 @@ export default function ProductCard({ id, title, image, price, oldPrice, rating,
               </Link>
 
             )}
-            <button className="add-to-card w-full py-2 bg-black text-white text-sm hover:opacity-90 transition">
+            <button className={`add-to-card w-full py-2 bg-black text-white text-sm hover:opacity-90 transition ${wish && "on-wish-list -translate-y-[52px]"}`}>
               {t("common.addToCart")}
             </button>
           </div>
