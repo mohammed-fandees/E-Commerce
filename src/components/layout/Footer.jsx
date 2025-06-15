@@ -12,7 +12,7 @@ export default function Footer() {
 
   return (
     <div className="bg-black">
-      <div className="grid grid-cols-5 gap-15 container mx-auto px-4 py-25 max-w-[1440px] text-white">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-15 container mx-auto px-4 py-25 max-w-[1440px] text-white">
         <div className="col-span-1">
           <h1 className='text-xl mb-5'>{t("footer.col-1.title")}</h1>
           <h2 className='mb-5 text-xl'>{t("common.subscribe")}</h2>

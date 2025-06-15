@@ -4,9 +4,11 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import DropdownMenuItems from "./common/DropdownMenuItems";
 import { changeLanguage, getCurrentLanguage } from "../../utils/change-lang";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export default function Banner() {
   const { t } = useTranslation();
+  const isMobile = useIsMobile();
   const isRTL = getCurrentLanguage() == "ar";
 
   const items = [
@@ -17,19 +19,21 @@ export default function Banner() {
   return (
     <div className="bg-black text-white">
       <div className="container mx-auto px-4 xl:px-0 max-w-[1440px] h-12 flex items-center justify-center">
-        <h2 className="w-[100%] text-center space-x-4">
+        <h2 className="w-[100%] text-center space-x-4 text-sm md:text-[16px]">
           <span>{t("banner.text")}</span>
           <Link to="/wishlist" className="underline font-[600]">
             {t("common.shopNow")}
           </Link>
         </h2>
-        <DropdownMenu>
-          <DropdownMenuTrigger className="flex gap-2 cursor-pointer outline-0">
-            {isRTL ? t("banner.menu.ar") : t("banner.menu.en")}
-            <ChevronDown />
-          </DropdownMenuTrigger>
-          <DropdownMenuItems items={items} />
-        </DropdownMenu>
+        {!isMobile && (
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex gap-2 cursor-pointer outline-0">
+              {isRTL ? t("banner.menu.ar") : t("banner.menu.en")}
+              <ChevronDown />
+            </DropdownMenuTrigger>
+            <DropdownMenuItems items={items} />
+          </DropdownMenu>
+        )}
       </div>
     </div>
   )
