@@ -6,7 +6,7 @@ export default function SectionHeader({ title, description, action, customBtn, c
   const { t } = useTranslation();
   const isRTL = getCurrentLanguage() == "ar";
   return (
-    <div className="mb-10">
+    <div className="mb-10 relative">
       {title && (
         <div className="flex gap-3 h-10 items-center mb-4">
           <div className="bg-[#DB4444] w-5 h-10 rounded-sm"></div>

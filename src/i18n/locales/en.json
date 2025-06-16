@@ -11,6 +11,10 @@
     "subscribe": "Subscribe",
     "moveAllToBag": "Move All To Bag"
   },
+  "app": {
+    "name": "Exclusive",
+    "version" : "v1.0"
+  },
   "pages": {
     "home": "Home",
     "about": "About",
@@ -21,7 +25,8 @@
     "checkout": "Checkout",
     "cart": "Cart",
     "wishlist": "Wishlist",
-    "notFound": "404 Error"
+    "notFound": "404 Error",
+    "account": "Account"
   },
   "banner": {
     "text": "Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!",
@@ -32,7 +37,10 @@
   },
   "header": {
     "title": "Exclusive",
+    "welcome": "Glad to see you here.",
     "searchPlaceholder": "What are you looking for?",
+    "navigation": "Navigation",
+    "language": "Language",
     "nav": {
       "home": "Home",
       "contact": "Contact",
@@ -59,6 +67,10 @@
     "nine": "Health & Beauty"
   },
   "home": {
+    "landing": {
+      "title": "iPhone 15 Series",
+      "description": "Up to 10% off Voucher"
+    },
     "offers": {
       "title": "Today's",
       "description": "Flash Sales",

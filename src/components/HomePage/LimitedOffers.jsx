@@ -4,19 +4,22 @@ import { useCountdown } from "@/hooks/use-countdown";
 import Button from "../common/Button";
 import ProductsSwiper from "../common/ProductsSwiper";
 import data from "../../data/products.json";
+import { getCurrentLanguage } from "@/utils/change-lang";
 
 export default function LimitedOffers() {
   const { t } = useTranslation();
+  const isRTL = getCurrentLanguage() == "ar";
   const targetDate = new Date("2025-07-01T12:00:00Z");
   const { days, hours, minutes, seconds, isEnded } = useCountdown(targetDate);
   const timeUnits = [{ label: "d", value: days }, { label: "h", value: hours }, { label: "m", value: minutes }, { label: "s", value: seconds }];
+
   return (
     <main>
       <SectionHeader title={t("home.offers.title")} description={t("home.offers.description")} action="navigation">
         {isEnded ? (
           <div className="text-red-600 font-bold text-xl">Event Ended</div>
         ) : (
-          <div className="flex gap-4 text font-bold-center  items-end">
+          <div className={`flex gap-4 text font-bold-center items-end absolute top-0 ${isRTL ? "left-0": "right-0"} md:relative`}>
             {timeUnits.map((unit, index) => (
               <div key={unit.label} className="flex items-end gap-1">
                 <div className="flex flex-col">
