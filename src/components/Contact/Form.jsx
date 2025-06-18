@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { z } from 'zod';
 import { useTranslation } from 'react-i18next';
 import Button from '../common/Button';
+import { toast } from 'sonner';
 
 export default function Form() {
   const { t } = useTranslation();
@@ -17,12 +16,6 @@ export default function Form() {
 
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
   const [errors, setErrors] = useState({});
-
-  const toastConfig = {
-    autoClose: 2500,
-    hideProgressBar: true,
-    closeButton: false,
-  };
 
   const fields = [
     { name: 'name', type: 'text', placeholder: t('contact.form.name') },
@@ -47,7 +40,7 @@ export default function Form() {
           formSchema.parse(formData);
           setErrors({});
           setFormData({ name: '', email: '', phone: '', message: '' });
-          setTimeout(() => resolve(), 1500)
+          setTimeout(() => resolve(), 1500);
         } catch (err) {
           const newErrors = {};
           err.errors.forEach(({ path, message }) => {
@@ -58,18 +51,16 @@ export default function Form() {
         }
       }),
       {
-        pending: t('contact.form.pending'),
+        loading: t('contact.form.pending'),
         success: t('contact.form.success'),
         error: t('contact.form.error')
-      },
-      toastConfig
+      }
     );
   };
 
 
   return (
     <form onSubmit={handleSubmit}>
-      <ToastContainer />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
         {fields.map(({ name, type, placeholder }) => (
           <div key={name}>
