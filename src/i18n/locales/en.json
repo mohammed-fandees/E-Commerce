@@ -9,7 +9,70 @@
     "buyNow": "Buy Now",
     "checkout": "Checkout",
     "subscribe": "Subscribe",
-    "moveAllToBag": "Move All To Bag"
+    "moveAllToBag": "Move All To Bag",
+    "saveChanges": "Save Changes",
+    "cancel": "Cancel",
+    "saving": "Saving...",
+    "loading": "Loading...",
+    "edit": "Edit",
+    "delete": "Delete"
+  },
+  "firstName": {
+    "too_small": "First name is required"
+  },
+  "lastName": {
+    "too_small": "Last name is required"
+  },
+  "email": {
+    "too_small": "Email is required",
+    "invalid_string": "Invalid email address"
+  },
+  "address": {
+    "too_small": "Address is required"
+  },
+  "currentPassword": {
+    "too_small": "Current password is required"
+  },
+  "newPassword": {
+    "too_small": "New password must be at least 6 characters"
+  },
+  "confirmNewPassword": {
+    "too_small": "Password confirmation is required",
+    "custom": "Passwords do not match"
+  },
+  "cardholderName": {
+    "too_small": "Cardholder name is required"
+  },
+  "cardNumber": {
+    "too_small": "Card number is required",
+    "invalid_string": "Invalid card number format"
+  },
+  "expiryDate": {
+    "too_small": "Expiry date is required",
+    "invalid_string": "Invalid expiry date format (MM/YY)"
+  },
+  "cvv": {
+    "too_small": "CVV must be at least 3 digits",
+    "too_big": "CVV must be at most 4 digits",
+    "invalid_string": "CVV must contain only numbers"
+  },
+  "cardType": {
+    "too_small": "Card type is required"
+  },
+  "billingAddress.street": {
+    "too_small": "Street address is required"
+  },
+  "billingAddress.city": {
+    "too_small": "City is required"
+  },
+  "billingAddress.state": {
+    "too_small": "State is required"
+  },
+  "billingAddress.postalCode": {
+    "too_small": "Postal code is required"
+  },
+  "billingAddress.country": {
+    "too_small": "Country is required"
   },
   "app": {
     "name": "Exclusive",
@@ -188,6 +251,54 @@
         "position": "Delivery Staff Manager"
       }
     }
+  },
+  "account": {
+    "welcome": "Welcome!",
+    "editProfile": "Edit Your Profile",
+    "changePassword": "Change Password",
+    "manageAccount": "Manage My Account",
+    "myProfile": "My Profile",
+    "password": "My Account's Password",
+    "paymentOptions": "My Payment Options",
+    "myOrders": "My Orders",
+    "myReturns": "My Returns",
+    "myCancellations": "My Cancellations",
+    "myWishList": "My WishList",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "address": "Address",
+    "currentPassword": "Current Password",
+    "newPassword": "New Password",
+    "confirmNewPassword": "Confirm New Password",
+    "profileUpdated": "Profile updated successfully!",
+    "profileUpdateError": "Please correct the errors in your profile.",
+    "passwordChanged": "Password changed successfully!",
+    "passwordChangeError": "Failed to change password. Please try again.",
+    "savedPaymentMethods": "Saved Payment Methods",
+    "addPaymentMethod": "Add Payment Method",
+    "editPaymentMethod": "Edit Payment Method",
+    "updatePaymentMethod": "Update Payment Method",
+    "cardholderName": "Cardholder Name",
+    "cardNumber": "Card Number",
+    "cardType": "Card Type",
+    "expiryDate": "Expiry Date",
+    "cvv": "CVV",
+    "billingAddress": "Billing Address",
+    "streetAddress": "Street Address",
+    "city": "City",
+    "state": "State/Province",
+    "postalCode": "Postal Code",
+    "country": "Country",
+    "selectCountry": "Select Country",
+    "setAsDefault": "Set as default payment method",
+    "default": "Default",
+    "expires": "Expires",
+    "paymentAdded": "Payment method added successfully!",
+    "paymentUpdated": "Payment method updated successfully!",
+    "paymentDeleted": "Payment method deleted successfully!",
+    "paymentSaveError": "Failed to save payment method. Please check your information.",
+    "confirmDeletePayment": "Are you sure you want to delete this payment method?"
   },
   "wishlist": {
     "title": "Wishlist",

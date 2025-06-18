@@ -9,7 +9,72 @@
     "buyNow": "اشتري الآن",
     "checkout": "الدفع",
     "subscribe": "اشترك الآن",
-    "moveAllToBag": "إضافة جميع المنتجات إلى السلة"
+    "moveAllToBag": "إضافة جميع المنتجات إلى السلة",
+    "saveChanges": "حفظ التغييرات",
+    "cancel": "إلغاء",
+    "saving": "جاري الحفظ...",
+    "loading": "جاري التحميل...",
+    "edit": "تعديل",
+    "delete": "حذف"
+  },
+  "validation": {
+    "firstName": {
+      "too_small": "الاسم الأول مطلوب"
+    },
+    "lastName": {
+      "too_small": "اسم العائلة مطلوب"
+    },
+    "email": {
+      "too_small": "البريد الإلكتروني مطلوب",
+      "invalid_string": "عنوان بريد إلكتروني غير صالح"
+    },
+    "address": {
+      "too_small": "العنوان مطلوب"
+    },
+    "currentPassword": {
+      "too_small": "كلمة المرور الحالية مطلوبة"
+    },
+    "newPassword": {
+      "too_small": "كلمة المرور الجديدة يجب أن تكون 6 أحرف على الأقل"
+    },
+    "confirmNewPassword": {
+      "too_small": "تأكيد كلمة المرور مطلوب",
+      "custom": "كلمات المرور غير متطابقة"
+    },
+    "cardholderName": {
+      "too_small": "اسم حامل البطاقة مطلوب"
+    },
+    "cardNumber": {
+      "too_small": "رقم البطاقة مطلوب",
+      "invalid_string": "تنسيق رقم البطاقة غير صالح"
+    },
+    "expiryDate": {
+      "too_small": "تاريخ الانتهاء مطلوب",
+      "invalid_string": "تنسيق تاريخ الانتهاء غير صالح (شهر/سنة)"
+    },
+    "cvv": {
+      "too_small": "رمز الأمان يجب أن يكون 3 أرقام على الأقل",
+      "too_big": "رمز الأمان يجب أن يكون 4 أرقام على الأكثر",
+      "invalid_string": "رمز الأمان يجب أن يحتوي على أرقام فقط"
+    },
+    "cardType": {
+      "too_small": "نوع البطاقة مطلوب"
+    },
+    "billingAddress.street": {
+      "too_small": "عنوان الشارع مطلوب"
+    },
+    "billingAddress.city": {
+      "too_small": "المدينة مطلوبة"
+    },
+    "billingAddress.state": {
+      "too_small": "الولاية مطلوبة"
+    },
+    "billingAddress.postalCode": {
+      "too_small": "الرمز البريدي مطلوب"
+    },
+    "billingAddress.country": {
+      "too_small": "البلد مطلوب"
+    }
   },
   "app": {
     "name": "حصريات"
@@ -187,6 +252,54 @@
         "position": "مدير فريق التوصيل"
       }
     }
+  },
+  "account": {
+    "welcome": "مرحباً",
+    "editProfile": "تعديل الملف الشخصي",
+    "changePassword": "تغيير كلمة المرور",
+    "manageAccount": "إدارة حسابي",
+    "myProfile": "ملفي الشخصي",
+    "password": "كلمة مرور الحساب",
+    "paymentOptions": "خيارات الدفع",
+    "myOrders": "طلباتي",
+    "myReturns": "المرتجعات",
+    "myCancellations": "الإلغاءات",
+    "myWishList": "قائمة المفضلة",
+    "firstName": "الاسم الأول",
+    "lastName": "اسم العائلة",
+    "email": "البريد الإلكتروني",
+    "address": "العنوان",
+    "currentPassword": "كلمة المرور الحالية",
+    "newPassword": "كلمة المرور الجديدة",
+    "confirmNewPassword": "تأكيد كلمة المرور الجديدة",
+    "profileUpdated": "تم تحديث الملف الشخصي بنجاح!",
+    "profileUpdateError": "يرجى تصحيح الأخطاء في ملفك الشخصي.",
+    "passwordChanged": "تم تغيير كلمة المرور بنجاح!",
+    "passwordChangeError": "فشل في تغيير كلمة المرور. يرجى المحاولة مرة أخرى.",
+    "savedPaymentMethods": "طرق الدفع المحفوظة",
+    "addPaymentMethod": "إضافة طريقة دفع",
+    "editPaymentMethod": "تعديل طريقة الدفع",
+    "updatePaymentMethod": "تحديث طريقة الدفع",
+    "cardholderName": "اسم حامل البطاقة",
+    "cardNumber": "رقم البطاقة",
+    "cardType": "نوع البطاقة",
+    "expiryDate": "تاريخ الانتهاء",
+    "cvv": "رمز الأمان",
+    "billingAddress": "عنوان الفواتير",
+    "streetAddress": "عنوان الشارع",
+    "city": "المدينة",
+    "state": "الولاية/المقاطعة",
+    "postalCode": "الرمز البريدي",
+    "country": "البلد",
+    "selectCountry": "اختر البلد",
+    "setAsDefault": "تعيين كطريقة دفع افتراضية",
+    "default": "افتراضي",
+    "expires": "ينتهي في",
+    "paymentAdded": "تم إضافة طريقة الدفع بنجاح!",
+    "paymentUpdated": "تم تحديث طريقة الدفع بنجاح!",
+    "paymentDeleted": "تم حذف طريقة الدفع بنجاح!",
+    "paymentSaveError": "فشل في حفظ طريقة الدفع. يرجى التحقق من المعلومات.",
+    "confirmDeletePayment": "هل أنت متأكد من أنك تريد حذف طريقة الدفع هذه؟"
   },
   "wishlist": {
     "title": "المفضلة",

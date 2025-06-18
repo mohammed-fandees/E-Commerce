@@ -83,6 +83,11 @@
   font-family: "Inter", sans-serif;
 }
 
+html {
+    -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 html[dir="rtl"] {
   font-family: var(--font-cairo);
 }
