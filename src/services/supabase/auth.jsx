@@ -1,6 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-import { Auth } from "@supabase/auth-ui-react";
-import { ThemeSupa } from "@supabase/auth-ui-shared";
+import { useNavigate } from "react-router";
 import supabase from "./supabaseClient";
 
 export const SessionContext = createContext();
@@ -24,17 +23,11 @@ export default function SessionProvider({ children }) {
     return () => subscription.unsubscribe();
   }, []);
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  if (loading) return <div>Loading...</div>;
 
-  if (!session) {
-    return <Auth supabaseClient={supabase} appearance={{ theme: ThemeSupa }} />;
-  } else {
-    return (
-      <SessionContext.Provider value={{ session, loading }}>
-        {children}
-      </SessionContext.Provider>
-    );
-  }
+  return (
+    <SessionContext.Provider value={{ session, loading }}>
+      {children}
+    </SessionContext.Provider>
+  );
 }
