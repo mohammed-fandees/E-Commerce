@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 @plugin "daisyui";
@@ -89,6 +89,21 @@ html[dir="rtl"] {
 
 input {
   outline: none;
+}
+
+p,
+span,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @theme inline {
