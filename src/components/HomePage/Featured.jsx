@@ -3,9 +3,16 @@ import SectionHeader from '../common/SectionHeader'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router';
 import { Headset, ShieldCheck, TruckElectric } from 'lucide-react';
+import FeatureCard from '../common/FeatureCard';
 
 export default function Featured() {
   const { t } = useTranslation();
+  const features = [
+    { title: "home.featured.advantages.one.title", text: "home.featured.advantages.one.description", icon: <TruckElectric size="35" color='white' /> },
+    { title: "home.featured.advantages.two.title", text: "home.featured.advantages.two.description", icon: <Headset size="35" color='white' /> },
+    { title: "home.featured.advantages.three.title", text: "home.featured.advantages.three.description", icon: <ShieldCheck size="35" color='white' /> }
+  ];
+  
   return (
     <div className='mt-15'>
       <SectionHeader title={t("home.featured.title")} description={t("home.featured.description")} />
@@ -47,23 +54,11 @@ export default function Featured() {
         </div>
       </div>
       <div className='mb-20'>
-        <ul className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 space-y-8 '>
-          <li className='flex flex-col justify-center items-center'>
-            <div className="p-2 bg-black border-10 border-[#D1D4DB] mb-5 rounded-full"><TruckElectric size="35" color='white' /></div>
-            <h3 className='text-xl font-semibold'>{t("home.featured.advantages.one.title")}</h3>
-            <p className='text-sm'>{t("home.featured.advantages.one.description")}</p>
-          </li>
-          <li className='flex flex-col justify-center items-center'>
-            <div className="p-2 bg-black border-10 border-[#D1D4DB] mb-5 rounded-full"><Headset size="35" color='white' /></div>
-            <h3 className='text-xl font-semibold'>{t("home.featured.advantages.two.title")}</h3>
-            <p className='text-sm'>{t("home.featured.advantages.two.description")}</p>
-          </li>
-          <li className='flex flex-col justify-center items-center'>
-            <div className="p-2 bg-black border-10 border-[#D1D4DB] mb-5 rounded-full"><ShieldCheck size="35" color='white' /></div>
-            <h3 className='text-xl font-semibold'>{t("home.featured.advantages.three.title")}</h3>
-            <p className='text-sm'>{t("home.featured.advantages.three.description")}</p>
-          </li>
-        </ul>
+        <div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 space-y-8 '>
+          {features?.map((feature, i) => (
+            <FeatureCard key={i} title={feature.title} text={feature.text}>{feature.icon}</FeatureCard>
+          ))}
+        </div>
       </div>
     </div>
   )
