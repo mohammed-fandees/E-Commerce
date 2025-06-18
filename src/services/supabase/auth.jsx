@@ -1,8 +1,6 @@
-import { createContext, useState, useEffect } from "react";
-import { useNavigate } from "react-router";
+import { useState, useEffect } from "react";
 import supabase from "./supabaseClient";
-
-export const SessionContext = createContext();
+import { SessionContext } from "@/store/SessionContext";
 
 export default function SessionProvider({ children }) {
   const [session, setSession] = useState(null);

@@ -1,5 +1,5 @@
 import Container from '@/routes/Container';
-import { SessionContext } from '@/services/supabase/auth';
+import { SessionContext } from '@/store/SessionContext';
 import { getCurrentLanguage } from '@/utils/change-lang';
 import { SendHorizontal } from 'lucide-react';
 import { useContext } from 'react'

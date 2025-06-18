@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { Navigate } from "react-router-dom";
-import { SessionContext } from "../services/supabase/auth";
+import { SessionContext } from "@/store/SessionContext";
 
 export default function Wrapper({ children, prevent }) {
   const { loading, session } = useContext(SessionContext);
