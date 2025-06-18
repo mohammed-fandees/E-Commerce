@@ -8,7 +8,7 @@
 }
 
 .add-to-card {
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
   cursor: pointer;
 }
 
@@ -18,4 +18,49 @@
 
 .product-card:hover .on-wish-list {
   transform: unset;
+}
+
+div:has(.hoverable-card):hover > .hoverable-card > div {
+  transition: all 200ms ease-in-out;
+  background-color: white;
+  border-color: #e67c7c;
+}
+
+div:has(.hoverable-card):hover > .hoverable-card > div svg {
+  transition: stroke 200ms ease-in-out;
+  stroke: black;
+}
+
+.statistic h3 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.employees .swiper-wrapper {
+  padding-bottom: 70px;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #b3b3b3;
+}
+
+.swiper-pagination-bullet-active {
+  width: 14px;
+  height: 14px;
+  background-color: #e67c7c;
+  border: 1px solid white;
+  box-shadow: 0 0 0 2px #b3b3b3;
+}
+
+.swiper-rtl .swiper-wrapper {
+  flex-direction: row-reverse;
+  direction: rtl !important;
+}
+
+.swiper-rtl .swiper-pagination {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
 }
