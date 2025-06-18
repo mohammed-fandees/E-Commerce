@@ -18,7 +18,7 @@ export default function MobileHeader() {
   return (
     <>
       <header className="p-4 max-h-[120px] border-b-1 border-[rgba(0, 0, 0, 1)] sticky top-0 bg-white z-10">
-        <div className="flex justify-between items-center container mx-auto lg:px-4 max-w-[1440px]">
+        <div className="flex justify-between items-center container mx-auto lg:px-4 max-w-[1280px]">
           <div className="flex gap-3 items-center">
             {isMobile && (
               <button className="cursor-pointer p-1 hover:bg-gray-100 rounded" onClick={handleSidebarToggle} aria-label="Toggle menu" >
