@@ -11,11 +11,13 @@ export default function ProductCard({ id, title, image, price, oldPrice, rating,
   return (
     <div className="product-card rounded-md relative min-w-[270px] min-h-[350px] [direction:ltr]">
       {loading ? (
-        <div>
-          <Skeleton variant="rectangular" width={220} height={160} />
-          <Skeleton variant="text" width="80%" />
-          <Skeleton variant="text" width="60%" />
-          <Skeleton variant="text" width="40%" />
+        <div className="p-4">
+          <Skeleton variant="rectangular" width="100%" height="250px" className="mb-3 rounded" />
+          <div className="flex flex-col ms-3">
+            <Skeleton variant="text" width="100%" />
+            <Skeleton variant="text" width="60%" />
+            <Skeleton variant="text" width="30%" />
+          </div>
         </div>
       ) : (
         <>

@@ -18,7 +18,7 @@ export default function Sidebar({ className }) {
     <aside className={`bg-white max-w-[250px] border-e-1 ${className}`}>
       <NavigationMenu>
         <NavigationMenuList>
-          <SidebarItems items={items}  />
+          <SidebarItems items={items} />
         </NavigationMenuList>
       </NavigationMenu>
     </aside>
