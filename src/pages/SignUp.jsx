@@ -3,10 +3,9 @@ import { z } from 'zod';
 import Wrapper from "../routes/Wrapper";
 import Button from '@/components/common/Button';
 import { useTranslation } from 'react-i18next';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import supabase from '@/services/supabase/supabaseClient';
 import { Eye, EyeOff } from 'lucide-react';
+import { toast } from 'sonner';
 
 const signupFormSchema = z.object({
   name: z.string().min(1, { message: 'Name is required.' }),
@@ -20,14 +19,6 @@ export default function Signup() {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-
-  const toastConfig = {
-    hideProgressBar: true,
-    autoClose: 2500,
-    closeButton: false,
-    theme: 'light',
-    bodyStyle: { color: '#000' },
-  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -49,9 +40,9 @@ export default function Signup() {
       });
 
       if (error) {
-        toast(t('auth.signup.failed'), toastConfig);
+        toast.error(t('auth.signup.failed'));
       } else {
-        toast(t('auth.signup.success'), toastConfig);
+        toast.success(t('auth.signup.success'));
         setFormData({ name: '', email: '', password: '' });
       }
     } catch (err) {
@@ -61,7 +52,7 @@ export default function Signup() {
           if (error.path) newErrors[error.path[0]] = error.message;
         });
         setErrors(newErrors);
-        toast(t('auth.signup.fixErrors'), toastConfig);
+        toast.error(t('auth.signup.fixErrors'));
       }
     } finally {
       setIsSubmitting(false);
@@ -70,12 +61,11 @@ export default function Signup() {
 
   const handleGoogleSignup = async () => {
     const { error } = await supabase.auth.signInWithOAuth({ provider: 'google' });
-    if (error) toast(t('auth.signup.failed'), toastConfig);
+    if (error) toast.error(t('auth.signup.failed'));
   };
 
   return (
     <Wrapper prevent="user">
-      <ToastContainer />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-15 items-center">
         <div className="hidden lg:flex justify-center max-h-[750px]">
           <img src="/assets/auth-page-img.jpg" alt="Signup illustration" className="w-full h-full rounded-e shadow-md object-cover" />

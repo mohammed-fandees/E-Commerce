@@ -1,18 +1,19 @@
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback, useRef, useContext } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
 import { X, ChevronRight, ChevronDown, Globe, User, ShoppingBag, CircleX, Star, LogOut, UserIcon, Home, Phone, Info, UserPlus } from "lucide-react";
 import { changeLanguage, getCurrentLanguage } from "../../utils/change-lang";
 import supabase from "@/services/supabase/supabaseClient";
+import { SessionContext } from "@/store/SessionContext";
 
-export default function MobileSidebar({ isOpen, onClose }) {
+export default function MobileSidebar({ isOpen, onClose, navLinks }) {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const isRTL = getCurrentLanguage() === "ar";
   const sidebarRef = useRef(null);
   const [mounted, setMounted] = useState(false);
   const [isAnimatingIn, setIsAnimatingIn] = useState(false);
-
+  const { session } = useContext(SessionContext);
   const [expandedCategory, setExpandedCategory] = useState(null);
   const [showLanguageMenu, setShowLanguageMenu] = useState(false);
   const [showAccountMenu, setShowAccountMenu] = useState(false);
@@ -69,13 +70,6 @@ export default function MobileSidebar({ isOpen, onClose }) {
     { trigger: "sidebar.seven", icon: Star },
     { trigger: "sidebar.eight", icon: Globe },
     { trigger: "sidebar.nine", icon: User },
-  ];
-
-  const navLinks = [
-    { label: "header.nav.home", path: "/", icon: Home },
-    { label: "header.nav.contact", path: "/contact", icon: Phone },
-    { label: "header.nav.about", path: "/about", icon: Info },
-    { label: "header.nav.signup", path: "/signup", icon: UserPlus },
   ];
 
   const languageOptions = [
@@ -194,46 +188,47 @@ export default function MobileSidebar({ isOpen, onClose }) {
           >
 
             {/* Account Section */}
-            <section className="border-b border-gray-100">
-              <button
-                onClick={() => setShowAccountMenu(!showAccountMenu)}
-                className={`w-full p-4 flex items-center justify-between hover:bg-red-50 transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] group `}
-                aria-expanded={showAccountMenu}
-              >
-                <div className={`flex items-center gap-3 `}>
-                  <div className="p-2 rounded-lg group-hover:bg-[#db4444] group-hover:text-white transition-all duration-200" style={{ backgroundColor: '#fef2f2' }}>
-                    <User className="w-5 h-5" style={{ color: '#db4444' }} />
+            {session &&
+              <section className="border-b border-gray-100">
+                <button
+                  onClick={() => setShowAccountMenu(!showAccountMenu)}
+                  className={`w-full p-4 flex items-center justify-between hover:bg-red-50 transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] group `}
+                  aria-expanded={showAccountMenu}
+                >
+                  <div className={`flex items-center gap-3 `}>
+                    <div className="p-2 rounded-lg group-hover:bg-[#db4444] group-hover:text-white transition-all duration-200" style={{ backgroundColor: '#fef2f2' }}>
+                      <User className="w-5 h-5" style={{ color: '#db4444' }} />
+                    </div>
+                    <span className="font-medium text-gray-800">{t("pages.account")}</span>
                   </div>
-                  <span className="font-medium text-gray-800">{t("pages.account")}</span>
-                </div>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 text-gray-500 ${showAccountMenu ? 'rotate-180' : ''
-                  } ${isRTL ? 'rotate-180' : ''}`} />
-              </button>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 text-gray-500 ${showAccountMenu ? 'rotate-180' : ''
+                    } ${isRTL ? 'rotate-180' : ''}`} />
+                </button>
 
-              <div className={`overflow-hidden transition-all duration-300 ease-out ${showAccountMenu ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                }`}>
-                <div className="bg-red-50/30">
-                  {accountItems.map((item, index) => {
-                    const IconComponent = item.icon;
-                    return (
-                      <button
-                        key={index}
-                        onClick={() => {
-                          item.func();
-                          if (!item.danger) handleLinkClick();
-                        }}
-                        className={`w-full p-3 ps-12 flex items-center gap-3 hover:bg-white/70 text-left transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)]
+                <div className={`overflow-hidden transition-all duration-300 ease-out ${showAccountMenu ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  }`}>
+                  <div className="bg-red-50/30">
+                    {accountItems.map((item, index) => {
+                      const IconComponent = item.icon;
+                      return (
+                        <button
+                          key={index}
+                          onClick={() => {
+                            item.func();
+                            if (!item.danger) handleLinkClick();
+                          }}
+                          className={`w-full p-3 ps-12 flex items-center gap-3 hover:bg-white/70 text-left transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)]
                           } ${item.danger ? 'text-red-600 hover:bg-red-100' : 'text-gray-700'}`}
-                      >
-                        <IconComponent className="w-4 h-4" />
-                        <span className="text-sm font-medium">{t(item.text)}</span>
-                      </button>
-                    );
-                  })}
+                        >
+                          <IconComponent className="w-4 h-4" />
+                          <span className="text-sm font-medium">{t(item.text)}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
-            </section>
-
+              </section>
+            }
             {/* Main Navigation */}
             <section className="border-b border-gray-100">
               <h3 className="p-4 font-semibold text-gray-800 bg-red-50/30 text-sm uppercase tracking-wide">

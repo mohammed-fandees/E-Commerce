@@ -44,7 +44,8 @@
       "home": "Home",
       "contact": "Contact",
       "about": "About",
-      "signup": "SignUp"
+      "signup": "SignUp",
+      "account": "Account"
     },
     "menu": {
       "manage": "Manage My Account",
@@ -221,6 +222,7 @@
     }
   },
   "auth": {
+    "signout": "Signed out successfully!",
     "login": {
       "title": "Log in to Exclusive",
       "subtitle": "Enter your details below",

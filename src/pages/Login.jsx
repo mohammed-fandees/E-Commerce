@@ -3,11 +3,10 @@ import { z } from 'zod';
 import Wrapper from "../routes/Wrapper";
 import Button from '@/components/common/Button';
 import { useTranslation } from 'react-i18next';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import supabase from '@/services/supabase/supabaseClient';
 import { Eye, EyeOff } from 'lucide-react';
 import { Link } from 'react-router';
+import { toast } from 'sonner';
 
 const loginFormSchema = z.object({
   emailOrPhone: z.string().min(1, { message: 'Email or Phone Number is required.' }),
@@ -20,14 +19,6 @@ export default function Login() {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-
-  const toastConfig = {
-    hideProgressBar: true,
-    autoClose: 2500,
-    closeButton: false,
-    theme: 'light',
-    bodyStyle: { color: '#000' },
-  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -48,9 +39,9 @@ export default function Login() {
       });
 
       if (error) {
-        toast(t('auth.login.failed'), toastConfig);
+        toast.error(t('auth.login.failed'));
       } else {
-        toast(t('auth.login.success'), toastConfig);
+        toast.success(t('auth.login.success'))
         setFormData({ emailOrPhone: '', password: '' });
       }
     } catch (err) {
@@ -60,7 +51,7 @@ export default function Login() {
           if (error.path) newErrors[error.path[0]] = error.message;
         });
         setErrors(newErrors);
-        toast(t('auth.login.fixErrors'), toastConfig);
+        toast.error(t('auth.login.fixErrors'));
       }
     } finally {
       setIsSubmitting(false);
@@ -69,13 +60,12 @@ export default function Login() {
 
   const handleGoogleLogin = async () => {
     const { error } = await supabase.auth.signInWithOAuth({ provider: 'google' });
-    if (error) toast(t('auth.signup.failed'), toastConfig);
+    if (error) toast.error(t('auth.signup.failed'));
   };
 
 
   return (
     <Wrapper prevent="user">
-      <ToastContainer />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-15 items-center">
         <div className="hidden lg:flex justify-center max-h-[750px]">
           <img

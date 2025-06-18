@@ -4,15 +4,19 @@ import { Banner, Header } from '../components';
 import Footer from '@/components/layout/Footer';
 import { useIsMobile } from '@/hooks/use-mobile';
 import MobileHeader from '@/components/layout/MobileHeader';
+import { useContext } from 'react';
+import { SessionContext } from '@/store/SessionContext';
+import { UserPlus, User, Home, Phone, Info } from 'lucide-react';
 
 export default function AppRouter() {
   const isMobile = useIsMobile();
+  const { session } = useContext(SessionContext);
 
   const navLinks = [
-    { label: "header.nav.home", path: "/" },
-    { label: "header.nav.contact", path: "/contact" },
-    { label: "header.nav.about", path: "/about" },
-    { label: "header.nav.signup", path: "/signup" },
+    { label: "header.nav.home", path: "/", icon: Home },
+    { label: "header.nav.contact", path: "/contact", icon: Phone },
+    { label: "header.nav.about", path: "/about", icon: Info },
+    { label: session ? "header.nav.account" : "header.nav.signup", path: session ? "/account" : "/signup", icon: session? User : UserPlus },
   ];
 
   return (

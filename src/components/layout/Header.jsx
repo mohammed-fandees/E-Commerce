@@ -5,11 +5,14 @@ import { useTranslation } from "react-i18next";
 import { getCurrentLanguage } from "../../utils/change-lang";
 import { Link } from "react-router-dom";
 import Container from "@/routes/Container";
+import { useContext } from "react";
+import { SessionContext } from "@/store/SessionContext";
 
 
 export default function Header({ navLinks }) {
   const { t } = useTranslation();
   const isRTL = getCurrentLanguage() == "ar";
+  const { session } = useContext(SessionContext);
 
   return (
     <header className="p-4 max-h-[70px] mt-6 border-b-1 border-[rgba(0, 0, 0, 1)] sticky top-0 bg-white z-10">
@@ -24,7 +27,7 @@ export default function Header({ navLinks }) {
             </div>
             <Link to="/wishlist"><Heart className="cursor-pointer" /></Link>
             <Link to="/cart"><ShoppingCart className="cursor-pointer" /></Link>
-            <Account />
+            {session && <Account />}
           </div>
         </div>
       </Container>
