@@ -101,7 +101,6 @@ h4,
 h5,
 h6,
 input {
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
