@@ -22,7 +22,7 @@ export default function SessionProvider({ children }) {
     return () => subscription.unsubscribe();
   }, []);
 
-  if (!loading) return <LoadingSpinner />;
+  if (loading) return <LoadingSpinner />;
 
   return (
     <SessionContext.Provider value={{ session, loading }}>
