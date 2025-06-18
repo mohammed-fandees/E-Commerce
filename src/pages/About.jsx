@@ -75,7 +75,7 @@ export default function About() {
               <SwiperSlide>
                 <div key={i}>
                   <div className="flex items-end justify-center h-[430px] bg-[#F5F5F5] rounded-[5px]">
-                    <img src={person.img} alt="perosn" className="h-[90%]" />
+                    <img loading="lazy" src={person.img} alt="perosn" className="h-[90%]" />
                   </div>
                   <div className="mt-8">
                     <h4 className="text-2xl font-medium inter">{t(person.name)}</h4>

@@ -68,7 +68,7 @@ export default function Signup() {
     <Wrapper prevent="user">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-15 items-center">
         <div className="hidden lg:flex justify-center max-h-[750px]">
-          <img src="/assets/auth-page-img.jpg" alt="Signup illustration" className="w-full h-full rounded-e shadow-md object-cover" />
+          <img loading="lazy" src="/assets/auth-page-img.jpg" alt="Signup illustration" className="w-full h-full rounded-e shadow-md object-cover" />
         </div>
 
         <div className="w-full max-w-[500px] p-4 rounded-lg mx-auto">
@@ -103,7 +103,7 @@ export default function Signup() {
                 {isSubmitting ? t('auth.signup.creating') : t('auth.signup.button')}
               </Button>
               <button type="button" onClick={handleGoogleSignup} className="px-12 py-4 rounded-sm text-black border border-[#B2B2B2] hover:bg-gray-100 cursor-pointer flex gap-3 justify-center">
-                <img src="/assets/Icon-Google.png" alt="google" />
+                <img loading="lazy" src="/assets/Icon-Google.png" alt="google" />
                 {t('auth.signup.google')}
               </button>
             </div>

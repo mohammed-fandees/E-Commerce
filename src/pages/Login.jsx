@@ -68,7 +68,7 @@ export default function Login() {
     <Wrapper prevent="user">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-15 items-center">
         <div className="hidden lg:flex justify-center max-h-[750px]">
-          <img
+          <img loading="lazy"
             src="/assets/auth-page-img.jpg"
             alt="Login illustration"
             className="w-full h-full rounded-e shadow-md object-cover"
@@ -114,7 +114,7 @@ export default function Login() {
                 {isSubmitting ? t('auth.login.loggingIn') : t('auth.login.button')}
               </Button>
               <button type="button" onClick={handleGoogleLogin} className="px-12 py-4 rounded-sm text-black border border-[#B2B2B2] hover:bg-gray-100 cursor-pointer flex gap-3 justify-center">
-                <img src="/assets/Icon-Google.png" alt="google" />
+                <img loading="lazy" src="/assets/Icon-Google.png" alt="google" />
                 {t('auth.login.google')}
               </button>
             </div>

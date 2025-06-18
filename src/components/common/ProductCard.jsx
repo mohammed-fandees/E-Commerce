@@ -54,7 +54,7 @@ export default function ProductCard({ id, title, image, price, oldPrice, rating,
             ) : (
               <Link to={`product/${id}`}>
                 <div className="rounded-sm h-[250px] mb-4 overflow-hidden flex items-center justify-center ">
-                  <img src={image} alt={title} onError={() => setImgError(true)} className="object-contain w-[80%] h-[75%]" loading="lazy" />
+                  <img loading="lazy" src={image} alt={title} onError={() => setImgError(true)} className="object-contain w-[80%] h-[75%]" loading="lazy" />
                 </div>
               </Link>
 

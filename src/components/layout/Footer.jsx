@@ -56,13 +56,13 @@ export default function Footer() {
             <h1 className='text-xl mb-5'>{t("footer.col-5.title")}</h1>
             <p className="text-[#FAFAFA] text-sm opacity-80 mb-4">{t("footer.col-5.award")}</p>
             <div className={`flex gap-2 ${isRTL && "flex-row-reverse"}`}>
-              <img src="/assets/QrCode.jpg" alt="qr-code" className="h-20 w-20" />
+              <img loading="lazy" src="/assets/QrCode.jpg" alt="qr-code" className="h-20 w-20" />
               <div className="flex flex-col gap-2">
                 <a href="https://play.google.com">
-                  <img src="/assets/google-play.png" alt="google-play" className='h-[38px]' />
+                  <img loading="lazy" src="/assets/google-play.png" alt="google-play" className='h-[38px]' />
                 </a>
                 <a href="https://play.google.com">
-                  <img src="/assets/app-store.png" alt="app-store" className='h-[38px] w-full' />
+                  <img loading="lazy" src="/assets/app-store.png" alt="app-store" className='h-[38px] w-full' />
                 </a>
               </div>
             </div>

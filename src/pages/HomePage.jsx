@@ -46,7 +46,7 @@ export default function HomePage() {
             ) : (
               <div className="text text-white md:ps-16 sm:ps-8 ps-4 z-1">
                 <div className="flex gap-4 items-center mb-8">
-                  <img src="/assets/apple-logo.png" alt="apple-logo" className="w-10" />
+                  <img loading="lazy" src="/assets/apple-logo.png" alt="apple-logo" className="w-10" />
                   <span className="text-white mt-2">{t("home.landing.title")}</span>
                 </div>
                 <h2 className="text-5xl leading-[60px] tracking-[2px] mb-4">
@@ -59,7 +59,7 @@ export default function HomePage() {
             )}
 
             {!loading && (
-              <img
+              <img loading="lazy"
                 src="/products/iphone.jpg"
                 className={`img-fluid rounded-top h-[85%] mx-25 ${isMobile &&
                   "absolute opacity-40 left-1/2 -translate-x-1/2 !m-0 h-[70%]"
