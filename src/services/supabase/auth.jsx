@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import supabase from "./supabaseClient";
 import { SessionContext } from "@/store/SessionContext";
+import LoadingSpinner from "@/components/ui/LoadingSpinner";
 
 export default function SessionProvider({ children }) {
   const [session, setSession] = useState(null);
@@ -21,7 +22,7 @@ export default function SessionProvider({ children }) {
     return () => subscription.unsubscribe();
   }, []);
 
-  if (loading) return <div>Loading...</div>;
+  if (!loading) return <LoadingSpinner />;
 
   return (
     <SessionContext.Provider value={{ session, loading }}>

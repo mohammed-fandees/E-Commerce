@@ -1,12 +1,13 @@
 import { useContext } from "react";
 import { Navigate } from "react-router-dom";
 import { SessionContext } from "@/store/SessionContext";
+import LoadingSpinner from "@/components/ui/LoadingSpinner";
 
 export default function Wrapper({ children, prevent }) {
   const { loading, session } = useContext(SessionContext);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <LoadingSpinner />;
   }
 
   if (prevent === "user") {
