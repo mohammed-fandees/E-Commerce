@@ -13,7 +13,7 @@
   },
   "app": {
     "name": "Exclusive",
-    "version" : "v1.0"
+    "version": "v1.0"
   },
   "pages": {
     "home": "Home",
@@ -100,11 +100,11 @@
       "bannerCategory": "Sound Experience"
     },
     "products": {
-      "title": "Our Products", 
+      "title": "Our Products",
       "description": "Explore Our Products"
     },
     "featured": {
-      "title": "Featured", 
+      "title": "Featured",
       "description": "New Arrival",
       "cards": {
         "one": {
@@ -140,9 +140,119 @@
       }
     }
   },
+  "about": {
+    "title": "Our Story",
+    "text1": "Launced in 2015, Exclusive is South Asia’s premier online shopping makterplace with an active presense in Bangladesh. Supported by wide range of tailored marketing, data and service solutions, Exclusive has 10,500 sallers and 300 brands and serves 3 millioons customers across the region. ",
+    "text2": "Exclusive has more than 1 Million products to offer, growing at a very fast. Exclusive offers a diverse assotment in categories ranging  from consumer.",
+    "statistics": {
+      "one": {
+        "title": "10.5k",
+        "description": "Sellers active on our site"
+      },
+      "two": {
+        "title": "33k",
+        "description": "Monthly product sales"
+      },
+      "three": {
+        "title": "45.5k",
+        "description": "Active customers on our site"
+      },
+      "four": {
+        "title": "25k",
+        "description": "Annual gross sales on our site"
+      }
+    },
+    "employees": {
+      "one": {
+        "name": "Li Wei",
+        "position": "Co-Founder"
+      },
+      "two": {
+        "name": "James Carter",
+        "position": "Chief Executive Officer (CEO)"
+      },
+      "three": {
+        "name": "Rajesh Mehta",
+        "position": "Chief Technology Officer (CTO)"
+      },
+      "four": {
+        "name": "Dmitri Ivanov",
+        "position": "Chief Operating Officer (COO)"
+      },
+      "five": {
+        "name": "Chen Huang",
+        "position": "HR Manager"
+      },
+      "six": {
+        "name": "Luca Moretti",
+        "position": "Delivery Staff Manager"
+      }
+    }
+  },
   "wishlist": {
     "title": "Wishlist",
     "title2": "Just For You"
+  },
+  "contact": {
+    "info": {
+      "callUs": "Call Us",
+      "available": "We are available 24/7, 7 days a week.",
+      "phone": "Phone",
+      "writeToUs": "Write To Us",
+      "tips": "Fill out our form and we will contact you within 24 hours.",
+      "emails": "Emails"
+    },
+    "form": {
+      "name": "Your Name *",
+      "email": "Your Email *",
+      "phone": "Your Phone *",
+      "message": "Your Message",
+      "send": "Send Message",
+      "success": "Your message has been sent successfully!",
+      "error": "Please correct the errors in the form.",
+      "pending": "Validating form...",
+      "errors": {
+        "name": "Your Name is required.",
+        "email_required": "Your Email is required.",
+        "email_invalid": "Invalid email address.",
+        "phone_required": "Your Phone is required.",
+        "phone_invalid": "Invalid phone number format.",
+        "message": "Your Message is required."
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Log in to Exclusive",
+      "subtitle": "Enter your details below",
+      "emailOrPhone": "Email or Phone Number",
+      "password": "Password",
+      "button": "Log in",
+      "signup": "Sign Up",
+      "loggingIn": "Logging in...",
+      "forgot": "Forgot password?",
+      "fixErrors": "Please correct the errors and try again.",
+      "success": "Logged in successfully!",
+      "failed": "Login failed. Check your credentials.",
+      "haveNoAccount": "Don't have an account? ",
+      "google": "Log in with Google"
+    },
+    "signup": {
+      "title": "Create an account",
+      "subtitle": "Enter your details to register",
+      "name": "Full Name",
+      "email": "Email Address",
+      "password": "Password",
+      "button": "Create Account",
+      "signingUp": "Creating account...",
+      "google": "Sign up with Google",
+      "already": "Already have an account?",
+      "login": "Log in",
+      "fixErrors": "Please correct the errors and try again.",
+      "success": "Account created successfully!",
+      "failed": "Sign up failed. Try again later.",
+      "alreadyAccount": "Already have an account? "
+    }
   },
   "notFound": {
     "404": "404 Not Found",
