@@ -10,6 +10,11 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  build: {
+    rollupOptions: {
+      external: ['@rollup/rollup-linux-x64-gnu'],
+    },
+  },
   server: {
     port: 3000,
     host: '0.0.0.0',
