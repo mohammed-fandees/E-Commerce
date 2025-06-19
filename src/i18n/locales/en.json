@@ -15,64 +15,68 @@
     "saving": "Saving...",
     "loading": "Loading...",
     "edit": "Edit",
-    "delete": "Delete"
+    "delete": "Delete",
+    "continueShopping": "Continue Shopping",
+    "quickView": "Quick View"
   },
-  "firstName": {
-    "too_small": "First name is required"
-  },
-  "lastName": {
-    "too_small": "Last name is required"
-  },
-  "email": {
-    "too_small": "Email is required",
-    "invalid_string": "Invalid email address"
-  },
-  "address": {
-    "too_small": "Address is required"
-  },
-  "currentPassword": {
-    "too_small": "Current password is required"
-  },
-  "newPassword": {
-    "too_small": "New password must be at least 6 characters"
-  },
-  "confirmNewPassword": {
-    "too_small": "Password confirmation is required",
-    "custom": "Passwords do not match"
-  },
-  "cardholderName": {
-    "too_small": "Cardholder name is required"
-  },
-  "cardNumber": {
-    "too_small": "Card number is required",
-    "invalid_string": "Invalid card number format"
-  },
-  "expiryDate": {
-    "too_small": "Expiry date is required",
-    "invalid_string": "Invalid expiry date format (MM/YY)"
-  },
-  "cvv": {
-    "too_small": "CVV must be at least 3 digits",
-    "too_big": "CVV must be at most 4 digits",
-    "invalid_string": "CVV must contain only numbers"
-  },
-  "cardType": {
-    "too_small": "Card type is required"
-  },
-  "billingAddress.street": {
-    "too_small": "Street address is required"
-  },
-  "billingAddress.city": {
-    "too_small": "City is required"
-  },
-  "billingAddress.state": {
-    "too_small": "State is required"
-  },
-  "billingAddress.postalCode": {
-    "too_small": "Postal code is required"
-  },
-  "billingAddress.country": {
-    "too_small": "Country is required"
+  "validation": {
+    "firstName": {
+      "too_small": "First name is required"
+    },
+    "lastName": {
+      "too_small": "Last name is required"
+    },
+    "email": {
+      "too_small": "Email is required",
+      "invalid_string": "Invalid email address"
+    },
+    "address": {
+      "too_small": "Address is required"
+    },
+    "currentPassword": {
+      "too_small": "Current password is required"
+    },
+    "newPassword": {
+      "too_small": "New password must be at least 6 characters"
+    },
+    "confirmNewPassword": {
+      "too_small": "Password confirmation is required",
+      "custom": "Passwords do not match"
+    },
+    "cardholderName": {
+      "too_small": "Cardholder name is required"
+    },
+    "cardNumber": {
+      "too_small": "Card number is required",
+      "invalid_string": "Invalid card number format"
+    },
+    "expiryDate": {
+      "too_small": "Expiry date is required",
+      "invalid_string": "Invalid expiry date format (MM/YY)"
+    },
+    "cvv": {
+      "too_small": "CVV must be at least 3 digits",
+      "too_big": "CVV must be at most 4 digits",
+      "invalid_string": "CVV must contain only numbers"
+    },
+    "cardType": {
+      "too_small": "Card type is required"
+    },
+    "billingAddress.street": {
+      "too_small": "Street address is required"
+    },
+    "billingAddress.city": {
+      "too_small": "City is required"
+    },
+    "billingAddress.state": {
+      "too_small": "State is required"
+    },
+    "billingAddress.postalCode": {
+      "too_small": "Postal code is required"
+    },
+    "billingAddress.country": {
+      "too_small": "Country is required"
+    }
   },
   "app": {
     "name": "Exclusive",
@@ -302,7 +306,16 @@
   },
   "wishlist": {
     "title": "Wishlist",
-    "title2": "Just For You"
+    "justForYou": "Just For You",
+    "empty": "Your wishlist is empty",
+    "emptyDescription": "Add items you like to your wishlist. Review them anytime and easily move them to your bag.",
+    "itemAdded": "Item added to wishlist",
+    "itemRemoved": "Item removed from wishlist",
+    "addToWishlist": "Add to wishlist",
+    "removeFromWishlist": "Remove from wishlist",
+    "movedAllToCart": "All items moved to cart",
+    "cleared": "Wishlist cleared",
+    "emptyWishlist": "Your wishlist is empty"
   },
   "cart": {
     "product": "Product",

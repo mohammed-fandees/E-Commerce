@@ -5,11 +5,16 @@ import { Link } from "react-router";
 import { useTranslation } from "react-i18next";
 import { useCart } from "@/hooks/useCart";
 import { toast } from "sonner";
+import { useWishlist } from "@/hooks/useWishlist";
 
-export default function ProductCard({ id, title, image, price, oldPrice, rating, wish = false, reviewsCount, loading = false }) {
+export default function ProductCard({ id, title, image, price, oldPrice, rating, wish = false, reviewsCount, loading = false, showAsWishlistItem = false }) {
   const [imgError, setImgError] = useState(false);
+  const [animationState, setAnimationState] = useState(""); // Track animation state
   const { t } = useTranslation();
   const { addItem } = useCart();
+  const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
+
+  const isWishlistItem = showAsWishlistItem || isInWishlist(id);
 
   const handleAddToCart = (e) => {
     e.preventDefault();
@@ -20,6 +25,56 @@ export default function ProductCard({ id, title, image, price, oldPrice, rating,
     addItem(product);
 
     toast.success(t("cart.itemAdded"))
+  };
+
+  const handleWishlistToggle = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    if (isWishlistItem) {
+      // Removing from wishlist
+      setAnimationState("removing");
+      removeFromWishlist(id);
+      toast.success(t("wishlist.itemRemoved"));
+      
+      // Clear animation after it completes (400ms for bounce-out)
+      setTimeout(() => {
+        setAnimationState("");
+      }, 400);
+    } else {
+      // Adding to wishlist
+      setAnimationState("adding");
+      const product = { id, title, image, price, oldPrice, rating, reviewsCount };
+      addToWishlist(product);
+      toast.success(t("wishlist.itemAdded"));
+      
+      // Clear animation after it completes (800ms for bounce-glow)
+      setTimeout(() => {
+        setAnimationState("");
+      }, 800);
+    }
+  };
+
+  const handleViewProduct = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    console.log('View product:', id);
+  };
+
+  // Generate wishlist button classes
+  const getWishlistButtonClasses = () => {
+    let classes = "cursor-pointer bg-white p-1 rounded-full shadow wishlist-button";
+    
+    if (animationState) {
+      classes += ` ${animationState}`;
+    }
+    
+    if (isWishlistItem) {
+      classes += " active";
+    }
+    
+    return classes;
   };
 
   return (
@@ -48,10 +103,17 @@ export default function ProductCard({ id, title, image, price, oldPrice, rating,
               </button>
             ) : (
               <>
-                <button className="cursor-pointer bg-white p-1 rounded-full shadow">
-                  <Heart size="24" />
+                <button 
+                  onClick={handleWishlistToggle} 
+                  className={getWishlistButtonClasses()}
+                >
+                  <Heart 
+                    size="24" 
+                    fill={isInWishlist(id) ? "currentColor" : "none"} 
+                    className="heart-icon"
+                  />
                 </button>
-                <button className="cursor-pointer bg-white p-1 rounded-full shadow">
+                <button onClick={handleViewProduct} className="cursor-pointer bg-white p-1 rounded-full shadow">
                   <Eye size='24' />
                 </button>
               </>

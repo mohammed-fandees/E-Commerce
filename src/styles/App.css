@@ -127,3 +127,78 @@ div:has(.hoverable-card):hover > .hoverable-card > div svg {
 .cart-item:hover .remove-cart-item {
   display: flex;
 }
+
+/* Wishlist button animations - Bounce with Glow */
+.wishlist-button {
+  position: relative;
+  overflow: visible;
+  transition: all 0.3s ease;
+}
+
+/* Add to wishlist animation */
+.wishlist-button.adding {
+  animation: bounce-glow-add 0.8s ease-in-out;
+}
+
+/* Remove from wishlist animation */
+.wishlist-button.removing {
+  animation: bounce-out-remove 0.4s ease-in-out;
+}
+
+/* Bounce with Glow - Add Animation */
+@keyframes bounce-glow-add {
+  0% { 
+    transform: scale(1); 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
+  }
+  25% { 
+    transform: scale(1.4); 
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.6); 
+  }
+  50% { 
+    transform: scale(0.9); 
+    box-shadow: 0 0 30px rgba(239, 68, 68, 0.4); 
+  }
+  75% { 
+    transform: scale(1.2); 
+    box-shadow: 0 0 25px rgba(239, 68, 68, 0.5); 
+  }
+  100% { 
+    transform: scale(1); 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
+  }
+}
+
+/* Bounce Out - Remove Animation */
+@keyframes bounce-out-remove {
+  0% { 
+    transform: scale(1); 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
+  }
+  50% { 
+    transform: scale(0.7); 
+    box-shadow: 0 0 15px rgba(156, 163, 175, 0.4); 
+  }
+  100% { 
+    transform: scale(1); 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
+  }
+}
+
+/* Heart icon positioning */
+.wishlist-button .heart-icon {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+/* Active wishlist state */
+.wishlist-button.active .heart-icon {
+  color: #ef4444;
+}
+
+/* Hover effect for extra polish */
+.wishlist-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
