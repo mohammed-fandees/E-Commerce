@@ -30,7 +30,7 @@ export default function Header({ navLinks }) {
             <Link to="/wishlist"><Heart className="cursor-pointer" /></Link>
             <Link to="/cart" className="relative">
               {itemCount ?
-                <p className="absolute text-sm bg-[#db4444] w-fit p-4 h-4 rounded-full text-white flex items-center justify-center -top-1 -end-1">{itemCount}</p>
+                <p className="absolute text-sm bg-[#db4444] w-fit p-1 h-4 rounded-full text-white flex items-center justify-center -top-1 -end-1">{itemCount}</p>
                 : ""}
               <ShoppingCart className="cursor-pointer" />
             </Link>
