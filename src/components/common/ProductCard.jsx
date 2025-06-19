@@ -3,10 +3,24 @@ import { ImageOff, Eye, Heart, Trash2 } from "lucide-react";
 import Skeleton from "@mui/material/Skeleton";
 import { Link } from "react-router";
 import { useTranslation } from "react-i18next";
+import { useCart } from "@/hooks/useCart";
+import { toast } from "sonner";
 
 export default function ProductCard({ id, title, image, price, oldPrice, rating, wish = false, reviewsCount, loading = false }) {
   const [imgError, setImgError] = useState(false);
   const { t } = useTranslation();
+  const { addItem } = useCart();
+
+  const handleAddToCart = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    const product = { id, name: title, img: image, price, quantity: 1 };
+
+    addItem(product);
+
+    toast.success(t("cart.itemAdded"))
+  };
 
   return (
     <div className="product-card rounded-md relative min-w-[270px] min-h-[350px] [direction:ltr]">
@@ -54,12 +68,14 @@ export default function ProductCard({ id, title, image, price, oldPrice, rating,
             ) : (
               <Link to={`product/${id}`}>
                 <div className="rounded-sm h-[250px] mb-4 overflow-hidden flex items-center justify-center ">
-                  <img loading="lazy" src={image} alt={title} onError={() => setImgError(true)} className="object-contain w-[80%] h-[75%]" loading="lazy" />
+                  <img loading="lazy" src={image} alt={title} onError={() => setImgError(true)} className="object-contain w-[80%] h-[75%]" />
                 </div>
               </Link>
-
             )}
-            <button className={`add-to-card w-full py-2 bg-black text-white text-sm hover:opacity-90 transition ${wish && "on-wish-list -translate-y-[52px]"}`}>
+            <button
+              onClick={handleAddToCart}
+              className={`add-to-card w-full py-2 bg-black text-white text-sm hover:opacity-90 transition ${wish && "on-wish-list -translate-y-[52px]"}`}
+            >
               {t("common.addToCart")}
             </button>
           </div>

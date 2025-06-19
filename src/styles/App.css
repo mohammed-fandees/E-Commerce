@@ -123,3 +123,7 @@ div:has(.hoverable-card):hover > .hoverable-card > div svg {
     transform: scale(1.2, 1);
   }
 }
+
+.cart-item:hover .remove-cart-item {
+  display: flex;
+}
