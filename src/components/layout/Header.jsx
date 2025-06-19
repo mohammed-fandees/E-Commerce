@@ -8,6 +8,7 @@ import Container from "@/routes/Container";
 import { useContext } from "react";
 import { SessionContext } from "@/store/SessionContext";
 import { useCart } from "@/hooks/useCart";
+import { useWishlist } from "@/hooks/useWishlist";
 
 
 export default function Header({ navLinks }) {
@@ -15,6 +16,7 @@ export default function Header({ navLinks }) {
   const isRTL = getCurrentLanguage() == "ar";
   const { session } = useContext(SessionContext);
   const { itemCount } = useCart();
+  const { getWishlistCount } = useWishlist();
 
   return (
     <header className="p-4 max-h-[70px] mt-6 border-b-1 border-[rgba(0, 0, 0, 1)] sticky top-0 bg-white z-10">
@@ -27,7 +29,12 @@ export default function Header({ navLinks }) {
               <input type="text" placeholder={t("header.searchPlaceholder")} className="px-4 py-2 bg-[#F5F5F5] outline-0" />
               <Search />
             </div>
-            <Link to="/wishlist"><Heart className="cursor-pointer" /></Link>
+            <Link to="/wishlist" className="relative">
+              {getWishlistCount() ?
+                <p className="absolute text-sm bg-[#db4444] w-fit p-1 h-4 rounded-full text-white flex items-center justify-center -top-1 -end-1">{getWishlistCount()}</p>
+                : ""}
+              <Heart className="cursor-pointer" />
+            </Link>
             <Link to="/cart" className="relative">
               {itemCount ?
                 <p className="absolute text-sm bg-[#db4444] w-fit p-1 h-4 rounded-full text-white flex items-center justify-center -top-1 -end-1">{itemCount}</p>
