@@ -136,29 +136,21 @@ export default function MobileSidebar({ isOpen, onClose, navLinks }) {
   return (
     <>
       <div
-        className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-40 transition-all duration-[300ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${isAnimatingIn ? 'opacity-100' : 'opacity-0'
-          }`}
-        onClick={handleClose}
-        style={{ visibility: mounted ? 'visible' : 'hidden' }}
+        className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-40 transition-all duration-[200ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${isAnimatingIn ? 'opacity-100' : 'opacity-0'}`}
+        onClick={handleClose} style={{ visibility: mounted ? 'visible' : 'hidden' }}
       />
 
       <aside
         ref={sidebarRef}
-        className={`fixed top-0 ${isRTL ? 'right-0' : 'left-0'} h-full w-80 max-w-[85vw] bg-white z-50 shadow-2xl transition-all duration-[300ms] ease-in transform ${isAnimatingIn
-          ? 'translate-x-0 scale-100 opacity-100'
-          : isRTL
-            ? 'translate-x-full scale-95 opacity-90'
-            : '-translate-x-full scale-95 opacity-90'
-          }`}
+        className={`fixed top-0 ${isRTL ? 'right-0' : 'left-0'} h-full w-80 max-w-[85vw] bg-white z-50 shadow-2xl transition-all duration-[200ms] ease-in transform ${isAnimatingIn
+          ? 'translate-x-0 scale-100' : isRTL ? 'translate-x-full' : '-translate-x-full'}`}
         role="dialog"
         aria-modal="true"
         aria-label={t("header.menu")}
       >
         <header className="bg-black text-white p-4 shadow-lg">
           <div className={`flex items-center justify-between`}>
-            <div className={`flex items-center gap-3 transform transition-all duration-[500ms] ease-in ${isAnimatingIn ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
-              }`}
-              style={{ transitionDelay: isAnimatingIn ? '100ms' : '0ms' }}
+            <div className={`flex items-center gap-3 transform transition-all duration-[500ms] ease-in`}
             >
               <div className="bg-white/20 p-2.5 rounded-full backdrop-blur-sm">
                 <UserIcon className="w-5 h-5" />
@@ -170,9 +162,7 @@ export default function MobileSidebar({ isOpen, onClose, navLinks }) {
             </div>
             <button
               onClick={handleClose}
-              className={`p-2.5 hover:bg-white/20 rounded-full transition-all duration-[300ms] ease-in transform hover:scale-110 hover:rotate-90 focus:outline-none focus:ring-2 focus:ring-white/30 ${isAnimatingIn ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
-                }`}
-              style={{ transitionDelay: isAnimatingIn ? '150ms' : '0ms' }}
+              className={`p-2.5 hover:bg-white/20 rounded-full transition-all duration-[300ms] ease-in transform hover:scale-110 hover:rotate-90 focus:outline-none focus:ring-2 focus:ring-white/30`}
               aria-label={t("header.close")}
             >
               <X className="w-5 h-5" />
@@ -182,10 +172,7 @@ export default function MobileSidebar({ isOpen, onClose, navLinks }) {
 
         {/* Content with proper height calculation */}
         <div className="flex flex-col" style={{ height: 'calc(100% - 80px)' }}>
-          <nav className={`flex-1 overflow-y-auto overscroll-contain transform transition-all duration-[500ms] ease-in ${isAnimatingIn ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-            }`}
-            style={{ transitionDelay: isAnimatingIn ? '200ms' : '0ms' }}
-          >
+          <nav className={`flex-1 overflow-y-auto overscroll-contain transform transition-all duration-[500ms] ease-in`}>
 
             {/* Account Section */}
             {session &&
@@ -324,9 +311,7 @@ export default function MobileSidebar({ isOpen, onClose, navLinks }) {
                       key={index}
                       onClick={() => handleLanguageChange(option.code)}
                       className={`w-full p-3 ps-12 hover:bg-white/70 text-left transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] flex items-center gap-3 ${getCurrentLanguage() === option.code
-                        ? 'text-white font-semibold'
-                        : 'text-gray-700'
-                        }`}
+                        ? 'text-white font-semibold' : 'text-gray-700'}`}
                       style={{
                         backgroundColor: getCurrentLanguage() === option.code ? '#db4444' : 'transparent'
                       }}
@@ -343,10 +328,7 @@ export default function MobileSidebar({ isOpen, onClose, navLinks }) {
             </section>
           </nav>
 
-          <footer className={`p-4 bg-red-50/30 border-t border-gray-100 mt-auto transform transition-all duration-[500ms] ease-in ${isAnimatingIn ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-            }`}
-            style={{ transitionDelay: isAnimatingIn ? '300ms' : '0ms' }}
-          >
+          <footer className={`p-4 bg-red-50/30 border-t border-gray-100 mt-auto transform transition-all duration-[500ms] ease-in`}>
             <p className="text-xs text-gray-500 text-center">
               © 2025 {t("app.name")} - {t("app.version")}
             </p>
