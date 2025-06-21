@@ -27,7 +27,7 @@ function wishlistReducer(state, action) {
 
     case WISHLIST_ACTIONS.ADD_ITEM:
       // Check if item already exists
-      const existingItem = state.items.find(item => item.id === action.payload.id);
+      { const existingItem = state.items.find(item => item.id === action.payload.id);
       if (existingItem) {
         return state; // Item already in wishlist
       }
@@ -35,7 +35,7 @@ function wishlistReducer(state, action) {
       return {
         ...state,
         items: [...state.items, action.payload]
-      };
+      }; }
 
     case WISHLIST_ACTIONS.REMOVE_ITEM:
       return {
