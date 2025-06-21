@@ -36,8 +36,8 @@ export default function About() {
 
   return (
     <Container>
-      <div className="mt-18">
-        <Breadcrumbs />
+      <Breadcrumbs />
+      <div className="mt-8">
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
           <div className="col-span-1 order-3 xl:order-1 my-auto">
             <h1 className="text-[54px] font-bold mb-6">{t("about.title")}</h1>

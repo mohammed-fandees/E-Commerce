@@ -75,9 +75,9 @@ export default function Account() {
   return (
     <Wrapper prevent="guest">
       <Container>
-        <div className="pt-18">
+        <Breadcrumbs />
+        <div className="pt-8">
           <div className="flex items-center justify-between mb-8">
-            <Breadcrumbs />
             <p className="text-sm">
               {t("account.welcome")} 
               <span className="text-[#db4444] font-medium">

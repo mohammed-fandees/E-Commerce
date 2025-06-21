@@ -9,6 +9,7 @@ import { useCart } from "@/hooks/useCart";
 import { toast } from "sonner";
 import { Heart } from "lucide-react";
 import { Link } from "react-router";
+import Breadcrumbs from "@/components/common/Breadcrumbs ";
 
 export default function WishList() {
   const { t } = useTranslation();
@@ -31,7 +32,8 @@ export default function WishList() {
 
   return (
     <Container>
-      <div className="my-20">
+      <Breadcrumbs />
+      <div className="my-8">
         <div className="flex justify-between items-center mb-15">
           <h2 className="text-xl">
             {t("wishlist.title")} ({getWishlistCount()})

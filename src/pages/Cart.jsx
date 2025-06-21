@@ -67,9 +67,8 @@ export default function Cart() {
 
   return (
     <Container>
-      <div className="pt-8 lg:pt-18 pb-20">
         <Breadcrumbs />
-
+      <div className="pb-20">
         <div className="mt-8 bg-white rounded space-y-6">
           {!isMobile && (
             <div className="grid grid-cols-4 gap-4  px-4 py-6 [box-shadow:0px_1px_13px_0px_#0000001A]">

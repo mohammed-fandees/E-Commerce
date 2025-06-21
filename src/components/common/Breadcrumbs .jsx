@@ -24,7 +24,7 @@ export default function Breadcrumbs() {
   };
 
   return (
-    <nav className="text-sm text-gray-600 my-4" dir={i18n.dir()}>
+    <nav className="text-sm text-gray-600 pb-4 pt-18" dir={i18n.dir()}>
       <ol className="flex items-center space-x-1 rtl:space-x-reverse">
         <li>
           <Link to="/" className="hover:underline text-gray-500">{t("pages.home")}</Link>

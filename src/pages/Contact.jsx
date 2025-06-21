@@ -9,10 +9,9 @@ export default function Contact() {
 
   return (
     <Container>
-      <div className="mt-18 ">
-        <Breadcrumbs />
+      <Breadcrumbs />
+      <div className="pt-8 ">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-10 pb-20">
-
           <div className="col-span-1">
             <div className="card [box-shadow:0px_1px_13px_0px_#0000001A] p-6 md:p-8 h-full">
               <div className="flex gap-4 mb-6">
