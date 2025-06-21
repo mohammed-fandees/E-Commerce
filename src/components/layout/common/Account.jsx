@@ -27,9 +27,9 @@ export default function Account() {
 
   const items = [
     { text: "header.menu.manage", icon: "User", func: () => navigate("/account") },
-    { text: "header.menu.order", icon: "ShoppingBag", func: () => console.log("HI from function") },
-    { text: "header.menu.cancellations", icon: "CircleX", func: () => console.log("HI from function") },
-    { text: "header.menu.reviews", icon: "Star", func: () => console.log("HI from function") },
+    { text: "header.menu.order", icon: "ShoppingBag", func: () => navigate("/orders") },
+    { text: "header.menu.cancellations", icon: "CircleX", func: () => navigate("/orders") },
+    { text: "header.menu.reviews", icon: "Star", func: () => navigate("/reviews") },
     { text: "header.menu.logout", icon: "LogOut", func: signOut },
   ];
 

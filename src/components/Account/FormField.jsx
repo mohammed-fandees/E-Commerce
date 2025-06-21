@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FormField = ({ name, label, type, value, error, onChange, placeholder, showLabel = true }) => {
+const FormField = ({ name, label, type, value, error, onChange, placeholder, showLabel = true, className }) => {
   return (
     <div>
       {showLabel && (
@@ -9,7 +9,7 @@ const FormField = ({ name, label, type, value, error, onChange, placeholder, sho
         </label>
       )}
       <input type={type} id={name} name={name} value={value} onChange={onChange} placeholder={placeholder || label}
-        className={`w-full p-3 bg-[#F5F5F5] rounded-md focus:outline-none border ${error ? 'border-[#db4444]' : 'border-gray-300'} focus:border-[#db4444] transition-colors`}
+        className={`${className} w-full p-3 bg-[#F5F5F5] rounded-md focus:outline-none border ${error ? 'border-[#db4444]' : 'border-gray-300'} focus:border-[#db4444] transition-colors`}
       />
       {error && <p className="text-[#db4444] text-sm mt-1">{error}</p>}
     </div>

@@ -21,6 +21,7 @@ export default function Breadcrumbs() {
     dashboard: t("pages.dashboard"),
     profile: t("pages.profile"),
     settings: t("pages.settings"),
+    orders: t("pages.orders")
   };
 
   return (

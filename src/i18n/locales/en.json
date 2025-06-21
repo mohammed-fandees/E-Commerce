@@ -92,7 +92,8 @@
     "checkout": "Checkout",
     "cart": "Cart",
     "wishlist": "Wishlist",
-    "account": "Account"
+    "account": "Account",
+    "orders": "Orders"
   },
   "banner": {
     "text": "Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!",
@@ -423,27 +424,175 @@
     "couponApplied": "Coupon {{code}} applied successfully!"
   },
 
-  "orders": {
+"orders": {
     "title": "My Orders",
     "subtitle": "Track and manage your orders",
-    "noOrders": "No orders yet",
-    "noOrdersMessage": "You haven't placed any orders yet.",
-    "startShopping": "Start Shopping",
-    "orderNumber": "Order #{{number}}",
-    "placedOn": "Placed on {{date}} at {{time}}",
-    "items": "Items ({{count}})",
+    "ordersCount": "orders",
+    
+    "search": {
+      "placeholder": "Search by order number or product name...",
+      "help": "Search for orders by order number, product name, or item details"
+    },
+    
+    "actions": {
+      "export": "Export",
+      "downloadInvoices": "Download Invoices",
+      "exportOrders": "Export Orders",
+      "exportCSV": "Export as CSV",
+      "exportJSON": "Export as JSON",
+      "track": "Track Package",
+      "reorder": "Buy Again", 
+      "details": "View Details",
+      "collapse": "Hide Details",
+      "cancel": "Cancel Order",
+      "remove": "Remove Order",
+      "markCompleted": "Mark as Completed",
+      "invoice": "Invoice",
+      "downloadInvoice": "Download Invoice"
+    },
+    
+    "filters": {
+      "title": "Filter Orders",
+      "clear": "Clear Filters",
+      "active": "Active filters",
+      "status": {
+        "label": "Status",
+        "all": "All Orders",
+        "pending": "Pending",
+        "completed": "Completed", 
+        "cancelled": "Cancelled"
+      },
+      "date": {
+        "label": "Date Range",
+        "all": "All Time",
+        "week": "Past Week",
+        "month": "Past Month",
+        "threeMonths": "Past 3 Months",
+        "year": "Past Year"
+      }
+    },
+    
     "status": {
       "pending": "Pending",
       "completed": "Completed",
-      "cancelled": "Cancelled"
+      "cancelled": "Cancelled",
+      "unknown": "Unknown"
     },
+    
     "stats": {
       "total": "Total Orders",
       "pending": "Pending",
       "completed": "Completed",
+      "cancelled": "Cancelled",
       "totalSpent": "Total Spent"
-    }
+    },
+    
+    "list": {
+      "title": "Your Orders",
+      "sortBy": "Sort by",
+      "loadMore": "Load More Orders",
+      "sort": {
+        "newest": "Newest First",
+        "oldest": "Oldest First",
+        "highest": "Highest Total",
+        "lowest": "Lowest Total"
+      }
+    },
+    
+    "card": {
+      "orderNumber": "Order Number",
+      "orderDate": "Order Date",
+      "total": "Total",
+      "items": "items",
+      "addressNotSet": "Address not set",
+      "orderItems": "Order Items",
+      "billingInfo": "Billing Information",
+      "priceBreakdown": "Price Breakdown",
+      "name": "Name",
+      "address": "Address",
+      "city": "City",
+      "phone": "Phone",
+      "email": "Email",
+      "subtotal": "Subtotal",
+      "discount": "Discount",
+      "shipping": "Shipping",
+      "free": "Free"
+    },
+    
+    "item": {
+      "quantity": "Qty",
+      "total": "Total",
+      "buyAgain": "Buy Again",
+      "writeReview": "Write Review",
+      "viewProduct": "View Product",
+      "delivered": "Delivered"
+    },
+    
+    "empty": {
+      "title": "You haven't placed any orders yet",
+      "description": "When you do, their status will appear here. In the meantime, explore our amazing products and find something you love!",
+      "startShopping": "Start Shopping",
+      "viewWishlist": "View Your Wishlist",
+      "viewCart": "View Your Cart",
+      "helpTitle": "How to place your first order",
+      "step1Title": "Browse Products",
+      "step1Desc": "Explore our catalog and add items to your cart",
+      "step2Title": "Checkout",
+      "step2Desc": "Complete your purchase with secure payment",
+      "step3Title": "Track & Enjoy",
+      "step3Desc": "Monitor your order and enjoy your purchase"
+    },
+    
+    "noResults": {
+      "title": "No orders found",
+      "message": "Try adjusting your search or filter criteria",
+      "refresh": "Refresh Page"
+    },
+    
+    "help": {
+      "title": "Need Help with Your Orders?",
+      "description": "Find answers to common questions about orders, shipping, and returns.",
+      "trackingTitle": "Order Tracking",
+      "trackingDesc": "Track your packages in real-time with our delivery updates",
+      "returnsTitle": "Returns & Exchanges", 
+      "returnsDesc": "Easy returns within 30 days of delivery"
+    },
+    
+    "export": {
+      "processing": "Processing export...",
+      "noOrders": "No orders available to export",
+      "limitedInvoices": "Generating invoices for the first {{count}} orders to prevent browser blocking",
+      "largeExportWarning": "You have {{count}} orders. Large exports may take time to process.",
+      "invoicesDesc": "Generate PDF invoices for recent orders",
+      "csvDesc": "Export all order data as spreadsheet",
+      "jsonDesc": "Export raw order data for backup",
+      "invoicesGenerated": "Invoices generated successfully! Check your browser tabs.",
+      "invoiceError": "Failed to generate invoices. Please try again.",
+      "csvSuccess": "Orders exported to CSV successfully!",
+      "csvError": "Failed to export CSV. Please try again.",
+      "jsonSuccess": "Orders exported to JSON successfully!",
+      "jsonError": "Failed to export JSON. Please try again."
+    },
+    
+    "invoice": {
+      "generated": "Invoice generated successfully!",
+      "error": "Failed to generate invoice. Please try again."
+    },
+    
+    "errors": {
+      "loadFailed": "Failed to load orders. Please try again.",
+      "reorderFailed": "Failed to add items to cart. Please try again.",
+      "statusUpdateFailed": "Failed to update order status.",
+      "cancelFailed": "Failed to cancel order.",
+      "deleteFailed": "Failed to delete order."
+    },
+    
+    "reorderSuccess": "Items added to cart successfully!",
+    "statusUpdated": "Order status updated successfully",
+    "orderDeleted": "Order removed successfully",
+    "trackingInfo": "Tracking information for order {{orderNumber}} is not available yet."
   },
+  
   "contact": {
     "info": {
       "callUs": "Call Us",

@@ -7,6 +7,7 @@ import MobileHeader from '@/components/layout/MobileHeader';
 import { useContext } from 'react';
 import { SessionContext } from '@/store/SessionContext';
 import { UserPlus, User, Home, Phone, Info } from 'lucide-react';
+import Orders from '@/pages/Orders';
 
 export default function AppRouter() {
   const isMobile = useIsMobile();
@@ -35,6 +36,7 @@ export default function AppRouter() {
         <Route path="/products/:id" element={<ProductDetailsPage />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<CheckOut />} />
+        <Route path="/orders" element={<Orders />} />
       </Routes>
       <Footer />
     </Router>
