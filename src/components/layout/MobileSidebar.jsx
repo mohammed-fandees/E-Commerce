@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef, useContext } from "react";
 import { useTranslation } from "react-i18next";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { X, ChevronRight, ChevronDown, Globe, User, ShoppingBag, CircleX, Star, LogOut, UserIcon, Home, Phone, Info, UserPlus } from "lucide-react";
 import { changeLanguage, getCurrentLanguage } from "../../utils/change-lang";
 import supabase from "@/services/supabase/supabaseClient";
@@ -9,6 +9,7 @@ import { SessionContext } from "@/store/SessionContext";
 export default function MobileSidebar({ isOpen, onClose, navLinks }) {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const location = useLocation();
   const isRTL = getCurrentLanguage() === "ar";
   const sidebarRef = useRef(null);
   const [mounted, setMounted] = useState(false);
@@ -129,6 +130,8 @@ export default function MobileSidebar({ isOpen, onClose, navLinks }) {
     setIsAnimatingIn(false);
   }, [handleClose]);
 
+  const isActive = useCallback((path) => location.pathname === path, [location]);
+
   // Don't render if not mounted
   if (!mounted) return null;
 
@@ -227,7 +230,8 @@ export default function MobileSidebar({ isOpen, onClose, navLinks }) {
                     key={index}
                     to={link.path}
                     onClick={handleLinkClick}
-                    className={`flex items-center gap-3 p-4 hover:bg-red-50 border-b border-gray-50 transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] group `}
+                    className={`flex items-center gap-3 p-4 hover:bg-red-50 border-b border-gray-50 transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] group 
+                       ${isActive(link.path) ? "bg-red-100 text-red-600 font-semibold" : "hover:bg-red-50 text-gray-700"} `}
                   >
                     <div className="p-2 bg-gray-100 rounded-lg group-hover:text-white transition-all duration-200" style={{ backgroundColor: '#fef2f2' }}>
                       <IconComponent className="w-4 h-4 group-hover:text-white" style={{ color: '#db4444' }} />
