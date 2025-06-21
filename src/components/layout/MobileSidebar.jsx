@@ -123,12 +123,11 @@ export default function MobileSidebar({ isOpen, onClose, navLinks }) {
     handleClose();
   }, [handleClose]);
 
-
   const handleLanguageChange = useCallback((code) => {
     changeLanguage(code);
-    setShowLanguageMenu(false);
+    handleClose();
     setIsAnimatingIn(false);
-  }, []);
+  }, [handleClose]);
 
   // Don't render if not mounted
   if (!mounted) return null;
