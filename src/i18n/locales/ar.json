@@ -352,6 +352,95 @@
     "emptyCartMessage": "يبدو أنك لم تضف أي منتجات إلى السلة بعد. ابدأ التسوق الآن!",
     "itemsInCart": "عنصر واحد في السلة",
     "itemsInCart_plural": "{{count}} عناصر في السلة"
+  },  "checkout": {
+    "title": "الدفع",
+    "subtitle": "أكمل طلبك عن طريق تقديم تفاصيل الدفع أدناه.",
+    "orderSummary": "ملخص الطلب",
+    "emptyCart": "عربة التسوق فارغة",
+    "placeOrder": "تأكيد الطلب",
+    "orderSuccess": "تم تأكيد الطلب بنجاح! تحقق من صفحة الطلبات لتتبع التقدم.",
+    
+    "billing": {
+      "title": "تفاصيل الفواتير",
+      "firstName": "الاسم الأول",
+      "firstNamePlaceholder": "أدخل اسمك الأول",
+      "companyName": "اسم الشركة",
+      "companyNamePlaceholder": "الشركة (اختياري)",
+      "streetAddress": "عنوان الشارع",
+      "streetAddressPlaceholder": "أدخل عنوان الشارع",
+      "apartment": "الشقة، الطابق، إلخ.",
+      "apartmentPlaceholder": "الشقة، المجموعة، إلخ. (اختياري)",
+      "townCity": "المدينة",
+      "townCityPlaceholder": "أدخل مدينتك",
+      "phoneNumber": "رقم الهاتف",
+      "phoneNumberPlaceholder": "أدخل رقم هاتفك",
+      "emailAddress": "عنوان البريد الإلكتروني",
+      "emailAddressPlaceholder": "أدخل بريدك الإلكتروني",
+      "saveInfo": "احفظ هذه المعلومات للدفع السريع في المرة القادمة"
+    },
+    
+    "summary": {
+      "subtotal": "المجموع الفرعي",
+      "discount": "الخصم",
+      "shipping": "الشحن",
+      "total": "الإجمالي",
+      "free": "مجاني"
+    },
+    
+    "payment": {
+      "title": "طريقة الدفع",
+      "bank": "بنك",
+      "cashOnDelivery": "الدفع عند الاستلام",
+      "acceptedCards": "نحن نقبل"
+    },
+    
+    "coupon": {
+      "placeholder": "كود الخصم",
+      "apply": "تطبيق الكوبون",
+      "remove": "إزالة",
+      "applied": "تم تطبيق الكوبون بنجاح",
+      "changeCoupon": "استخدم كوبون مختلف",
+      "validCoupons": "جرب: SAVE10, SAVE20, WELCOME, FIRST20"
+    },
+    
+    "security": {
+      "title": "دفع آمن",
+      "description": "معلومات الدفع الخاصة بك مشفرة وآمنة. نحن لا نحفظ تفاصيل بطاقتك أبداً."
+    },
+    
+    "errors": {
+      "missingFields": "يرجى ملء جميع الحقول المطلوبة",
+      "invalidEmail": "يرجى إدخال عنوان بريد إلكتروني صحيح",
+      "emptyCoupon": "يرجى إدخال كود الكوبون",
+      "invalidCoupon": "كود كوبون غير صالح. جرب: SAVE10, SAVE20, WELCOME, FIRST20",
+      "couponError": "خطأ في تطبيق الكوبون. يرجى المحاولة مرة أخرى.",
+      "emptyCart": "عربة التسوق فارغة. أضف بعض العناصر قبل الدفع.",
+      "orderFailed": "فشل في تأكيد الطلب. يرجى المحاولة مرة أخرى."
+    },
+
+    "couponApplied": "تم تطبيق الكوبون {{code}} بنجاح!"
+  },
+
+  "orders": {
+    "title": "طلباتي",
+    "subtitle": "تتبع وإدارة طلباتك",
+    "noOrders": "لا توجد طلبات بعد",
+    "noOrdersMessage": "لم تقم بتقديم أي طلبات بعد.",
+    "startShopping": "ابدأ التسوق",
+    "orderNumber": "طلب رقم {{number}}",
+    "placedOn": "تم في {{date}} في {{time}}",
+    "items": "العناصر ({{count}})",
+    "status": {
+      "pending": "قيد المعالجة",
+      "completed": "مكتمل",
+      "cancelled": "ملغي"
+    },
+    "stats": {
+      "total": "إجمالي الطلبات",
+      "pending": "قيد المعالجة",
+      "completed": "مكتمل",
+      "totalSpent": "إجمالي المبلغ المنفق"
+    }
   },
   "contact": {
     "info": {

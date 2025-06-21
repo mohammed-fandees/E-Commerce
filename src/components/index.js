@@ -1,3 +1,9 @@
 export { default as Header } from "./layout/Header";
 export { default as Banner } from "./layout/Banner";
 export { default as Sidebar } from "./common/Sidebar";
+export { default as BillingForm } from './Checkout/BillingForm';
+export { default as OrderSummary } from './Checkout/OrderSummary';
+export { default as OrderItem } from './Checkout/OrderItem';
+export { default as PriceSummary } from './Checkout/PriceSummary';
+export { default as PaymentMethods } from './Checkout/PaymentMethods';
+export { default as CouponSection } from './Checkout/CouponSection';

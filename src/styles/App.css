@@ -202,3 +202,144 @@ div:has(.hoverable-card):hover > .hoverable-card > div svg {
   transform: translateY(-1px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
+
+
+/* Checkout specific styles */
+.checkout-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Billing form animations */
+.billing-form-field {
+  transition: all 0.3s ease;
+}
+
+.billing-form-field:focus-within {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Order summary sticky positioning */
+.order-summary-sticky {
+  position: sticky;
+  top: 2rem;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+}
+
+/* Payment method selection */
+.payment-method-option {
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.payment-method-option:hover {
+  border-color: #e5e7eb;
+  background-color: #f9fafb;
+}
+
+.payment-method-option.selected {
+  border-color: #ef4444;
+  background-color: #fef2f2;
+}
+
+/* Coupon section animations */
+.coupon-success {
+  animation: slideInUp 0.3s ease-out;
+}
+
+.coupon-applied-card {
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  border: 1px solid #86efac;
+  transition: all 0.3s ease;
+}
+
+.coupon-applied-card:hover {
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.2);
+}
+
+.coupon-remove-btn {
+  transition: all 0.2s ease;
+}
+
+.coupon-remove-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Order item hover effects */
+.order-item {
+  transition: background-color 0.2s ease;
+}
+
+.order-item:hover {
+  background-color: #f9fafb;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .checkout-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .order-summary-sticky {
+    position: static;
+    max-height: none;
+  }
+}
+
+/* Loading states */
+.loading-overlay {
+  position: relative;
+}
+
+.loading-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* Security notice styling */
+.security-notice {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  border: 1px solid #93c5fd;
+}
+
+/* Form validation styles */
+.form-field-error {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.form-field-error:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+/* Success states */
+.success-message {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+  border: 1px solid #86efac;
+  color: #166534;
+}

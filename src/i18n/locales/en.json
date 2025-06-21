@@ -354,6 +354,96 @@
     "itemsInCart": "{{count}} item in cart",
     "itemsInCart_plural": "{{count}} items in cart"
   },
+  "checkout": {
+    "title": "Checkout",
+    "subtitle": "Complete your order by providing your payment details below.",
+    "orderSummary": "Order Summary",
+    "emptyCart": "Your cart is empty",
+    "placeOrder": "Place Order",
+    "orderSuccess": "Order placed successfully! Check your orders page to track progress.",
+    
+    "billing": {
+      "title": "Billing Details",
+      "firstName": "First Name",
+      "firstNamePlaceholder": "Enter your first name",
+      "companyName": "Company Name",
+      "companyNamePlaceholder": "Company (optional)",
+      "streetAddress": "Street Address",
+      "streetAddressPlaceholder": "Enter your street address",
+      "apartment": "Apartment, floor, etc.",
+      "apartmentPlaceholder": "Apartment, suite, etc. (optional)",
+      "townCity": "Town/City",
+      "townCityPlaceholder": "Enter your city",
+      "phoneNumber": "Phone Number",
+      "phoneNumberPlaceholder": "Enter your phone number",
+      "emailAddress": "Email Address",
+      "emailAddressPlaceholder": "Enter your email address",
+      "saveInfo": "Save this information for faster check-out next time"
+    },
+    
+    "summary": {
+      "subtotal": "Subtotal",
+      "discount": "Discount",
+      "shipping": "Shipping",
+      "total": "Total",
+      "free": "Free"
+    },
+    
+    "payment": {
+      "title": "Payment Method",
+      "bank": "Bank",
+      "cashOnDelivery": "Cash on delivery",
+      "acceptedCards": "We accept"
+    },
+    
+    "coupon": {
+      "placeholder": "Coupon Code",
+      "apply": "Apply Coupon",
+      "remove": "Remove",
+      "applied": "Coupon applied successfully",
+      "changeCoupon": "Use a different coupon",
+      "validCoupons": "Try: SAVE10, SAVE20, WELCOME, FIRST20"
+    },
+    
+    "security": {
+      "title": "Secure Checkout",
+      "description": "Your payment information is encrypted and secure. We never store your card details."
+    },
+    
+    "errors": {
+      "missingFields": "Please fill in all required fields",
+      "invalidEmail": "Please enter a valid email address",
+      "emptyCoupon": "Please enter a coupon code",
+      "invalidCoupon": "Invalid coupon code. Try: SAVE10, SAVE20, WELCOME, FIRST20",
+      "couponError": "Error applying coupon. Please try again.",
+      "emptyCart": "Your cart is empty. Add some items before checkout.",
+      "orderFailed": "Failed to place order. Please try again."
+    },
+
+    "couponApplied": "Coupon {{code}} applied successfully!"
+  },
+
+  "orders": {
+    "title": "My Orders",
+    "subtitle": "Track and manage your orders",
+    "noOrders": "No orders yet",
+    "noOrdersMessage": "You haven't placed any orders yet.",
+    "startShopping": "Start Shopping",
+    "orderNumber": "Order #{{number}}",
+    "placedOn": "Placed on {{date}} at {{time}}",
+    "items": "Items ({{count}})",
+    "status": {
+      "pending": "Pending",
+      "completed": "Completed",
+      "cancelled": "Cancelled"
+    },
+    "stats": {
+      "total": "Total Orders",
+      "pending": "Pending",
+      "completed": "Completed",
+      "totalSpent": "Total Spent"
+    }
+  },
   "contact": {
     "info": {
       "callUs": "Call Us",
