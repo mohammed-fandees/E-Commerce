@@ -5,13 +5,16 @@ import { Link } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useState } from "react";
 import MobileSidebar from "./MobileSidebar";
+import { useWishlist } from "@/hooks/useWishlist";
+import { useCart } from "@/hooks/useCart";
 
 export default function MobileHeader({ navLinks }) {
   const { t } = useTranslation();
   const isRTL = getCurrentLanguage() === "ar";
   const isMobile = useIsMobile();
   const [isOpened, setIsOpened] = useState(false);
-
+  const { getWishlistCount } = useWishlist();
+  const { itemCount } = useCart();
   const handleSidebarToggle = () => setIsOpened(!isOpened);
   const handleSidebarClose = () => setIsOpened(false);
 
@@ -29,11 +32,17 @@ export default function MobileHeader({ navLinks }) {
           </div>
 
           <div className={`flex space-x-6 items-center ${isRTL && 'flex-row-reverse space-x-reverse'}`}>
-            <Link to="/wishlist" aria-label="Wishlist">
-              <Heart className="cursor-pointer w-6 h-6 hover:text-red-500 transition-colors" />
+            <Link to="/wishlist" className="relative">
+              {getWishlistCount() ?
+                <p className="absolute text-sm bg-[#db4444] w-fit p-1 h-4 rounded-full text-white flex items-center justify-center -top-1 -end-1">{getWishlistCount()}</p>
+                : ""}
+              <Heart className="cursor-pointer" />
             </Link>
-            <Link to="/cart" aria-label="Shopping cart">
-              <ShoppingCart className="cursor-pointer w-6 h-6 hover:text-blue-500 transition-colors" />
+            <Link to="/cart" className="relative">
+              {itemCount ?
+                <p className="absolute text-sm bg-[#db4444] w-fit p-1 h-4 rounded-full text-white flex items-center justify-center -top-1 -end-1">{itemCount}</p>
+                : ""}
+              <ShoppingCart className="cursor-pointer" />
             </Link>
           </div>
         </div>
