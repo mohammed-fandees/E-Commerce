@@ -64,7 +64,7 @@ const ImageGallery = ({ product, selectedImage, onImageSelect, imageLoading, onI
         <div className="relative bg-gray-50 rounded-lg overflow-hidden group">
           {/* Discount Badge */}
           {discountPercentage > 0 && (
-            <div className="absolute top-4 left-4 bg-[#db4444] text-white text-sm font-bold px-3 py-1 rounded z-10">
+            <div className="absolute top-4 left-4 bg-[#db4444] text-white text-sm font-bold px-3 py-1 rounded z-2">
               -{discountPercentage}%
             </div>
           )}
