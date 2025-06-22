@@ -4,6 +4,7 @@ import { Banner, Header } from '../components';
 import Footer from '@/components/layout/Footer';
 import { useIsMobile } from '@/hooks/use-mobile';
 import MobileHeader from '@/components/layout/MobileHeader';
+import ScrollToTop from '@/components/common/ScrollToTop';
 import { useContext } from 'react';
 import { SessionContext } from '@/store/SessionContext';
 import { UserPlus, User, Home, Phone, Info } from 'lucide-react';
@@ -22,6 +23,7 @@ export default function AppRouter() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Banner />
       {isMobile ? <MobileHeader navLinks={navLinks} /> : <Header navLinks={navLinks} />}
       <Routes>
