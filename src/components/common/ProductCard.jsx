@@ -55,13 +55,6 @@ export default function ProductCard({ id, title, image, price, oldPrice, rating,
     }
   };
 
-  const handleViewProduct = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-
-    console.log('View product:', id);
-  };
-
   // Generate wishlist button classes
   const getWishlistButtonClasses = () => {
     let classes = "cursor-pointer bg-white p-1 rounded-full shadow wishlist-button";
@@ -102,33 +95,21 @@ export default function ProductCard({ id, title, image, price, oldPrice, rating,
                 <Trash2 size="24" />
               </button>
             ) : (
-              <>
-                <button 
-                  onClick={handleWishlistToggle} 
-                  className={getWishlistButtonClasses()}
-                >
-                  <Heart 
-                    size="24" 
-                    fill={isInWishlist(id) ? "currentColor" : "none"} 
-                    className="heart-icon"
-                  />
-                </button>
-                <button onClick={handleViewProduct} className="cursor-pointer bg-white p-1 rounded-full shadow">
-                  <Eye size='24' />
-                </button>
-              </>
+              <button onClick={handleWishlistToggle} className={getWishlistButtonClasses()}>
+                <Heart  size="24"  fill={isInWishlist(id) ? "currentColor" : "none"}  className="heart-icon" />
+              </button>
             )}
           </div>
 
           <div className="rounded-sm h-[250px] overflow-hidden bg-[#F5F5F5]">
             {imgError ? (
-              <Link to={`product/${id}`}>
+              <Link to={`/products/${id}`}>
                 <div className="flex items-center mb-4 justify-center h-[250px]">
                   <ImageOff size="68" color="#aaa" />
                 </div>
               </Link>
             ) : (
-              <Link to={`product/${id}`}>
+              <Link to={`/products/${id}`}>
                 <div className="rounded-sm h-[250px] mb-4 overflow-hidden flex items-center justify-center ">
                   <img loading="lazy" src={image} alt={title} onError={() => setImgError(true)} className="object-contain w-[80%] h-[75%]" />
                 </div>
@@ -143,7 +124,7 @@ export default function ProductCard({ id, title, image, price, oldPrice, rating,
           </div>
           <div className="p-4">
             <h3 className="font-medium text-gray-800 line-clamp-2 mb-1">
-              <Link to={`product/${id}`}>{title}</Link>
+              <Link to={`/products/${id}`}>{title}</Link>
             </h3>
 
             <div className="flex items-center gap-2 mb-1">

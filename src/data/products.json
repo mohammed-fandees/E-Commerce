@@ -1,18 +1,4745 @@
 {
   "products": [
-    {"id": 1, "img": "/products/controller-havic.png", "title": "HAVIC HV-G92 Gamepad", "price": 120, "oldPrice": 160, "rating": 5, "reviewsCount": 88},
-    {"id": 2, "img": "/products/keyboard.png", "title": "AK-900 Wired Keyboard", "price": 960, "oldPrice": 1160, "rating": 4, "reviewsCount": 75},
-    {"id": 3, "img": "/products/msi-monitor.png", "title": "IPS LCD Gaming Monitor", "price": 370, "oldPrice": 400, "rating": 5, "reviewsCount": 88},
-    {"id": 4, "img": "/products/comfort-chair.png", "title": "S-Series Comfort Chair ", "price": 110, "oldPrice": 155, "rating": 3, "reviewsCount": 1025},
-    {"id": 5, "img": "/products/gucci-duffle-bag.png", "title": "Gucci duffle bag", "price": 70, "oldPrice": 150, "rating": 5, "reviewsCount": 808},
-    {"id": 6, "img": "/products/controller-havic.png", "title": "HAVIC HV-G92 Gamepad", "price": 160, "oldPrice": null, "rating": 5, "reviewsCount": 88},
-    {"id": 7, "img": "/products/controller-havic.png", "title": "HAVIC HV-G92 Gamepad", "price": 160, "oldPrice": null, "rating": 5, "reviewsCount": 88},
-    {"id": 8, "img": "/products/controller-havic.png", "title": "HAVIC HV-G92 Gamepad", "price": 160, "oldPrice": null, "rating": 5, "reviewsCount": 88},
-    {"id": 9, "img": "/products/controller-havic.png", "title": "HAVIC HV-G92 Gamepad", "price": 160, "oldPrice": null, "rating": 5, "reviewsCount": 88},
-    {"id": 10, "img": "/products/controller-havic.png", "title": "HAVIC HV-G92 Gamepad", "price": 160, "oldPrice": null, "rating": 5, "reviewsCount": 88},
-    {"id": 11, "img": "/products/controller-havic.png", "title": "HAVIC HV-G92 Gamepad", "price": 160, "oldPrice": null, "rating": 5, "reviewsCount": 88},
-    {"id": 12, "img": "/products/controller-havic.png", "title": "HAVIC HV-G92 Gamepad", "price": 160, "oldPrice": null, "rating": 5, "reviewsCount": 88},
-    {"id": 13, "img": "/products/controller-havic.png", "title": "HAVIC HV-G92 Gamepad", "price": 160, "oldPrice": null, "rating": 5, "reviewsCount": 88},
-    {"id": 14, "img": "/products/controller-havic.png", "title": "HAVIC HV-G92 Gamepad", "price": 160, "oldPrice": null, "rating": 5, "reviewsCount": 88}
+    {
+      "id": 1,
+      "img": "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp"
+      ],
+      "title": "Essence Mascara Lash Princess",
+      "price": 9.99,
+      "oldPrice": 11,
+      "rating": 3,
+      "reviewsCount": 99,
+      "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+      "colors": [
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": true
+        },
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": false
+        }
+      ],
+      "sizes": [
+        {
+          "name": "S",
+          "available": true
+        },
+        {
+          "name": "XS",
+          "available": true
+        },
+        {
+          "name": "M",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 99,
+      "category": "beauty",
+      "brand": "Essence",
+      "sku": "SKU-1",
+      "specifications": {
+        "Brand": "Essence",
+        "Category": "beauty",
+        "Rating": "2.56 / 5",
+        "Discount": "10.48%"
+      }
+    },
+    {
+      "id": 2,
+      "img": "https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/1.webp"
+      ],
+      "title": "Eyeshadow Palette with Mirror",
+      "price": 19.99,
+      "oldPrice": 24,
+      "rating": 3,
+      "reviewsCount": 34,
+      "description": "The Eyeshadow Palette with Mirror offers a versatile range of eyeshadow shades for creating stunning eye looks. With a built-in mirror, it's convenient for on-the-go makeup application.",
+      "colors": [
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": false
+        },
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "L",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 34,
+      "category": "beauty",
+      "brand": "Glamour Beauty",
+      "sku": "SKU-2",
+      "specifications": {
+        "Brand": "Glamour Beauty",
+        "Category": "beauty",
+        "Rating": "2.86 / 5",
+        "Discount": "18.19%"
+      }
+    },
+    {
+      "id": 3,
+      "img": "https://cdn.dummyjson.com/product-images/beauty/powder-canister/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/beauty/powder-canister/1.webp"
+      ],
+      "title": "Powder Canister",
+      "price": 14.99,
+      "oldPrice": 16,
+      "rating": 5,
+      "reviewsCount": 89,
+      "description": "The Powder Canister is a finely milled setting powder designed to set makeup and control shine. With a lightweight and translucent formula, it provides a smooth and matte finish.",
+      "colors": [
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "M",
+          "available": true
+        },
+        {
+          "name": "S",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 89,
+      "category": "beauty",
+      "brand": "Velvet Touch",
+      "sku": "SKU-3",
+      "specifications": {
+        "Brand": "Velvet Touch",
+        "Category": "beauty",
+        "Rating": "4.64 / 5",
+        "Discount": "9.84%"
+      }
+    },
+    {
+      "id": 4,
+      "img": "https://cdn.dummyjson.com/product-images/beauty/red-lipstick/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/beauty/red-lipstick/1.webp"
+      ],
+      "title": "Red Lipstick",
+      "price": 12.99,
+      "oldPrice": 15,
+      "rating": 4,
+      "reviewsCount": 91,
+      "description": "The Red Lipstick is a classic and bold choice for adding a pop of color to your lips. With a creamy and pigmented formula, it provides a vibrant and long-lasting finish.",
+      "colors": [
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": false
+        },
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "S",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 91,
+      "category": "beauty",
+      "brand": "Chic Cosmetics",
+      "sku": "SKU-4",
+      "specifications": {
+        "Brand": "Chic Cosmetics",
+        "Category": "beauty",
+        "Rating": "4.36 / 5",
+        "Discount": "12.16%"
+      }
+    },
+    {
+      "id": 5,
+      "img": "https://cdn.dummyjson.com/product-images/beauty/red-nail-polish/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/beauty/red-nail-polish/1.webp"
+      ],
+      "title": "Red Nail Polish",
+      "price": 8.99,
+      "oldPrice": 10,
+      "rating": 4,
+      "reviewsCount": 79,
+      "description": "The Red Nail Polish offers a rich and glossy red hue for vibrant and polished nails. With a quick-drying formula, it provides a salon-quality finish at home.",
+      "colors": [
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": true
+        },
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "M",
+          "available": true
+        },
+        {
+          "name": "S",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 79,
+      "category": "beauty",
+      "brand": "Nail Couture",
+      "sku": "SKU-5",
+      "specifications": {
+        "Brand": "Nail Couture",
+        "Category": "beauty",
+        "Rating": "4.32 / 5",
+        "Discount": "11.44%"
+      }
+    },
+    {
+      "id": 6,
+      "img": "https://cdn.dummyjson.com/product-images/fragrances/calvin-klein-ck-one/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/fragrances/calvin-klein-ck-one/1.webp",
+        "https://cdn.dummyjson.com/product-images/fragrances/calvin-klein-ck-one/2.webp",
+        "https://cdn.dummyjson.com/product-images/fragrances/calvin-klein-ck-one/3.webp"
+      ],
+      "title": "Calvin Klein CK One",
+      "price": 49.99,
+      "oldPrice": 51,
+      "rating": 4,
+      "reviewsCount": 29,
+      "description": "CK One by Calvin Klein is a classic unisex fragrance, known for its fresh and clean scent. It's a versatile fragrance suitable for everyday wear.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        },
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": true
+        },
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "S",
+          "available": true
+        },
+        {
+          "name": "XL",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 29,
+      "category": "fragrances",
+      "brand": "Calvin Klein",
+      "sku": "SKU-6",
+      "specifications": {
+        "Brand": "Calvin Klein",
+        "Category": "fragrances",
+        "Rating": "4.37 / 5",
+        "Discount": "1.89%"
+      }
+    },
+    {
+      "id": 7,
+      "img": "https://cdn.dummyjson.com/product-images/fragrances/chanel-coco-noir-eau-de/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/fragrances/chanel-coco-noir-eau-de/1.webp",
+        "https://cdn.dummyjson.com/product-images/fragrances/chanel-coco-noir-eau-de/2.webp",
+        "https://cdn.dummyjson.com/product-images/fragrances/chanel-coco-noir-eau-de/3.webp"
+      ],
+      "title": "Chanel Coco Noir Eau De",
+      "price": 129.99,
+      "oldPrice": 151,
+      "rating": 4,
+      "reviewsCount": 58,
+      "description": "Coco Noir by Chanel is an elegant and mysterious fragrance, featuring notes of grapefruit, rose, and sandalwood. Perfect for evening occasions.",
+      "colors": [
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": true
+        },
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "L",
+          "available": true
+        },
+        {
+          "name": "S",
+          "available": false
+        },
+        {
+          "name": "XS",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 58,
+      "category": "fragrances",
+      "brand": "Chanel",
+      "sku": "SKU-7",
+      "specifications": {
+        "Brand": "Chanel",
+        "Category": "fragrances",
+        "Rating": "4.26 / 5",
+        "Discount": "16.51%"
+      }
+    },
+    {
+      "id": 8,
+      "img": "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/1.webp",
+        "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/2.webp",
+        "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/3.webp"
+      ],
+      "title": "Dior J'adore",
+      "price": 89.99,
+      "oldPrice": 103,
+      "rating": 4,
+      "reviewsCount": 98,
+      "description": "J'adore by Dior is a luxurious and floral fragrance, known for its blend of ylang-ylang, rose, and jasmine. It embodies femininity and sophistication.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": false
+        },
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": true
+        },
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XL",
+          "available": false
+        },
+        {
+          "name": "L",
+          "available": true
+        },
+        {
+          "name": "M",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 98,
+      "category": "fragrances",
+      "brand": "Dior",
+      "sku": "SKU-8",
+      "specifications": {
+        "Brand": "Dior",
+        "Category": "fragrances",
+        "Rating": "3.8 / 5",
+        "Discount": "14.72%"
+      }
+    },
+    {
+      "id": 9,
+      "img": "https://cdn.dummyjson.com/product-images/fragrances/dolce-shine-eau-de/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/fragrances/dolce-shine-eau-de/1.webp",
+        "https://cdn.dummyjson.com/product-images/fragrances/dolce-shine-eau-de/2.webp",
+        "https://cdn.dummyjson.com/product-images/fragrances/dolce-shine-eau-de/3.webp"
+      ],
+      "title": "Dolce Shine Eau de",
+      "price": 69.99,
+      "oldPrice": 70,
+      "rating": 4,
+      "reviewsCount": 4,
+      "description": "Dolce Shine by Dolce & Gabbana is a vibrant and fruity fragrance, featuring notes of mango, jasmine, and blonde woods. It's a joyful and youthful scent.",
+      "colors": [
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": true
+        },
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XL",
+          "available": true
+        },
+        {
+          "name": "XS",
+          "available": true
+        },
+        {
+          "name": "S",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 4,
+      "category": "fragrances",
+      "brand": "Dolce & Gabbana",
+      "sku": "SKU-9",
+      "specifications": {
+        "Brand": "Dolce & Gabbana",
+        "Category": "fragrances",
+        "Rating": "3.96 / 5",
+        "Discount": "0.62%"
+      }
+    },
+    {
+      "id": 10,
+      "img": "https://cdn.dummyjson.com/product-images/fragrances/gucci-bloom-eau-de/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/fragrances/gucci-bloom-eau-de/1.webp",
+        "https://cdn.dummyjson.com/product-images/fragrances/gucci-bloom-eau-de/2.webp",
+        "https://cdn.dummyjson.com/product-images/fragrances/gucci-bloom-eau-de/3.webp"
+      ],
+      "title": "Gucci Bloom Eau de",
+      "price": 79.99,
+      "oldPrice": 92,
+      "rating": 3,
+      "reviewsCount": 91,
+      "description": "Gucci Bloom by Gucci is a floral and captivating fragrance, with notes of tuberose, jasmine, and Rangoon creeper. It's a modern and romantic scent.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XL",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 91,
+      "category": "fragrances",
+      "brand": "Gucci",
+      "sku": "SKU-10",
+      "specifications": {
+        "Brand": "Gucci",
+        "Category": "fragrances",
+        "Rating": "2.74 / 5",
+        "Discount": "14.39%"
+      }
+    },
+    {
+      "id": 11,
+      "img": "https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/1.webp",
+        "https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/2.webp",
+        "https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/3.webp"
+      ],
+      "title": "Annibale Colombo Bed",
+      "price": 1899.99,
+      "oldPrice": 2063,
+      "rating": 5,
+      "reviewsCount": 88,
+      "description": "The Annibale Colombo Bed is a luxurious and elegant bed frame, crafted with high-quality materials for a comfortable and stylish bedroom.",
+      "colors": [
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "M",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 88,
+      "category": "furniture",
+      "brand": "Annibale Colombo",
+      "sku": "SKU-11",
+      "specifications": {
+        "Brand": "Annibale Colombo",
+        "Category": "furniture",
+        "Rating": "4.77 / 5",
+        "Discount": "8.57%"
+      }
+    },
+    {
+      "id": 12,
+      "img": "https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/1.webp",
+        "https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/2.webp",
+        "https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/3.webp"
+      ],
+      "title": "Annibale Colombo Sofa",
+      "price": 2499.99,
+      "oldPrice": 2860,
+      "rating": 4,
+      "reviewsCount": 60,
+      "description": "The Annibale Colombo Sofa is a sophisticated and comfortable seating option, featuring exquisite design and premium upholstery for your living room.",
+      "colors": [
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": false
+        }
+      ],
+      "sizes": [
+        {
+          "name": "L",
+          "available": true
+        },
+        {
+          "name": "S",
+          "available": true
+        },
+        {
+          "name": "XS",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 60,
+      "category": "furniture",
+      "brand": "Annibale Colombo",
+      "sku": "SKU-12",
+      "specifications": {
+        "Brand": "Annibale Colombo",
+        "Category": "furniture",
+        "Rating": "3.92 / 5",
+        "Discount": "14.4%"
+      }
+    },
+    {
+      "id": 13,
+      "img": "https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/1.webp",
+        "https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/2.webp",
+        "https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/3.webp"
+      ],
+      "title": "Bedside Table African Cherry",
+      "price": 299.99,
+      "oldPrice": 357,
+      "rating": 3,
+      "reviewsCount": 64,
+      "description": "The Bedside Table in African Cherry is a stylish and functional addition to your bedroom, providing convenient storage space and a touch of elegance.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "S",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 64,
+      "category": "furniture",
+      "brand": "Furniture Co.",
+      "sku": "SKU-13",
+      "specifications": {
+        "Brand": "Furniture Co.",
+        "Category": "furniture",
+        "Rating": "2.87 / 5",
+        "Discount": "19.09%"
+      }
+    },
+    {
+      "id": 14,
+      "img": "https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/1.webp",
+        "https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/2.webp",
+        "https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/3.webp"
+      ],
+      "title": "Knoll Saarinen Executive Conference Chair",
+      "price": 499.99,
+      "oldPrice": 510,
+      "rating": 5,
+      "reviewsCount": 26,
+      "description": "The Knoll Saarinen Executive Conference Chair is a modern and ergonomic chair, perfect for your office or conference room with its timeless design.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": false
+        },
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": true
+        },
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": true
+        },
+        {
+          "name": "S",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 26,
+      "category": "furniture",
+      "brand": "Knoll",
+      "sku": "SKU-14",
+      "specifications": {
+        "Brand": "Knoll",
+        "Category": "furniture",
+        "Rating": "4.88 / 5",
+        "Discount": "2.01%"
+      }
+    },
+    {
+      "id": 15,
+      "img": "https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/1.webp",
+        "https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/2.webp",
+        "https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/3.webp"
+      ],
+      "title": "Wooden Bathroom Sink With Mirror",
+      "price": 799.99,
+      "oldPrice": 870,
+      "rating": 4,
+      "reviewsCount": 7,
+      "description": "The Wooden Bathroom Sink with Mirror is a unique and stylish addition to your bathroom, featuring a wooden sink countertop and a matching mirror.",
+      "colors": [
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": false
+        },
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": true
+        },
+        {
+          "name": "S",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 7,
+      "category": "furniture",
+      "brand": "Bath Trends",
+      "sku": "SKU-15",
+      "specifications": {
+        "Brand": "Bath Trends",
+        "Category": "furniture",
+        "Rating": "3.59 / 5",
+        "Discount": "8.8%"
+      }
+    },
+    {
+      "id": 16,
+      "img": "https://cdn.dummyjson.com/product-images/groceries/apple/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/groceries/apple/1.webp"
+      ],
+      "title": "Apple",
+      "price": 1.99,
+      "oldPrice": 2,
+      "rating": 4,
+      "reviewsCount": 8,
+      "description": "Fresh and crisp apples, perfect for snacking or incorporating into various recipes.",
+      "colors": [
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": true
+        },
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        },
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "L",
+          "available": false
+        },
+        {
+          "name": "XL",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 8,
+      "category": "groceries",
+      "brand": "Generic",
+      "sku": "SKU-16",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "groceries",
+        "Rating": "4.19 / 5",
+        "Discount": "12.62%"
+      }
+    },
+    {
+      "id": 17,
+      "img": "https://cdn.dummyjson.com/product-images/groceries/beef-steak/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/groceries/beef-steak/1.webp"
+      ],
+      "title": "Beef Steak",
+      "price": 12.99,
+      "oldPrice": 14,
+      "rating": 4,
+      "reviewsCount": 86,
+      "description": "High-quality beef steak, great for grilling or cooking to your preferred level of doneness.",
+      "colors": [
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XL",
+          "available": true
+        },
+        {
+          "name": "M",
+          "available": false
+        },
+        {
+          "name": "S",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 86,
+      "category": "groceries",
+      "brand": "Generic",
+      "sku": "SKU-17",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "groceries",
+        "Rating": "4.47 / 5",
+        "Discount": "9.61%"
+      }
+    },
+    {
+      "id": 18,
+      "img": "https://cdn.dummyjson.com/product-images/groceries/cat-food/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/groceries/cat-food/1.webp"
+      ],
+      "title": "Cat Food",
+      "price": 8.99,
+      "oldPrice": 10,
+      "rating": 3,
+      "reviewsCount": 46,
+      "description": "Nutritious cat food formulated to meet the dietary needs of your feline friend.",
+      "colors": [
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": false
+        },
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "L",
+          "available": true
+        },
+        {
+          "name": "M",
+          "available": true
+        },
+        {
+          "name": "XL",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 46,
+      "category": "groceries",
+      "brand": "Generic",
+      "sku": "SKU-18",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "groceries",
+        "Rating": "3.13 / 5",
+        "Discount": "9.58%"
+      }
+    },
+    {
+      "id": 19,
+      "img": "https://cdn.dummyjson.com/product-images/groceries/chicken-meat/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/groceries/chicken-meat/1.webp",
+        "https://cdn.dummyjson.com/product-images/groceries/chicken-meat/2.webp"
+      ],
+      "title": "Chicken Meat",
+      "price": 9.99,
+      "oldPrice": 11,
+      "rating": 3,
+      "reviewsCount": 97,
+      "description": "Fresh and tender chicken meat, suitable for various culinary preparations.",
+      "colors": [
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": true
+        },
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": true
+        },
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 97,
+      "category": "groceries",
+      "brand": "Generic",
+      "sku": "SKU-19",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "groceries",
+        "Rating": "3.19 / 5",
+        "Discount": "13.7%"
+      }
+    },
+    {
+      "id": 20,
+      "img": "https://cdn.dummyjson.com/product-images/groceries/cooking-oil/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/groceries/cooking-oil/1.webp"
+      ],
+      "title": "Cooking Oil",
+      "price": 4.99,
+      "oldPrice": 5,
+      "rating": 5,
+      "reviewsCount": 10,
+      "description": "Versatile cooking oil suitable for frying, sautéing, and various culinary applications.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": true
+        },
+        {
+          "name": "S",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 10,
+      "category": "groceries",
+      "brand": "Generic",
+      "sku": "SKU-20",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "groceries",
+        "Rating": "4.8 / 5",
+        "Discount": "9.33%"
+      }
+    },
+    {
+      "id": 21,
+      "img": "https://cdn.dummyjson.com/product-images/groceries/cucumber/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/groceries/cucumber/1.webp"
+      ],
+      "title": "Cucumber",
+      "price": 1.49,
+      "oldPrice": 1,
+      "rating": 4,
+      "reviewsCount": 84,
+      "description": "Crisp and hydrating cucumbers, ideal for salads, snacks, or as a refreshing side.",
+      "colors": [
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": true
+        },
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": true
+        },
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "L",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 84,
+      "category": "groceries",
+      "brand": "Generic",
+      "sku": "SKU-21",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "groceries",
+        "Rating": "4.07 / 5",
+        "Discount": "0.16%"
+      }
+    },
+    {
+      "id": 22,
+      "img": "https://cdn.dummyjson.com/product-images/groceries/dog-food/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/groceries/dog-food/1.webp"
+      ],
+      "title": "Dog Food",
+      "price": 10.99,
+      "oldPrice": 12,
+      "rating": 5,
+      "reviewsCount": 71,
+      "description": "Specially formulated dog food designed to provide essential nutrients for your canine companion.",
+      "colors": [
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": true
+        },
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": true
+        },
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XL",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 71,
+      "category": "groceries",
+      "brand": "Generic",
+      "sku": "SKU-22",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "groceries",
+        "Rating": "4.55 / 5",
+        "Discount": "10.27%"
+      }
+    },
+    {
+      "id": 23,
+      "img": "https://cdn.dummyjson.com/product-images/groceries/eggs/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/groceries/eggs/1.webp"
+      ],
+      "title": "Eggs",
+      "price": 2.99,
+      "oldPrice": 3,
+      "rating": 3,
+      "reviewsCount": 9,
+      "description": "Fresh eggs, a versatile ingredient for baking, cooking, or breakfast.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        },
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "L",
+          "available": true
+        },
+        {
+          "name": "XS",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 9,
+      "category": "groceries",
+      "brand": "Generic",
+      "sku": "SKU-23",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "groceries",
+        "Rating": "2.53 / 5",
+        "Discount": "11.05%"
+      }
+    },
+    {
+      "id": 24,
+      "img": "https://cdn.dummyjson.com/product-images/groceries/fish-steak/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/groceries/fish-steak/1.webp"
+      ],
+      "title": "Fish Steak",
+      "price": 14.99,
+      "oldPrice": 16,
+      "rating": 4,
+      "reviewsCount": 74,
+      "description": "Quality fish steak, suitable for grilling, baking, or pan-searing.",
+      "colors": [
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": false
+        },
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": false
+        }
+      ],
+      "sizes": [
+        {
+          "name": "M",
+          "available": true
+        },
+        {
+          "name": "L",
+          "available": true
+        },
+        {
+          "name": "XL",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 74,
+      "category": "groceries",
+      "brand": "Generic",
+      "sku": "SKU-24",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "groceries",
+        "Rating": "3.78 / 5",
+        "Discount": "4.23%"
+      }
+    },
+    {
+      "id": 25,
+      "img": "https://cdn.dummyjson.com/product-images/groceries/green-bell-pepper/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/groceries/green-bell-pepper/1.webp"
+      ],
+      "title": "Green Bell Pepper",
+      "price": 1.29,
+      "oldPrice": 1,
+      "rating": 3,
+      "reviewsCount": 33,
+      "description": "Fresh and vibrant green bell pepper, perfect for adding color and flavor to your dishes.",
+      "colors": [
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": false
+        },
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": false
+        }
+      ],
+      "sizes": [
+        {
+          "name": "L",
+          "available": true
+        },
+        {
+          "name": "XS",
+          "available": true
+        },
+        {
+          "name": "S",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 33,
+      "category": "groceries",
+      "brand": "Generic",
+      "sku": "SKU-25",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "groceries",
+        "Rating": "3.25 / 5",
+        "Discount": "0.16%"
+      }
+    },
+    {
+      "id": 26,
+      "img": "https://cdn.dummyjson.com/product-images/groceries/green-chili-pepper/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/groceries/green-chili-pepper/1.webp"
+      ],
+      "title": "Green Chili Pepper",
+      "price": 0.99,
+      "oldPrice": 1,
+      "rating": 4,
+      "reviewsCount": 3,
+      "description": "Spicy green chili pepper, ideal for adding heat to your favorite recipes.",
+      "colors": [
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": false
+        },
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": true
+        },
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XL",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 3,
+      "category": "groceries",
+      "brand": "Generic",
+      "sku": "SKU-26",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "groceries",
+        "Rating": "3.66 / 5",
+        "Discount": "1%"
+      }
+    },
+    {
+      "id": 27,
+      "img": "https://cdn.dummyjson.com/product-images/groceries/honey-jar/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/groceries/honey-jar/1.webp"
+      ],
+      "title": "Honey Jar",
+      "price": 6.99,
+      "oldPrice": 8,
+      "rating": 4,
+      "reviewsCount": 34,
+      "description": "Pure and natural honey in a convenient jar, perfect for sweetening beverages or drizzling over food.",
+      "colors": [
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": true
+        },
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": false
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": true
+        },
+        {
+          "name": "L",
+          "available": false
+        },
+        {
+          "name": "S",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 34,
+      "category": "groceries",
+      "brand": "Generic",
+      "sku": "SKU-27",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "groceries",
+        "Rating": "3.97 / 5",
+        "Discount": "14.4%"
+      }
+    },
+    {
+      "id": 28,
+      "img": "https://cdn.dummyjson.com/product-images/groceries/ice-cream/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/groceries/ice-cream/1.webp",
+        "https://cdn.dummyjson.com/product-images/groceries/ice-cream/2.webp",
+        "https://cdn.dummyjson.com/product-images/groceries/ice-cream/3.webp",
+        "https://cdn.dummyjson.com/product-images/groceries/ice-cream/4.webp"
+      ],
+      "title": "Ice Cream",
+      "price": 5.49,
+      "oldPrice": 6,
+      "rating": 3,
+      "reviewsCount": 27,
+      "description": "Creamy and delicious ice cream, available in various flavors for a delightful treat.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "M",
+          "available": true
+        },
+        {
+          "name": "L",
+          "available": true
+        },
+        {
+          "name": "XL",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 27,
+      "category": "groceries",
+      "brand": "Generic",
+      "sku": "SKU-28",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "groceries",
+        "Rating": "3.39 / 5",
+        "Discount": "8.69%"
+      }
+    },
+    {
+      "id": 29,
+      "img": "https://cdn.dummyjson.com/product-images/groceries/juice/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/groceries/juice/1.webp"
+      ],
+      "title": "Juice",
+      "price": 3.99,
+      "oldPrice": 4,
+      "rating": 4,
+      "reviewsCount": 50,
+      "description": "Refreshing fruit juice, packed with vitamins and great for staying hydrated.",
+      "colors": [
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "M",
+          "available": true
+        },
+        {
+          "name": "XL",
+          "available": false
+        },
+        {
+          "name": "S",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 50,
+      "category": "groceries",
+      "brand": "Generic",
+      "sku": "SKU-29",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "groceries",
+        "Rating": "3.94 / 5",
+        "Discount": "12.06%"
+      }
+    },
+    {
+      "id": 30,
+      "img": "https://cdn.dummyjson.com/product-images/groceries/kiwi/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/groceries/kiwi/1.webp"
+      ],
+      "title": "Kiwi",
+      "price": 2.49,
+      "oldPrice": 3,
+      "rating": 5,
+      "reviewsCount": 99,
+      "description": "Nutrient-rich kiwi, perfect for snacking or adding a tropical twist to your dishes.",
+      "colors": [
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": true
+        },
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        },
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "S",
+          "available": true
+        },
+        {
+          "name": "XL",
+          "available": false
+        },
+        {
+          "name": "L",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 99,
+      "category": "groceries",
+      "brand": "Generic",
+      "sku": "SKU-30",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "groceries",
+        "Rating": "4.93 / 5",
+        "Discount": "15.22%"
+      }
+    },
+    {
+      "id": 31,
+      "img": "https://cdn.dummyjson.com/product-images/groceries/lemon/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/groceries/lemon/1.webp"
+      ],
+      "title": "Lemon",
+      "price": 0.79,
+      "oldPrice": 1,
+      "rating": 4,
+      "reviewsCount": 31,
+      "description": "Zesty and tangy lemons, versatile for cooking, baking, or making refreshing beverages.",
+      "colors": [
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": false
+        },
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "L",
+          "available": true
+        },
+        {
+          "name": "M",
+          "available": true
+        },
+        {
+          "name": "XS",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 31,
+      "category": "groceries",
+      "brand": "Generic",
+      "sku": "SKU-31",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "groceries",
+        "Rating": "3.53 / 5",
+        "Discount": "9.7%"
+      }
+    },
+    {
+      "id": 32,
+      "img": "https://cdn.dummyjson.com/product-images/groceries/milk/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/groceries/milk/1.webp"
+      ],
+      "title": "Milk",
+      "price": 3.49,
+      "oldPrice": 4,
+      "rating": 3,
+      "reviewsCount": 27,
+      "description": "Fresh and nutritious milk, a staple for various recipes and daily consumption.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        },
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": true
+        },
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "S",
+          "available": true
+        },
+        {
+          "name": "M",
+          "available": true
+        },
+        {
+          "name": "XS",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 27,
+      "category": "groceries",
+      "brand": "Generic",
+      "sku": "SKU-32",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "groceries",
+        "Rating": "2.61 / 5",
+        "Discount": "13.74%"
+      }
+    },
+    {
+      "id": 33,
+      "img": "https://cdn.dummyjson.com/product-images/groceries/mulberry/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/groceries/mulberry/1.webp"
+      ],
+      "title": "Mulberry",
+      "price": 4.99,
+      "oldPrice": 6,
+      "rating": 5,
+      "reviewsCount": 99,
+      "description": "Sweet and juicy mulberries, perfect for snacking or adding to desserts and cereals.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "M",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 99,
+      "category": "groceries",
+      "brand": "Generic",
+      "sku": "SKU-33",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "groceries",
+        "Rating": "4.95 / 5",
+        "Discount": "12.87%"
+      }
+    },
+    {
+      "id": 34,
+      "img": "https://cdn.dummyjson.com/product-images/groceries/nescafe-coffee/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/groceries/nescafe-coffee/1.webp"
+      ],
+      "title": "Nescafe Coffee",
+      "price": 7.99,
+      "oldPrice": 8,
+      "rating": 5,
+      "reviewsCount": 57,
+      "description": "Quality coffee from Nescafe, available in various blends for a rich and satisfying cup.",
+      "colors": [
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": true
+        },
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "S",
+          "available": true
+        },
+        {
+          "name": "M",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 57,
+      "category": "groceries",
+      "brand": "Generic",
+      "sku": "SKU-34",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "groceries",
+        "Rating": "4.82 / 5",
+        "Discount": "1.59%"
+      }
+    },
+    {
+      "id": 35,
+      "img": "https://cdn.dummyjson.com/product-images/groceries/potatoes/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/groceries/potatoes/1.webp"
+      ],
+      "title": "Potatoes",
+      "price": 2.29,
+      "oldPrice": 2,
+      "rating": 5,
+      "reviewsCount": 13,
+      "description": "Versatile and starchy potatoes, great for roasting, mashing, or as a side dish.",
+      "colors": [
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": true
+        },
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        },
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": true
+        },
+        {
+          "name": "S",
+          "available": true
+        },
+        {
+          "name": "M",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 13,
+      "category": "groceries",
+      "brand": "Generic",
+      "sku": "SKU-35",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "groceries",
+        "Rating": "4.81 / 5",
+        "Discount": "5.38%"
+      }
+    },
+    {
+      "id": 36,
+      "img": "https://cdn.dummyjson.com/product-images/groceries/protein-powder/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/groceries/protein-powder/1.webp"
+      ],
+      "title": "Protein Powder",
+      "price": 19.99,
+      "oldPrice": 22,
+      "rating": 4,
+      "reviewsCount": 80,
+      "description": "Nutrient-packed protein powder, ideal for supplementing your diet with essential proteins.",
+      "colors": [
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": true
+        },
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "S",
+          "available": true
+        },
+        {
+          "name": "XS",
+          "available": false
+        },
+        {
+          "name": "XL",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 80,
+      "category": "groceries",
+      "brand": "Generic",
+      "sku": "SKU-36",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "groceries",
+        "Rating": "4.18 / 5",
+        "Discount": "7.59%"
+      }
+    },
+    {
+      "id": 37,
+      "img": "https://cdn.dummyjson.com/product-images/groceries/red-onions/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/groceries/red-onions/1.webp"
+      ],
+      "title": "Red Onions",
+      "price": 1.99,
+      "oldPrice": 2,
+      "rating": 4,
+      "reviewsCount": 82,
+      "description": "Flavorful and aromatic red onions, perfect for adding depth to your savory dishes.",
+      "colors": [
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": true
+        },
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": false
+        },
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "L",
+          "available": false
+        },
+        {
+          "name": "M",
+          "available": true
+        },
+        {
+          "name": "XL",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 82,
+      "category": "groceries",
+      "brand": "Generic",
+      "sku": "SKU-37",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "groceries",
+        "Rating": "4.2 / 5",
+        "Discount": "9.9%"
+      }
+    },
+    {
+      "id": 38,
+      "img": "https://cdn.dummyjson.com/product-images/groceries/rice/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/groceries/rice/1.webp"
+      ],
+      "title": "Rice",
+      "price": 5.99,
+      "oldPrice": 7,
+      "rating": 3,
+      "reviewsCount": 59,
+      "description": "High-quality rice, a staple for various cuisines and a versatile base for many dishes.",
+      "colors": [
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": false
+        },
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "L",
+          "available": true
+        },
+        {
+          "name": "M",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 59,
+      "category": "groceries",
+      "brand": "Generic",
+      "sku": "SKU-38",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "groceries",
+        "Rating": "3.18 / 5",
+        "Discount": "9.29%"
+      }
+    },
+    {
+      "id": 39,
+      "img": "https://cdn.dummyjson.com/product-images/groceries/soft-drinks/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/groceries/soft-drinks/1.webp"
+      ],
+      "title": "Soft Drinks",
+      "price": 1.99,
+      "oldPrice": 2,
+      "rating": 5,
+      "reviewsCount": 53,
+      "description": "Assorted soft drinks in various flavors, perfect for refreshing beverages.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XL",
+          "available": false
+        },
+        {
+          "name": "L",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 53,
+      "category": "groceries",
+      "brand": "Generic",
+      "sku": "SKU-39",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "groceries",
+        "Rating": "4.75 / 5",
+        "Discount": "17.48%"
+      }
+    },
+    {
+      "id": 40,
+      "img": "https://cdn.dummyjson.com/product-images/groceries/strawberry/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/groceries/strawberry/1.webp"
+      ],
+      "title": "Strawberry",
+      "price": 3.99,
+      "oldPrice": 4,
+      "rating": 3,
+      "reviewsCount": 46,
+      "description": "Sweet and succulent strawberries, great for snacking, desserts, or blending into smoothies.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        },
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "L",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 46,
+      "category": "groceries",
+      "brand": "Generic",
+      "sku": "SKU-40",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "groceries",
+        "Rating": "3.08 / 5",
+        "Discount": "1.12%"
+      }
+    },
+    {
+      "id": 41,
+      "img": "https://cdn.dummyjson.com/product-images/groceries/tissue-paper-box/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/groceries/tissue-paper-box/1.webp",
+        "https://cdn.dummyjson.com/product-images/groceries/tissue-paper-box/2.webp"
+      ],
+      "title": "Tissue Paper Box",
+      "price": 2.49,
+      "oldPrice": 3,
+      "rating": 3,
+      "reviewsCount": 86,
+      "description": "Convenient tissue paper box for everyday use, providing soft and absorbent tissues.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        },
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": false
+        }
+      ],
+      "sizes": [
+        {
+          "name": "M",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 86,
+      "category": "groceries",
+      "brand": "Generic",
+      "sku": "SKU-41",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "groceries",
+        "Rating": "2.69 / 5",
+        "Discount": "13.28%"
+      }
+    },
+    {
+      "id": 42,
+      "img": "https://cdn.dummyjson.com/product-images/groceries/water/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/groceries/water/1.webp"
+      ],
+      "title": "Water",
+      "price": 0.99,
+      "oldPrice": 1,
+      "rating": 5,
+      "reviewsCount": 53,
+      "description": "Pure and refreshing bottled water, essential for staying hydrated throughout the day.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": false
+        },
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": false
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 53,
+      "category": "groceries",
+      "brand": "Generic",
+      "sku": "SKU-42",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "groceries",
+        "Rating": "4.96 / 5",
+        "Discount": "14.92%"
+      }
+    },
+    {
+      "id": 43,
+      "img": "https://cdn.dummyjson.com/product-images/home-decoration/decoration-swing/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/home-decoration/decoration-swing/1.webp",
+        "https://cdn.dummyjson.com/product-images/home-decoration/decoration-swing/2.webp",
+        "https://cdn.dummyjson.com/product-images/home-decoration/decoration-swing/3.webp"
+      ],
+      "title": "Decoration Swing",
+      "price": 59.99,
+      "oldPrice": 66,
+      "rating": 3,
+      "reviewsCount": 47,
+      "description": "The Decoration Swing is a charming addition to your home decor. Crafted with intricate details, it adds a touch of elegance and whimsy to any room.",
+      "colors": [
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": false
+        },
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": true
+        },
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": false
+        }
+      ],
+      "sizes": [
+        {
+          "name": "S",
+          "available": false
+        },
+        {
+          "name": "XL",
+          "available": true
+        },
+        {
+          "name": "M",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 47,
+      "category": "home-decoration",
+      "brand": "Generic",
+      "sku": "SKU-43",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "home-decoration",
+        "Rating": "3.16 / 5",
+        "Discount": "10.41%"
+      }
+    },
+    {
+      "id": 44,
+      "img": "https://cdn.dummyjson.com/product-images/home-decoration/family-tree-photo-frame/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/home-decoration/family-tree-photo-frame/1.webp"
+      ],
+      "title": "Family Tree Photo Frame",
+      "price": 29.99,
+      "oldPrice": 34,
+      "rating": 5,
+      "reviewsCount": 77,
+      "description": "The Family Tree Photo Frame is a sentimental and stylish way to display your cherished family memories. With multiple photo slots, it tells the story of your loved ones.",
+      "colors": [
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": false
+        },
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": false
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": true
+        },
+        {
+          "name": "S",
+          "available": false
+        },
+        {
+          "name": "XL",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 77,
+      "category": "home-decoration",
+      "brand": "Generic",
+      "sku": "SKU-44",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "home-decoration",
+        "Rating": "4.53 / 5",
+        "Discount": "14.87%"
+      }
+    },
+    {
+      "id": 45,
+      "img": "https://cdn.dummyjson.com/product-images/home-decoration/house-showpiece-plant/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/home-decoration/house-showpiece-plant/1.webp",
+        "https://cdn.dummyjson.com/product-images/home-decoration/house-showpiece-plant/2.webp",
+        "https://cdn.dummyjson.com/product-images/home-decoration/house-showpiece-plant/3.webp"
+      ],
+      "title": "House Showpiece Plant",
+      "price": 39.99,
+      "oldPrice": 43,
+      "rating": 5,
+      "reviewsCount": 28,
+      "description": "The House Showpiece Plant is an artificial plant that brings a touch of nature to your home without the need for maintenance. It adds greenery and style to any space.",
+      "colors": [
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": true
+        },
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XL",
+          "available": true
+        },
+        {
+          "name": "L",
+          "available": true
+        },
+        {
+          "name": "M",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 28,
+      "category": "home-decoration",
+      "brand": "Generic",
+      "sku": "SKU-45",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "home-decoration",
+        "Rating": "4.67 / 5",
+        "Discount": "7.46%"
+      }
+    },
+    {
+      "id": 46,
+      "img": "https://cdn.dummyjson.com/product-images/home-decoration/plant-pot/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/home-decoration/plant-pot/1.webp",
+        "https://cdn.dummyjson.com/product-images/home-decoration/plant-pot/2.webp",
+        "https://cdn.dummyjson.com/product-images/home-decoration/plant-pot/3.webp",
+        "https://cdn.dummyjson.com/product-images/home-decoration/plant-pot/4.webp"
+      ],
+      "title": "Plant Pot",
+      "price": 14.99,
+      "oldPrice": 16,
+      "rating": 3,
+      "reviewsCount": 59,
+      "description": "The Plant Pot is a stylish container for your favorite plants. With a sleek design, it complements your indoor or outdoor garden, adding a modern touch to your plant display.",
+      "colors": [
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": true
+        },
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 59,
+      "category": "home-decoration",
+      "brand": "Generic",
+      "sku": "SKU-46",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "home-decoration",
+        "Rating": "3.01 / 5",
+        "Discount": "6.84%"
+      }
+    },
+    {
+      "id": 47,
+      "img": "https://cdn.dummyjson.com/product-images/home-decoration/table-lamp/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/home-decoration/table-lamp/1.webp"
+      ],
+      "title": "Table Lamp",
+      "price": 49.99,
+      "oldPrice": 54,
+      "rating": 4,
+      "reviewsCount": 9,
+      "description": "The Table Lamp is a functional and decorative lighting solution for your living space. With a modern design, it provides both ambient and task lighting, enhancing the atmosphere.",
+      "colors": [
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "M",
+          "available": true
+        },
+        {
+          "name": "L",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 9,
+      "category": "home-decoration",
+      "brand": "Generic",
+      "sku": "SKU-47",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "home-decoration",
+        "Rating": "3.55 / 5",
+        "Discount": "7.09%"
+      }
+    },
+    {
+      "id": 48,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/bamboo-spatula/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/bamboo-spatula/1.webp"
+      ],
+      "title": "Bamboo Spatula",
+      "price": 7.99,
+      "oldPrice": 8,
+      "rating": 3,
+      "reviewsCount": 37,
+      "description": "The Bamboo Spatula is a versatile kitchen tool made from eco-friendly bamboo. Ideal for flipping, stirring, and serving various dishes.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        },
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "L",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 37,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-48",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "3.27 / 5",
+        "Discount": "2.84%"
+      }
+    },
+    {
+      "id": 49,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/black-aluminium-cup/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/black-aluminium-cup/1.webp",
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/black-aluminium-cup/2.webp"
+      ],
+      "title": "Black Aluminium Cup",
+      "price": 5.99,
+      "oldPrice": 7,
+      "rating": 4,
+      "reviewsCount": 75,
+      "description": "The Black Aluminium Cup is a stylish and durable cup suitable for both hot and cold beverages. Its sleek black design adds a modern touch to your drinkware collection.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 75,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-49",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "4.46 / 5",
+        "Discount": "15.65%"
+      }
+    },
+    {
+      "id": 50,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/black-whisk/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/black-whisk/1.webp"
+      ],
+      "title": "Black Whisk",
+      "price": 9.99,
+      "oldPrice": 11,
+      "rating": 4,
+      "reviewsCount": 73,
+      "description": "The Black Whisk is a kitchen essential for whisking and beating ingredients. Its ergonomic handle and sleek design make it a practical and stylish tool.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": false
+        }
+      ],
+      "sizes": [
+        {
+          "name": "S",
+          "available": true
+        },
+        {
+          "name": "XS",
+          "available": true
+        },
+        {
+          "name": "L",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 73,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-50",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "3.9 / 5",
+        "Discount": "10.24%"
+      }
+    },
+    {
+      "id": 51,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/boxed-blender/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/boxed-blender/1.webp",
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/boxed-blender/2.webp",
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/boxed-blender/3.webp",
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/boxed-blender/4.webp"
+      ],
+      "title": "Boxed Blender",
+      "price": 39.99,
+      "oldPrice": 43,
+      "rating": 5,
+      "reviewsCount": 9,
+      "description": "The Boxed Blender is a powerful and compact blender perfect for smoothies, shakes, and more. Its convenient design and multiple functions make it a versatile kitchen appliance.",
+      "colors": [
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": true
+        },
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": true
+        },
+        {
+          "name": "S",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 9,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-51",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "4.56 / 5",
+        "Discount": "7.26%"
+      }
+    },
+    {
+      "id": 52,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/carbon-steel-wok/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/carbon-steel-wok/1.webp"
+      ],
+      "title": "Carbon Steel Wok",
+      "price": 29.99,
+      "oldPrice": 32,
+      "rating": 4,
+      "reviewsCount": 40,
+      "description": "The Carbon Steel Wok is a versatile cooking pan suitable for stir-frying, sautéing, and deep frying. Its sturdy construction ensures even heat distribution for delicious meals.",
+      "colors": [
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": true
+        },
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": true
+        },
+        {
+          "name": "S",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 40,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-52",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "4.05 / 5",
+        "Discount": "6.53%"
+      }
+    },
+    {
+      "id": 53,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/chopping-board/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/chopping-board/1.webp"
+      ],
+      "title": "Chopping Board",
+      "price": 12.99,
+      "oldPrice": 14,
+      "rating": 4,
+      "reviewsCount": 14,
+      "description": "The Chopping Board is an essential kitchen accessory for food preparation. Made from durable material, it provides a safe and hygienic surface for cutting and chopping.",
+      "colors": [
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": true
+        },
+        {
+          "name": "S",
+          "available": true
+        },
+        {
+          "name": "M",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 14,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-53",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "3.7 / 5",
+        "Discount": "8.03%"
+      }
+    },
+    {
+      "id": 54,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/citrus-squeezer-yellow/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/citrus-squeezer-yellow/1.webp"
+      ],
+      "title": "Citrus Squeezer Yellow",
+      "price": 8.99,
+      "oldPrice": 10,
+      "rating": 5,
+      "reviewsCount": 22,
+      "description": "The Citrus Squeezer in Yellow is a handy tool for extracting juice from citrus fruits. Its vibrant color adds a cheerful touch to your kitchen gadgets.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XL",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 22,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-54",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "4.63 / 5",
+        "Discount": "12.1%"
+      }
+    },
+    {
+      "id": 55,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/egg-slicer/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/egg-slicer/1.webp"
+      ],
+      "title": "Egg Slicer",
+      "price": 6.99,
+      "oldPrice": 8,
+      "rating": 3,
+      "reviewsCount": 40,
+      "description": "The Egg Slicer is a convenient tool for slicing boiled eggs evenly. It's perfect for salads, sandwiches, and other dishes where sliced eggs are desired.",
+      "colors": [
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": false
+        },
+        {
+          "name": "XL",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 40,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-55",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "3.09 / 5",
+        "Discount": "14.76%"
+      }
+    },
+    {
+      "id": 56,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/electric-stove/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/electric-stove/1.webp",
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/electric-stove/2.webp",
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/electric-stove/3.webp",
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/electric-stove/4.webp"
+      ],
+      "title": "Electric Stove",
+      "price": 49.99,
+      "oldPrice": 57,
+      "rating": 4,
+      "reviewsCount": 21,
+      "description": "The Electric Stove provides a portable and efficient cooking solution. Ideal for small kitchens or as an additional cooking surface for various culinary needs.",
+      "colors": [
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": false
+        }
+      ],
+      "sizes": [
+        {
+          "name": "S",
+          "available": true
+        },
+        {
+          "name": "L",
+          "available": false
+        },
+        {
+          "name": "XS",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 21,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-56",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "4.11 / 5",
+        "Discount": "14.04%"
+      }
+    },
+    {
+      "id": 57,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/fine-mesh-strainer/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/fine-mesh-strainer/1.webp"
+      ],
+      "title": "Fine Mesh Strainer",
+      "price": 9.99,
+      "oldPrice": 10,
+      "rating": 3,
+      "reviewsCount": 85,
+      "description": "The Fine Mesh Strainer is a versatile tool for straining liquids and sifting dry ingredients. Its fine mesh ensures efficient filtering for smooth cooking and baking.",
+      "colors": [
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": true
+        },
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XL",
+          "available": false
+        },
+        {
+          "name": "L",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 85,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-57",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "3.04 / 5",
+        "Discount": "3.5%"
+      }
+    },
+    {
+      "id": 58,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/fork/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/fork/1.webp"
+      ],
+      "title": "Fork",
+      "price": 3.99,
+      "oldPrice": 4,
+      "rating": 3,
+      "reviewsCount": 7,
+      "description": "The Fork is a classic utensil for various dining and serving purposes. Its durable and ergonomic design makes it a reliable choice for everyday use.",
+      "colors": [
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": false
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": true
+        },
+        {
+          "name": "M",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 7,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-58",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "3.11 / 5",
+        "Discount": "8.07%"
+      }
+    },
+    {
+      "id": 59,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/glass/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/glass/1.webp"
+      ],
+      "title": "Glass",
+      "price": 4.99,
+      "oldPrice": 5,
+      "rating": 4,
+      "reviewsCount": 46,
+      "description": "The Glass is a versatile and elegant drinking vessel suitable for a variety of beverages. Its clear design allows you to enjoy the colors and textures of your drinks.",
+      "colors": [
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": true
+        },
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": false
+        },
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 46,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-59",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "4.02 / 5",
+        "Discount": "7.92%"
+      }
+    },
+    {
+      "id": 60,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/grater-black/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/grater-black/1.webp"
+      ],
+      "title": "Grater Black",
+      "price": 10.99,
+      "oldPrice": 11,
+      "rating": 3,
+      "reviewsCount": 84,
+      "description": "The Grater in Black is a handy kitchen tool for grating cheese, vegetables, and more. Its sleek design and sharp blades make food preparation efficient and easy.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": false
+        },
+        {
+          "name": "S",
+          "available": true
+        },
+        {
+          "name": "L",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 84,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-60",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "3.21 / 5",
+        "Discount": "3.56%"
+      }
+    },
+    {
+      "id": 61,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/hand-blender/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/hand-blender/1.webp"
+      ],
+      "title": "Hand Blender",
+      "price": 34.99,
+      "oldPrice": 41,
+      "rating": 4,
+      "reviewsCount": 84,
+      "description": "The Hand Blender is a versatile kitchen appliance for blending, pureeing, and mixing. Its compact design and powerful motor make it a convenient tool for various recipes.",
+      "colors": [
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": true
+        },
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "L",
+          "available": true
+        },
+        {
+          "name": "XS",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 84,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-61",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "3.86 / 5",
+        "Discount": "17.02%"
+      }
+    },
+    {
+      "id": 62,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/ice-cube-tray/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/ice-cube-tray/1.webp"
+      ],
+      "title": "Ice Cube Tray",
+      "price": 5.99,
+      "oldPrice": 6,
+      "rating": 5,
+      "reviewsCount": 13,
+      "description": "The Ice Cube Tray is a practical accessory for making ice cubes in various shapes. Perfect for keeping your drinks cool and adding a fun element to your beverages.",
+      "colors": [
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": false
+        },
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": false
+        },
+        {
+          "name": "S",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 13,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-62",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "4.71 / 5",
+        "Discount": "0.63%"
+      }
+    },
+    {
+      "id": 63,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/kitchen-sieve/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/kitchen-sieve/1.webp"
+      ],
+      "title": "Kitchen Sieve",
+      "price": 7.99,
+      "oldPrice": 10,
+      "rating": 3,
+      "reviewsCount": 68,
+      "description": "The Kitchen Sieve is a versatile tool for sifting and straining dry and wet ingredients. Its fine mesh design ensures smooth results in your cooking and baking.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        },
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XL",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 68,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-63",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "3.09 / 5",
+        "Discount": "18.91%"
+      }
+    },
+    {
+      "id": 64,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/knife/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/knife/1.webp"
+      ],
+      "title": "Knife",
+      "price": 14.99,
+      "oldPrice": 18,
+      "rating": 3,
+      "reviewsCount": 7,
+      "description": "The Knife is an essential kitchen tool for chopping, slicing, and dicing. Its sharp blade and ergonomic handle make it a reliable choice for food preparation.",
+      "colors": [
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": true
+        },
+        {
+          "name": "S",
+          "available": true
+        },
+        {
+          "name": "M",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 7,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-64",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "3.26 / 5",
+        "Discount": "18.86%"
+      }
+    },
+    {
+      "id": 65,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/lunch-box/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/lunch-box/1.webp"
+      ],
+      "title": "Lunch Box",
+      "price": 12.99,
+      "oldPrice": 14,
+      "rating": 5,
+      "reviewsCount": 94,
+      "description": "The Lunch Box is a convenient and portable container for packing and carrying your meals. With compartments for different foods, it's perfect for on-the-go dining.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        },
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": false
+        },
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": true
+        },
+        {
+          "name": "S",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 94,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-65",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "4.93 / 5",
+        "Discount": "10.34%"
+      }
+    },
+    {
+      "id": 66,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/microwave-oven/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/microwave-oven/1.webp",
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/microwave-oven/2.webp",
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/microwave-oven/3.webp",
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/microwave-oven/4.webp"
+      ],
+      "title": "Microwave Oven",
+      "price": 89.99,
+      "oldPrice": 101,
+      "rating": 5,
+      "reviewsCount": 59,
+      "description": "The Microwave Oven is a versatile kitchen appliance for quick and efficient cooking, reheating, and defrosting. Its compact size makes it suitable for various kitchen setups.",
+      "colors": [
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": true
+        },
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": true
+        },
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": false
+        },
+        {
+          "name": "S",
+          "available": false
+        },
+        {
+          "name": "M",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 59,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-66",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "4.82 / 5",
+        "Discount": "12.13%"
+      }
+    },
+    {
+      "id": 67,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/mug-tree-stand/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/mug-tree-stand/1.webp",
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/mug-tree-stand/2.webp"
+      ],
+      "title": "Mug Tree Stand",
+      "price": 15.99,
+      "oldPrice": 17,
+      "rating": 3,
+      "reviewsCount": 88,
+      "description": "The Mug Tree Stand is a stylish and space-saving solution for organizing your mugs. Keep your favorite mugs easily accessible and neatly displayed in your kitchen.",
+      "colors": [
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XL",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 88,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-67",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "2.64 / 5",
+        "Discount": "9.25%"
+      }
+    },
+    {
+      "id": 68,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/pan/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/pan/1.webp"
+      ],
+      "title": "Pan",
+      "price": 24.99,
+      "oldPrice": 26,
+      "rating": 3,
+      "reviewsCount": 90,
+      "description": "The Pan is a versatile and essential cookware item for frying, sautéing, and cooking various dishes. Its non-stick coating ensures easy food release and cleanup.",
+      "colors": [
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": true
+        },
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "L",
+          "available": false
+        },
+        {
+          "name": "M",
+          "available": true
+        },
+        {
+          "name": "XL",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 90,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-68",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "2.79 / 5",
+        "Discount": "3%"
+      }
+    },
+    {
+      "id": 69,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/plate/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/plate/1.webp"
+      ],
+      "title": "Plate",
+      "price": 3.99,
+      "oldPrice": 4,
+      "rating": 4,
+      "reviewsCount": 66,
+      "description": "The Plate is a classic and essential dishware item for serving meals. Its durable and stylish design makes it suitable for everyday use or special occasions.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        },
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": false
+        }
+      ],
+      "sizes": [
+        {
+          "name": "M",
+          "available": false
+        },
+        {
+          "name": "S",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 66,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-69",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "3.65 / 5",
+        "Discount": "7.31%"
+      }
+    },
+    {
+      "id": 70,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/red-tongs/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/red-tongs/1.webp"
+      ],
+      "title": "Red Tongs",
+      "price": 6.99,
+      "oldPrice": 8,
+      "rating": 4,
+      "reviewsCount": 82,
+      "description": "The Red Tongs are versatile kitchen tongs suitable for various cooking and serving tasks. Their vibrant color adds a pop of excitement to your kitchen utensils.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        },
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": false
+        },
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XL",
+          "available": false
+        },
+        {
+          "name": "L",
+          "available": false
+        },
+        {
+          "name": "S",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 82,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-70",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "4.42 / 5",
+        "Discount": "14.52%"
+      }
+    },
+    {
+      "id": 71,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/silver-pot-with-glass-cap/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/silver-pot-with-glass-cap/1.webp"
+      ],
+      "title": "Silver Pot With Glass Cap",
+      "price": 39.99,
+      "oldPrice": 42,
+      "rating": 3,
+      "reviewsCount": 40,
+      "description": "The Silver Pot with Glass Cap is a stylish and functional cookware item for boiling, simmering, and preparing delicious meals. Its glass cap allows you to monitor cooking progress.",
+      "colors": [
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": true
+        },
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": true
+        },
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": false
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 40,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-71",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "3.22 / 5",
+        "Discount": "5.7%"
+      }
+    },
+    {
+      "id": 72,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/slotted-turner/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/slotted-turner/1.webp"
+      ],
+      "title": "Slotted Turner",
+      "price": 8.99,
+      "oldPrice": 10,
+      "rating": 3,
+      "reviewsCount": 88,
+      "description": "The Slotted Turner is a kitchen utensil designed for flipping and turning food items. Its slotted design allows excess liquid to drain, making it ideal for frying and sautéing.",
+      "colors": [
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": false
+        }
+      ],
+      "sizes": [
+        {
+          "name": "S",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 88,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-72",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "3.4 / 5",
+        "Discount": "13.35%"
+      }
+    },
+    {
+      "id": 73,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/spice-rack/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/spice-rack/1.webp"
+      ],
+      "title": "Spice Rack",
+      "price": 19.99,
+      "oldPrice": 22,
+      "rating": 5,
+      "reviewsCount": 79,
+      "description": "The Spice Rack is a convenient organizer for your spices and seasonings. Keep your kitchen essentials within reach and neatly arranged with this stylish spice rack.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": true
+        },
+        {
+          "name": "M",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 79,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-73",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "4.87 / 5",
+        "Discount": "12.09%"
+      }
+    },
+    {
+      "id": 74,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/spoon/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/spoon/1.webp"
+      ],
+      "title": "Spoon",
+      "price": 4.99,
+      "oldPrice": 5,
+      "rating": 4,
+      "reviewsCount": 59,
+      "description": "The Spoon is a versatile kitchen utensil for stirring, serving, and tasting. Its ergonomic design and durable construction make it an essential tool for every kitchen.",
+      "colors": [
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": false
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 59,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-74",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "4.03 / 5",
+        "Discount": "1.53%"
+      }
+    },
+    {
+      "id": 75,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/tray/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/tray/1.webp"
+      ],
+      "title": "Tray",
+      "price": 16.99,
+      "oldPrice": 18,
+      "rating": 5,
+      "reviewsCount": 71,
+      "description": "The Tray is a functional and decorative item for serving snacks, appetizers, or drinks. Its stylish design makes it a versatile accessory for entertaining guests.",
+      "colors": [
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": false
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": false
+        },
+        {
+          "name": "M",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 71,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-75",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "4.62 / 5",
+        "Discount": "7.48%"
+      }
+    },
+    {
+      "id": 76,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/wooden-rolling-pin/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/wooden-rolling-pin/1.webp"
+      ],
+      "title": "Wooden Rolling Pin",
+      "price": 11.99,
+      "oldPrice": 13,
+      "rating": 3,
+      "reviewsCount": 80,
+      "description": "The Wooden Rolling Pin is a classic kitchen tool for rolling out dough for baking. Its smooth surface and sturdy handles make it easy to achieve uniform thickness.",
+      "colors": [
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": true
+        },
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": true
+        },
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": false
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XL",
+          "available": true
+        },
+        {
+          "name": "L",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 80,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-76",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "2.92 / 5",
+        "Discount": "9.75%"
+      }
+    },
+    {
+      "id": 77,
+      "img": "https://cdn.dummyjson.com/product-images/kitchen-accessories/yellow-peeler/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/kitchen-accessories/yellow-peeler/1.webp"
+      ],
+      "title": "Yellow Peeler",
+      "price": 5.99,
+      "oldPrice": 7,
+      "rating": 4,
+      "reviewsCount": 35,
+      "description": "The Yellow Peeler is a handy tool for peeling fruits and vegetables with ease. Its bright yellow color adds a cheerful touch to your kitchen gadgets.",
+      "colors": [
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": true
+        },
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "S",
+          "available": true
+        },
+        {
+          "name": "L",
+          "available": true
+        },
+        {
+          "name": "XL",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 35,
+      "category": "kitchen-accessories",
+      "brand": "Generic",
+      "sku": "SKU-77",
+      "specifications": {
+        "Brand": "Generic",
+        "Category": "kitchen-accessories",
+        "Rating": "4.24 / 5",
+        "Discount": "12.48%"
+      }
+    },
+    {
+      "id": 78,
+      "img": "https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/1.webp",
+        "https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/2.webp",
+        "https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/3.webp"
+      ],
+      "title": "Apple MacBook Pro 14 Inch Space Grey",
+      "price": 1999.99,
+      "oldPrice": 2094,
+      "rating": 4,
+      "reviewsCount": 24,
+      "description": "The MacBook Pro 14 Inch in Space Grey is a powerful and sleek laptop, featuring Apple's M1 Pro chip for exceptional performance and a stunning Retina display.",
+      "colors": [
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": true
+        },
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "S",
+          "available": false
+        },
+        {
+          "name": "L",
+          "available": true
+        },
+        {
+          "name": "M",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 24,
+      "category": "laptops",
+      "brand": "Apple",
+      "sku": "SKU-78",
+      "specifications": {
+        "Brand": "Apple",
+        "Category": "laptops",
+        "Rating": "3.65 / 5",
+        "Discount": "4.69%"
+      }
+    },
+    {
+      "id": 79,
+      "img": "https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/1.webp",
+        "https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/2.webp",
+        "https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/3.webp"
+      ],
+      "title": "Asus Zenbook Pro Dual Screen Laptop",
+      "price": 1799.99,
+      "oldPrice": 2001,
+      "rating": 4,
+      "reviewsCount": 45,
+      "description": "The Asus Zenbook Pro Dual Screen Laptop is a high-performance device with dual screens, providing productivity and versatility for creative professionals.",
+      "colors": [
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": false
+        },
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": true
+        },
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "L",
+          "available": true
+        },
+        {
+          "name": "M",
+          "available": true
+        },
+        {
+          "name": "XL",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 45,
+      "category": "laptops",
+      "brand": "Asus",
+      "sku": "SKU-79",
+      "specifications": {
+        "Brand": "Asus",
+        "Category": "laptops",
+        "Rating": "3.95 / 5",
+        "Discount": "11.14%"
+      }
+    },
+    {
+      "id": 80,
+      "img": "https://cdn.dummyjson.com/product-images/laptops/huawei-matebook-x-pro/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/laptops/huawei-matebook-x-pro/1.webp",
+        "https://cdn.dummyjson.com/product-images/laptops/huawei-matebook-x-pro/2.webp",
+        "https://cdn.dummyjson.com/product-images/laptops/huawei-matebook-x-pro/3.webp"
+      ],
+      "title": "Huawei Matebook X Pro",
+      "price": 1399.99,
+      "oldPrice": 1531,
+      "rating": 5,
+      "reviewsCount": 75,
+      "description": "The Huawei Matebook X Pro is a slim and stylish laptop with a high-resolution touchscreen display, offering a premium experience for users on the go.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        },
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": false
+        }
+      ],
+      "sizes": [
+        {
+          "name": "L",
+          "available": true
+        },
+        {
+          "name": "XL",
+          "available": true
+        },
+        {
+          "name": "M",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 75,
+      "category": "laptops",
+      "brand": "Huawei",
+      "sku": "SKU-80",
+      "specifications": {
+        "Brand": "Huawei",
+        "Category": "laptops",
+        "Rating": "4.98 / 5",
+        "Discount": "9.38%"
+      }
+    },
+    {
+      "id": 81,
+      "img": "https://cdn.dummyjson.com/product-images/laptops/lenovo-yoga-920/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/laptops/lenovo-yoga-920/1.webp",
+        "https://cdn.dummyjson.com/product-images/laptops/lenovo-yoga-920/2.webp",
+        "https://cdn.dummyjson.com/product-images/laptops/lenovo-yoga-920/3.webp"
+      ],
+      "title": "Lenovo Yoga 920",
+      "price": 1099.99,
+      "oldPrice": 1172,
+      "rating": 3,
+      "reviewsCount": 40,
+      "description": "The Lenovo Yoga 920 is a 2-in-1 convertible laptop with a flexible hinge, allowing you to use it as a laptop or tablet, offering versatility and portability.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        },
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": true
+        },
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "M",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 40,
+      "category": "laptops",
+      "brand": "Lenovo",
+      "sku": "SKU-81",
+      "specifications": {
+        "Brand": "Lenovo",
+        "Category": "laptops",
+        "Rating": "2.86 / 5",
+        "Discount": "6.55%"
+      }
+    },
+    {
+      "id": 82,
+      "img": "https://cdn.dummyjson.com/product-images/laptops/new-dell-xps-13-9300-laptop/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/laptops/new-dell-xps-13-9300-laptop/1.webp",
+        "https://cdn.dummyjson.com/product-images/laptops/new-dell-xps-13-9300-laptop/2.webp",
+        "https://cdn.dummyjson.com/product-images/laptops/new-dell-xps-13-9300-laptop/3.webp"
+      ],
+      "title": "New DELL XPS 13 9300 Laptop",
+      "price": 1499.99,
+      "oldPrice": 1678,
+      "rating": 3,
+      "reviewsCount": 74,
+      "description": "The New DELL XPS 13 9300 Laptop is a compact and powerful device, featuring a virtually borderless InfinityEdge display and high-end performance for various tasks.",
+      "colors": [
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": true
+        },
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": true
+        },
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": false
+        },
+        {
+          "name": "L",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 74,
+      "category": "laptops",
+      "brand": "Dell",
+      "sku": "SKU-82",
+      "specifications": {
+        "Brand": "Dell",
+        "Category": "laptops",
+        "Rating": "2.67 / 5",
+        "Discount": "11.89%"
+      }
+    },
+    {
+      "id": 83,
+      "img": "https://cdn.dummyjson.com/product-images/mens-shirts/blue-&-black-check-shirt/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/mens-shirts/blue-&-black-check-shirt/1.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shirts/blue-&-black-check-shirt/2.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shirts/blue-&-black-check-shirt/3.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shirts/blue-&-black-check-shirt/4.webp"
+      ],
+      "title": "Blue & Black Check Shirt",
+      "price": 29.99,
+      "oldPrice": 35,
+      "rating": 4,
+      "reviewsCount": 38,
+      "description": "The Blue & Black Check Shirt is a stylish and comfortable men's shirt featuring a classic check pattern. Made from high-quality fabric, it's suitable for both casual and semi-formal occasions.",
+      "colors": [
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": true
+        },
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": true
+        },
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XL",
+          "available": true
+        },
+        {
+          "name": "S",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 38,
+      "category": "mens-shirts",
+      "brand": "Fashion Trends",
+      "sku": "SKU-83",
+      "specifications": {
+        "Brand": "Fashion Trends",
+        "Category": "mens-shirts",
+        "Rating": "3.64 / 5",
+        "Discount": "15.35%"
+      }
+    },
+    {
+      "id": 84,
+      "img": "https://cdn.dummyjson.com/product-images/mens-shirts/gigabyte-aorus-men-tshirt/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/mens-shirts/gigabyte-aorus-men-tshirt/1.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shirts/gigabyte-aorus-men-tshirt/2.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shirts/gigabyte-aorus-men-tshirt/3.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shirts/gigabyte-aorus-men-tshirt/4.webp"
+      ],
+      "title": "Gigabyte Aorus Men Tshirt",
+      "price": 24.99,
+      "oldPrice": 25,
+      "rating": 3,
+      "reviewsCount": 90,
+      "description": "The Gigabyte Aorus Men Tshirt is a cool and casual shirt for gaming enthusiasts. With the Aorus logo and sleek design, it's perfect for expressing your gaming style.",
+      "colors": [
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": true
+        },
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": true
+        },
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": false
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": true
+        },
+        {
+          "name": "S",
+          "available": true
+        },
+        {
+          "name": "XL",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 90,
+      "category": "mens-shirts",
+      "brand": "Gigabyte",
+      "sku": "SKU-84",
+      "specifications": {
+        "Brand": "Gigabyte",
+        "Category": "mens-shirts",
+        "Rating": "3.18 / 5",
+        "Discount": "0.94%"
+      }
+    },
+    {
+      "id": 85,
+      "img": "https://cdn.dummyjson.com/product-images/mens-shirts/man-plaid-shirt/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/mens-shirts/man-plaid-shirt/1.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shirts/man-plaid-shirt/2.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shirts/man-plaid-shirt/3.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shirts/man-plaid-shirt/4.webp"
+      ],
+      "title": "Man Plaid Shirt",
+      "price": 34.99,
+      "oldPrice": 42,
+      "rating": 3,
+      "reviewsCount": 82,
+      "description": "The Man Plaid Shirt is a timeless and versatile men's shirt with a classic plaid pattern. Its comfortable fit and casual style make it a wardrobe essential for various occasions.",
+      "colors": [
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": true
+        },
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": true
+        },
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": true
+        },
+        {
+          "name": "L",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 82,
+      "category": "mens-shirts",
+      "brand": "Classic Wear",
+      "sku": "SKU-85",
+      "specifications": {
+        "Brand": "Classic Wear",
+        "Category": "mens-shirts",
+        "Rating": "3.46 / 5",
+        "Discount": "19.5%"
+      }
+    },
+    {
+      "id": 86,
+      "img": "https://cdn.dummyjson.com/product-images/mens-shirts/man-short-sleeve-shirt/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/mens-shirts/man-short-sleeve-shirt/1.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shirts/man-short-sleeve-shirt/2.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shirts/man-short-sleeve-shirt/3.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shirts/man-short-sleeve-shirt/4.webp"
+      ],
+      "title": "Man Short Sleeve Shirt",
+      "price": 19.99,
+      "oldPrice": 21,
+      "rating": 3,
+      "reviewsCount": 2,
+      "description": "The Man Short Sleeve Shirt is a breezy and stylish option for warm days. With a comfortable fit and short sleeves, it's perfect for a laid-back yet polished look.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        },
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": false
+        }
+      ],
+      "sizes": [
+        {
+          "name": "L",
+          "available": true
+        },
+        {
+          "name": "S",
+          "available": true
+        },
+        {
+          "name": "XL",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 2,
+      "category": "mens-shirts",
+      "brand": "Casual Comfort",
+      "sku": "SKU-86",
+      "specifications": {
+        "Brand": "Casual Comfort",
+        "Category": "mens-shirts",
+        "Rating": "2.9 / 5",
+        "Discount": "6.83%"
+      }
+    },
+    {
+      "id": 87,
+      "img": "https://cdn.dummyjson.com/product-images/mens-shirts/men-check-shirt/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/mens-shirts/men-check-shirt/1.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shirts/men-check-shirt/2.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shirts/men-check-shirt/3.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shirts/men-check-shirt/4.webp"
+      ],
+      "title": "Men Check Shirt",
+      "price": 27.99,
+      "oldPrice": 31,
+      "rating": 3,
+      "reviewsCount": 95,
+      "description": "The Men Check Shirt is a classic and versatile shirt featuring a stylish check pattern. Suitable for various occasions, it adds a smart and polished touch to your wardrobe.",
+      "colors": [
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": false
+        },
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": false
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": false
+        },
+        {
+          "name": "M",
+          "available": true
+        },
+        {
+          "name": "XL",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 95,
+      "category": "mens-shirts",
+      "brand": "Urban Chic",
+      "sku": "SKU-87",
+      "specifications": {
+        "Brand": "Urban Chic",
+        "Category": "mens-shirts",
+        "Rating": "2.72 / 5",
+        "Discount": "11.38%"
+      }
+    },
+    {
+      "id": 88,
+      "img": "https://cdn.dummyjson.com/product-images/mens-shoes/nike-air-jordan-1-red-and-black/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/mens-shoes/nike-air-jordan-1-red-and-black/1.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shoes/nike-air-jordan-1-red-and-black/2.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shoes/nike-air-jordan-1-red-and-black/3.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shoes/nike-air-jordan-1-red-and-black/4.webp"
+      ],
+      "title": "Nike Air Jordan 1 Red And Black",
+      "price": 149.99,
+      "oldPrice": 156,
+      "rating": 5,
+      "reviewsCount": 7,
+      "description": "The Nike Air Jordan 1 in Red and Black is an iconic basketball sneaker known for its stylish design and high-performance features, making it a favorite among sneaker enthusiasts and athletes.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        },
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 7,
+      "category": "mens-shoes",
+      "brand": "Nike",
+      "sku": "SKU-88",
+      "specifications": {
+        "Brand": "Nike",
+        "Category": "mens-shoes",
+        "Rating": "4.77 / 5",
+        "Discount": "4.12%"
+      }
+    },
+    {
+      "id": 89,
+      "img": "https://cdn.dummyjson.com/product-images/mens-shoes/nike-baseball-cleats/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/mens-shoes/nike-baseball-cleats/1.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shoes/nike-baseball-cleats/2.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shoes/nike-baseball-cleats/3.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shoes/nike-baseball-cleats/4.webp"
+      ],
+      "title": "Nike Baseball Cleats",
+      "price": 79.99,
+      "oldPrice": 94,
+      "rating": 4,
+      "reviewsCount": 12,
+      "description": "Nike Baseball Cleats are designed for maximum traction and performance on the baseball field. They provide stability and support for players during games and practices.",
+      "colors": [
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": true
+        },
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "M",
+          "available": true
+        },
+        {
+          "name": "S",
+          "available": true
+        },
+        {
+          "name": "XL",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 12,
+      "category": "mens-shoes",
+      "brand": "Nike",
+      "sku": "SKU-89",
+      "specifications": {
+        "Brand": "Nike",
+        "Category": "mens-shoes",
+        "Rating": "3.88 / 5",
+        "Discount": "18.04%"
+      }
+    },
+    {
+      "id": 90,
+      "img": "https://cdn.dummyjson.com/product-images/mens-shoes/puma-future-rider-trainers/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/mens-shoes/puma-future-rider-trainers/1.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shoes/puma-future-rider-trainers/2.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shoes/puma-future-rider-trainers/3.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shoes/puma-future-rider-trainers/4.webp"
+      ],
+      "title": "Puma Future Rider Trainers",
+      "price": 89.99,
+      "oldPrice": 94,
+      "rating": 5,
+      "reviewsCount": 90,
+      "description": "The Puma Future Rider Trainers offer a blend of retro style and modern comfort. Perfect for casual wear, these trainers provide a fashionable and comfortable option for everyday use.",
+      "colors": [
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": true
+        },
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "L",
+          "available": true
+        },
+        {
+          "name": "M",
+          "available": true
+        },
+        {
+          "name": "XS",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 90,
+      "category": "mens-shoes",
+      "brand": "Puma",
+      "sku": "SKU-90",
+      "specifications": {
+        "Brand": "Puma",
+        "Category": "mens-shoes",
+        "Rating": "4.9 / 5",
+        "Discount": "4.2%"
+      }
+    },
+    {
+      "id": 91,
+      "img": "https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-&-red/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-&-red/1.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-&-red/2.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-&-red/3.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-&-red/4.webp"
+      ],
+      "title": "Sports Sneakers Off White & Red",
+      "price": 119.99,
+      "oldPrice": 126,
+      "rating": 5,
+      "reviewsCount": 17,
+      "description": "The Sports Sneakers in Off White and Red combine style and functionality, making them a fashionable choice for sports enthusiasts. The red and off-white color combination adds a bold and energetic touch.",
+      "colors": [
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": true
+        },
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        },
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": false
+        }
+      ],
+      "sizes": [
+        {
+          "name": "M",
+          "available": false
+        },
+        {
+          "name": "S",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 17,
+      "category": "mens-shoes",
+      "brand": "Off White",
+      "sku": "SKU-91",
+      "specifications": {
+        "Brand": "Off White",
+        "Category": "mens-shoes",
+        "Rating": "4.77 / 5",
+        "Discount": "4.97%"
+      }
+    },
+    {
+      "id": 92,
+      "img": "https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-red/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-red/1.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-red/2.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-red/3.webp",
+        "https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-red/4.webp"
+      ],
+      "title": "Sports Sneakers Off White Red",
+      "price": 109.99,
+      "oldPrice": 110,
+      "rating": 5,
+      "reviewsCount": 62,
+      "description": "Another variant of the Sports Sneakers in Off White Red, featuring a unique design. These sneakers offer style and comfort for casual occasions.",
+      "colors": [
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": true
+        },
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "M",
+          "available": true
+        },
+        {
+          "name": "S",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 62,
+      "category": "mens-shoes",
+      "brand": "Off White",
+      "sku": "SKU-92",
+      "specifications": {
+        "Brand": "Off White",
+        "Category": "mens-shoes",
+        "Rating": "4.69 / 5",
+        "Discount": "0.04%"
+      }
+    },
+    {
+      "id": 93,
+      "img": "https://cdn.dummyjson.com/product-images/mens-watches/brown-leather-belt-watch/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/mens-watches/brown-leather-belt-watch/1.webp",
+        "https://cdn.dummyjson.com/product-images/mens-watches/brown-leather-belt-watch/2.webp",
+        "https://cdn.dummyjson.com/product-images/mens-watches/brown-leather-belt-watch/3.webp"
+      ],
+      "title": "Brown Leather Belt Watch",
+      "price": 89.99,
+      "oldPrice": 95,
+      "rating": 4,
+      "reviewsCount": 32,
+      "description": "The Brown Leather Belt Watch is a stylish timepiece with a classic design. Featuring a genuine leather strap and a sleek dial, it adds a touch of sophistication to your look.",
+      "colors": [
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": false
+        }
+      ],
+      "sizes": [
+        {
+          "name": "L",
+          "available": true
+        },
+        {
+          "name": "S",
+          "available": false
+        },
+        {
+          "name": "XL",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 32,
+      "category": "mens-watches",
+      "brand": "Fashion Timepieces",
+      "sku": "SKU-93",
+      "specifications": {
+        "Brand": "Fashion Timepieces",
+        "Category": "mens-watches",
+        "Rating": "4.19 / 5",
+        "Discount": "5.99%"
+      }
+    },
+    {
+      "id": 94,
+      "img": "https://cdn.dummyjson.com/product-images/mens-watches/longines-master-collection/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/mens-watches/longines-master-collection/1.webp",
+        "https://cdn.dummyjson.com/product-images/mens-watches/longines-master-collection/2.webp",
+        "https://cdn.dummyjson.com/product-images/mens-watches/longines-master-collection/3.webp"
+      ],
+      "title": "Longines Master Collection",
+      "price": 1499.99,
+      "oldPrice": 1759,
+      "rating": 4,
+      "reviewsCount": 100,
+      "description": "The Longines Master Collection is an elegant and refined watch known for its precision and craftsmanship. With a timeless design, it's a symbol of luxury and sophistication.",
+      "colors": [
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 100,
+      "category": "mens-watches",
+      "brand": "Longines",
+      "sku": "SKU-94",
+      "specifications": {
+        "Brand": "Longines",
+        "Category": "mens-watches",
+        "Rating": "3.87 / 5",
+        "Discount": "17.24%"
+      }
+    },
+    {
+      "id": 95,
+      "img": "https://cdn.dummyjson.com/product-images/mens-watches/rolex-cellini-date-black-dial/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/mens-watches/rolex-cellini-date-black-dial/1.webp",
+        "https://cdn.dummyjson.com/product-images/mens-watches/rolex-cellini-date-black-dial/2.webp",
+        "https://cdn.dummyjson.com/product-images/mens-watches/rolex-cellini-date-black-dial/3.webp"
+      ],
+      "title": "Rolex Cellini Date Black Dial",
+      "price": 8999.99,
+      "oldPrice": 9799,
+      "rating": 5,
+      "reviewsCount": 40,
+      "description": "The Rolex Cellini Date with Black Dial is a classic and prestigious watch. With a black dial and date complication, it exudes sophistication and is a symbol of Rolex's heritage.",
+      "colors": [
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "L",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 40,
+      "category": "mens-watches",
+      "brand": "Rolex",
+      "sku": "SKU-95",
+      "specifications": {
+        "Brand": "Rolex",
+        "Category": "mens-watches",
+        "Rating": "4.97 / 5",
+        "Discount": "8.88%"
+      }
+    },
+    {
+      "id": 96,
+      "img": "https://cdn.dummyjson.com/product-images/mens-watches/rolex-cellini-moonphase/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/mens-watches/rolex-cellini-moonphase/1.webp",
+        "https://cdn.dummyjson.com/product-images/mens-watches/rolex-cellini-moonphase/2.webp",
+        "https://cdn.dummyjson.com/product-images/mens-watches/rolex-cellini-moonphase/3.webp"
+      ],
+      "title": "Rolex Cellini Moonphase",
+      "price": 12999.99,
+      "oldPrice": 15278,
+      "rating": 3,
+      "reviewsCount": 36,
+      "description": "The Rolex Cellini Moonphase is a masterpiece of horology, featuring a moon phase complication and exquisite design. It reflects Rolex's commitment to precision and elegance.",
+      "colors": [
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": true
+        },
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": true
+        },
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": true
+        },
+        {
+          "name": "S",
+          "available": true
+        },
+        {
+          "name": "M",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 36,
+      "category": "mens-watches",
+      "brand": "Rolex",
+      "sku": "SKU-96",
+      "specifications": {
+        "Brand": "Rolex",
+        "Category": "mens-watches",
+        "Rating": "2.58 / 5",
+        "Discount": "17.52%"
+      }
+    },
+    {
+      "id": 97,
+      "img": "https://cdn.dummyjson.com/product-images/mens-watches/rolex-datejust/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/mens-watches/rolex-datejust/1.webp",
+        "https://cdn.dummyjson.com/product-images/mens-watches/rolex-datejust/2.webp",
+        "https://cdn.dummyjson.com/product-images/mens-watches/rolex-datejust/3.webp"
+      ],
+      "title": "Rolex Datejust",
+      "price": 10999.99,
+      "oldPrice": 11410,
+      "rating": 4,
+      "reviewsCount": 86,
+      "description": "The Rolex Datejust is an iconic and versatile timepiece with a date window. Known for its timeless design and reliability, it's a symbol of Rolex's watchmaking excellence.",
+      "colors": [
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": true
+        },
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": true
+        },
+        {
+          "name": "Yellow",
+          "value": "#facc15",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XL",
+          "available": true
+        },
+        {
+          "name": "L",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 86,
+      "category": "mens-watches",
+      "brand": "Rolex",
+      "sku": "SKU-97",
+      "specifications": {
+        "Brand": "Rolex",
+        "Category": "mens-watches",
+        "Rating": "3.66 / 5",
+        "Discount": "3.73%"
+      }
+    },
+    {
+      "id": 98,
+      "img": "https://cdn.dummyjson.com/product-images/mens-watches/rolex-submariner-watch/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/mens-watches/rolex-submariner-watch/1.webp",
+        "https://cdn.dummyjson.com/product-images/mens-watches/rolex-submariner-watch/2.webp",
+        "https://cdn.dummyjson.com/product-images/mens-watches/rolex-submariner-watch/3.webp"
+      ],
+      "title": "Rolex Submariner Watch",
+      "price": 13999.99,
+      "oldPrice": 14707,
+      "rating": 3,
+      "reviewsCount": 55,
+      "description": "The Rolex Submariner is a legendary dive watch with a rich history. Known for its durability and water resistance, it's a symbol of adventure and exploration.",
+      "colors": [
+        {
+          "name": "Blue",
+          "value": "#3b82f6",
+          "available": true
+        },
+        {
+          "name": "Green",
+          "value": "#10b981",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XS",
+          "available": false
+        }
+      ],
+      "inStock": true,
+      "stockCount": 55,
+      "category": "mens-watches",
+      "brand": "Rolex",
+      "sku": "SKU-98",
+      "specifications": {
+        "Brand": "Rolex",
+        "Category": "mens-watches",
+        "Rating": "2.69 / 5",
+        "Discount": "5.05%"
+      }
+    },
+    {
+      "id": 99,
+      "img": "https://cdn.dummyjson.com/product-images/mobile-accessories/amazon-echo-plus/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/mobile-accessories/amazon-echo-plus/1.webp",
+        "https://cdn.dummyjson.com/product-images/mobile-accessories/amazon-echo-plus/2.webp"
+      ],
+      "title": "Amazon Echo Plus",
+      "price": 99.99,
+      "oldPrice": 112,
+      "rating": 5,
+      "reviewsCount": 61,
+      "description": "The Amazon Echo Plus is a smart speaker with built-in Alexa voice control. It features premium sound quality and serves as a hub for controlling smart home devices.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        },
+        {
+          "name": "Red",
+          "value": "#ef4444",
+          "available": true
+        },
+        {
+          "name": "Gray",
+          "value": "#6b7280",
+          "available": false
+        }
+      ],
+      "sizes": [
+        {
+          "name": "L",
+          "available": false
+        },
+        {
+          "name": "XL",
+          "available": true
+        },
+        {
+          "name": "XS",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 61,
+      "category": "mobile-accessories",
+      "brand": "Amazon",
+      "sku": "SKU-99",
+      "specifications": {
+        "Brand": "Amazon",
+        "Category": "mobile-accessories",
+        "Rating": "4.99 / 5",
+        "Discount": "12.07%"
+      }
+    },
+    {
+      "id": 100,
+      "img": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/1.webp",
+        "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/2.webp",
+        "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/3.webp"
+      ],
+      "title": "Apple Airpods",
+      "price": 129.99,
+      "oldPrice": 150,
+      "rating": 4,
+      "reviewsCount": 67,
+      "description": "The Apple Airpods offer a seamless wireless audio experience. With easy pairing, high-quality sound, and Siri integration, they are perfect for on-the-go listening.",
+      "colors": [
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        }
+      ],
+      "sizes": [
+        {
+          "name": "XL",
+          "available": true
+        }
+      ],
+      "inStock": true,
+      "stockCount": 67,
+      "category": "mobile-accessories",
+      "brand": "Apple",
+      "sku": "SKU-100",
+      "specifications": {
+        "Brand": "Apple",
+        "Category": "mobile-accessories",
+        "Rating": "4.15 / 5",
+        "Discount": "15.54%"
+      }
+    }
   ]
 }
