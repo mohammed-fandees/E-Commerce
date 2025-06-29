@@ -9,3 +9,5 @@ export { default as NotFound } from "./NotFound";
 export { default as ProductDetailsPage } from "./ProductDetailsPage";
 export { default as SignUp } from "./SignUp";
 export { default as WishList } from "./WishList";
+export { default as Products } from "./Products";
+export { default as Orders } from "./Orders";

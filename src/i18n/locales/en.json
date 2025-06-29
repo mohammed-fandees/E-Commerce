@@ -721,5 +721,18 @@
       "title": "Download App",
       "award": "Save $3 with App! (New Users Only)"
     }
+  },
+  "categories": {
+    "beauty": "Beauty",
+    "fragrances": "Fragrances",
+    "furniture": "Furniture",
+    "groceries": "Groceries",
+    "home-decoration": "Home Decoration",
+    "kitchen-accessories": "Kitchen Accessories",
+    "laptops": "Laptops",
+    "mens-shirts": "Men's Shirts",
+    "mens-shoes": "Men's Shoes",
+    "mens-watches": "Men's Watches",
+    "mobile-accessories": "Mobile Accessories"
   }
 }

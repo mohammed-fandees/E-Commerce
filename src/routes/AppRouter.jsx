@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HomePage, WishList, Contact, SignUp, NotFound, Login, ProductDetailsPage, Cart, CheckOut, About, Account } from '../pages';
+import { HomePage, WishList, Contact, SignUp, NotFound, Login, ProductDetailsPage, Cart, CheckOut, About, Account, Products, Orders } from '../pages';
 import { Banner, Header } from '../components';
 import Footer from '@/components/layout/Footer';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -8,7 +8,7 @@ import ScrollToTop from '@/components/common/ScrollToTop';
 import { useContext } from 'react';
 import { SessionContext } from '@/store/SessionContext';
 import { UserPlus, User, Home, Phone, Info } from 'lucide-react';
-import Orders from '@/pages/Orders';
+
 
 export default function AppRouter() {
   const isMobile = useIsMobile();
@@ -30,6 +30,7 @@ export default function AppRouter() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
         <Route path="/account" element={<Account />} />
+        <Route path="/products" element={<Products />} />
         <Route path="/wishlist" element={<WishList />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/signup" element={<SignUp />} />

@@ -719,5 +719,18 @@
       "title": "حمل التطبيق",
       "award": "احصل على $3 هدية فور تحميلك التطبيق و التسجيل لأول مرة"
     }
+  },
+  "categories": {
+    "beauty": "جمال",
+    "fragrances": "عطور",
+    "furniture": "أثاث",
+    "groceries": "بقالة",
+    "home-decoration": "ديكور منزلي",
+    "kitchen-accessories": "اكسسوارات المطبخ",
+    "laptops": "لابتوبات",
+    "mens-shirts": "قمصان رجالي",
+    "mens-shoes": "أحذية رجالي",
+    "mens-watches": "ساعات رجالي",
+    "mobile-accessories": "اكسسوارات موبايل"
   }
 }

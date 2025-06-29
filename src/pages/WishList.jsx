@@ -86,9 +86,11 @@ export default function WishList() {
           <div className="mt-15">
             <div className="flex justify-between items-start mb-6">
               <SectionHeader title={t("wishlist.justForYou")} />
-              <Button className="bg-transparent border-1 border-[#0000004D] !text-black">
-                {t("common.viewAll")}
-              </Button>
+              <Link to="/products">
+                <Button className="bg-transparent border-1 border-[#0000004D] !text-black">
+                  {t("common.viewAll")}
+                </Button>
+              </Link>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
               {forYou.map((product) => (

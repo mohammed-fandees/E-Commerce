@@ -7,6 +7,8 @@ import data from "../../data/products.json";
 import { getCurrentLanguage } from "@/utils/change-lang";
 import { Skeleton } from "@mui/material";
 import { useEffect, useState } from "react";
+import { Link } from "react-router";
+
 
 export default function LimitedOffers() {
   const { t } = useTranslation();
@@ -23,6 +25,7 @@ export default function LimitedOffers() {
   const products = data.products.filter((product) => product.oldPrice);
   const [loading, setLoading] = useState(true);
 
+  
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 1000);
     return () => clearTimeout(timer);
@@ -71,7 +74,9 @@ export default function LimitedOffers() {
           <ProductsSwiper products={products} />
         </div>
         <div className="actions mt-10 flex justify-center">
-          <Button>{t("common.viewAllProducts")}</Button>
+          <Link to="/products">
+            <Button>{t("common.viewAllProducts")}</Button>
+          </Link>
         </div>
       </div>
     </main>

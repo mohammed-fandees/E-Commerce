@@ -67,7 +67,9 @@ export default function Products() {
       </div>
 
       <div className="flex justify-center my-10">
-        <Button><Link to="/products">{t("common.viewAllProducts")}</Link></Button>
+        <Link to="/products">
+          <Button>{t("common.viewAllProducts")}</Button>
+        </Link>
       </div>
     </div>
   )

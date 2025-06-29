@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next"
 import Button from "./Button";
 import Navigation from "./Navigation";
 import { getCurrentLanguage } from "@/utils/change-lang";
+import { Link } from "react-router";
 export default function SectionHeader({ title, description, action, customBtn, children }) {
   const { t } = useTranslation();
   const isRTL = getCurrentLanguage() == "ar";
@@ -23,7 +24,9 @@ export default function SectionHeader({ title, description, action, customBtn, c
             <Navigation />
           </div>
         ) : action == "view" ? (
-          <Button className={customBtn}>{t("common.viewAll")}</Button>
+          <Link to="/products">
+            <Button className={customBtn}>{t("common.viewAll")}</Button>
+          </Link>
         ) : ""}
       </div>
     </div>
