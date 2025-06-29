@@ -20,7 +20,7 @@ function getRandomItems(arr, max = 3) {
   }));
 }
 
-fetch('https://dummyjson.com/products?limit=100&skip=0')
+fetch('https://dummyjson.com/products?limit=200&skip=0')
   .then(res => res.json())
   .then(data => {
     const shaped = {
