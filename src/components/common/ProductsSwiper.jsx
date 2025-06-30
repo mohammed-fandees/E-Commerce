@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Keyboard, Navigation } from 'swiper/modules';
-import ProductCard from "./ProductCard";
+import VirtualProductCard from "./VirtualProductCard";
 import { breakpoints } from '@/config/Swiper.config';
 import { getCurrentLanguage } from '@/utils/change-lang';
 import 'swiper/css';
@@ -12,7 +12,7 @@ export default function ProductsSwiper({ products }) {
   const isRTL = getCurrentLanguage == "ar";
 
   return (
-    <>
+    <div className="w-full max-w-full overflow-x-hidden">
       <Swiper
         slidesPerView={1}
         spaceBetween={25}
@@ -21,14 +21,15 @@ export default function ProductsSwiper({ products }) {
         modules={[FreeMode, Keyboard, Navigation]}
         breakpoints={breakpoints}
         dir={isRTL ? "rtl" : "ltr"}
-        className="mySwiper" navigation={{
+        className="mySwiper"
+        navigation={{
           prevEl: `.${prevButtonClass}`,
           nextEl: `.${nextButtonClass}`,
-        }}>
-
+        }}
+      >
         {products?.map((product, i) => (
           <SwiperSlide key={i}>
-            <ProductCard
+            <VirtualProductCard
               id={product.id}
               image={product.img || null}
               title={product.title}
@@ -42,6 +43,6 @@ export default function ProductsSwiper({ products }) {
       </Swiper>
       <button className={`${prevButtonClass} hidden`}></button>
       <button className={`${nextButtonClass} hidden`}></button>
-    </>
+    </div>
   )
 }
