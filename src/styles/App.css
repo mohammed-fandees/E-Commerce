@@ -16,11 +16,11 @@
   transform: translateY(-36px);
 }
 
-@media (pointer: coarse) and (hover: none) {
+@media (hover: none) and (pointer: coarse), (pointer: none) and (hover: none) {
   .product-card .add-to-card {
     transform: translateY(-36px);
   }
-  
+
   .on-wish-list {
     transform: translateY(0) !important;
   }
