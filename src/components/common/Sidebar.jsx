@@ -4,15 +4,15 @@ import SidebarItems from "./SidebarItems";
 
 export default function Sidebar({ className }) {  
   const items = [
-    {trigger: "sidebar.one", subs: [1, 2]},
-    {trigger: "sidebar.two", subs: [1, 2]},
-    {trigger: "sidebar.three"},
-    {trigger: "sidebar.four"},
-    {trigger: "sidebar.five"},
-    {trigger: "sidebar.six"},
-    {trigger: "sidebar.seven"},
-    {trigger: "sidebar.eight"},
-    {trigger: "sidebar.nine"},
+    {trigger: "sidebar.one", subs: ["womens-dresses"]},
+    {trigger: "sidebar.two", subs: ["mens-shirts"]},
+    {trigger: "sidebar.three", subs: ["smartphones"]},
+    {trigger: "sidebar.four", subs: ["furniture"]},
+    {trigger: "sidebar.five", subs: ["sunglasses"]},
+    {trigger: "sidebar.six", subs: ["sports-accessories"]},
+    {trigger: "sidebar.seven", subs: ["laptops"]},
+    {trigger: "sidebar.eight", subs: ["groceries"]},
+    {trigger: "sidebar.nine", subs: ["beauty"]},
   ];
   return (
     <aside className={`bg-white max-w-[250px] border-e-1 ${className}`}>

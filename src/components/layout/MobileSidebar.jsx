@@ -1,10 +1,13 @@
 import { useState, useEffect, useCallback, useRef, useContext } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { X, ChevronRight, ChevronDown, Globe, User, ShoppingBag, CircleX, Star, LogOut, UserIcon, Home, Phone, Info, UserPlus } from "lucide-react";
+import { X, ChevronRight, ChevronDown, Globe, User, ShoppingBag, CircleX, Star, LogOut, SoapDispenserDroplet, UserIcon, Banana, Smartphone, Armchair, Glasses, Dumbbell, LaptopMinimal } from "lucide-react";
 import { changeLanguage, getCurrentLanguage } from "../../utils/change-lang";
 import supabase from "@/services/supabase/supabaseClient";
 import { SessionContext } from "@/store/SessionContext";
+import Face4OutlinedIcon from '@mui/icons-material/Face4Outlined';
+import FaceOutlinedIcon from '@mui/icons-material/FaceOutlined';
+import { Links } from "react-router";
 
 export default function MobileSidebar({ isOpen, onClose, navLinks }) {
   const { t } = useTranslation();
@@ -54,23 +57,15 @@ export default function MobileSidebar({ isOpen, onClose, navLinks }) {
 
   // Navigation data
   const categories = [
-    {
-      trigger: "sidebar.one",
-      subs: ["Women's Clothing", "Men's Clothing"],
-      icon: User
-    },
-    {
-      trigger: "sidebar.two",
-      subs: ["Smartphones", "Laptops"],
-      icon: ShoppingBag
-    },
-    { trigger: "sidebar.three", icon: Star },
-    { trigger: "sidebar.four", icon: Globe },
-    { trigger: "sidebar.five", icon: User },
-    { trigger: "sidebar.six", icon: ShoppingBag },
-    { trigger: "sidebar.seven", icon: Star },
-    { trigger: "sidebar.eight", icon: Globe },
-    { trigger: "sidebar.nine", icon: User },
+    { trigger: "sidebar.one", icon: Face4OutlinedIcon },
+    { trigger: "sidebar.two", icon: FaceOutlinedIcon },
+    { trigger: "sidebar.three", icon: Smartphone },
+    { trigger: "sidebar.four", icon: Armchair },
+    { trigger: "sidebar.five", icon: Glasses },
+    { trigger: "sidebar.six", icon: Dumbbell },
+    { trigger: "sidebar.seven", icon: LaptopMinimal },
+    { trigger: "sidebar.eight", icon: Banana },
+    { trigger: "sidebar.nine", icon: SoapDispenserDroplet },
   ];
 
   const languageOptions = [
@@ -251,21 +246,23 @@ export default function MobileSidebar({ isOpen, onClose, navLinks }) {
                 const IconComponent = category.icon || Star;
                 return (
                   <div key={index}>
-                    <button
-                      onClick={() => handleCategoryClick(index)}
-                      className={`w-full p-4 flex items-center justify-between hover:bg-red-50 border-b border-gray-50 transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] group `}
-                    >
-                      <div className={`flex items-center gap-3 `}>
-                        <div className="p-2 bg-gray-100 rounded-lg group-hover:text-white transition-all duration-200" style={{ backgroundColor: '#fef2f2' }}>
-                          <IconComponent className="w-4 h-4 group-hover:text-white" style={{ color: '#db4444' }} />
+                    <Link to={`/products`}>
+                      <button
+                        onClick={() => handleCategoryClick(index)}
+                        className={`w-full p-4 flex items-center justify-between hover:bg-red-50 border-b border-gray-50 transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] group `}
+                      >
+                        <div className={`flex items-center gap-3 `}>
+                          <div className="p-2 bg-gray-100 rounded-lg group-hover:text-white transition-all duration-200" style={{ backgroundColor: '#fef2f2' }}>
+                            <IconComponent className="!w-4 !h-4 group-hover:text-white" style={{ color: '#db4444' }} />
+                          </div>
+                          <span className="font-medium text-gray-700">{t(category.trigger)}</span>
                         </div>
-                        <span className="font-medium text-gray-700">{t(category.trigger)}</span>
-                      </div>
-                      {category.subs && (
-                        <ChevronRight className={`w-4 h-4 transition-transform duration-300 text-gray-500 ${expandedCategory === index ? 'rotate-90' : ''
-                          } ${isRTL ? 'rotate-180' : ''}`} />
-                      )}
-                    </button>
+                        {category.subs && (
+                          <ChevronRight className={`w-4 h-4 transition-transform duration-300 text-gray-500 ${expandedCategory === index ? 'rotate-90' : ''
+                            } ${isRTL ? 'rotate-180' : ''}`} />
+                        )}
+                      </button>
+                    </Link>
 
                     <div className={`overflow-hidden transition-all duration-300 ease-out ${category.subs && expandedCategory === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                       }`}>
