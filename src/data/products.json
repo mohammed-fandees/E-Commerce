@@ -9123,6 +9123,47 @@
         "Rating": "3.52 / 5",
         "Discount": "12.6%"
       }
+    },
+    {
+      "id": 195,
+      "img": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-product-thumbnail-01-en-14sep21?$facebook$",
+      "images": [
+        "https://gmedia.playstation.com/is/image/SIEPDC/ps5-product-thumbnail-01-en-14sep21?$facebook$",
+        "https://logon.citysuper.com.hk/cdn/shop/products/PS5_01_DUALSENSE_GALAXY_CC_MB_sRGB_211124.jpg?v=1697523004&width=1946"
+      ],
+      "title": "PlayStation 5 Console",
+      "price": 599.99,
+      "oldPrice": 649.99,
+      "rating": 4.9,
+      "reviewsCount": 185,
+      "description": "The PlayStation 5 delivers lightning-fast loading, ultra-high speed SSD, deeper immersion with support for haptic feedback, adaptive triggers and 3D Audio, and an all-new generation of incredible PlayStation games.",
+      "colors": [
+        {
+          "name": "White",
+          "value": "#ffffff",
+          "available": true
+        },
+        {
+          "name": "Black",
+          "value": "#000000",
+          "available": true
+        }
+      ],
+      "sizes": [],
+      "inStock": true,
+      "stockCount": 27,
+      "category": "gaming-consoles",
+      "brand": "Sony",
+      "sku": "SKU-195",
+      "specifications": {
+        "Brand": "Sony",
+        "Category": "gaming-consoles",
+        "Rating": "4.9 / 5",
+        "Discount": "7.7%",
+        "Storage": "825 GB SSD",
+        "Resolution": "Up to 8K",
+        "Controllers": "1 DualSense Wireless Controller included"
+      }
     }
   ]
 }

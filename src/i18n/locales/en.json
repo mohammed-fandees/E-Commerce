@@ -93,7 +93,8 @@
     "cart": "Cart",
     "wishlist": "Wishlist",
     "account": "Account",
-    "orders": "Orders"
+    "orders": "Orders",
+    "categories": "Categories"
   },
   "banner": {
     "text": "Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!",
@@ -151,7 +152,7 @@
     },
     "categories": {
       "title": "Categories",
-      "description": "Browse By Category",
+      "description": "Browse By Categories",
       "items": {
         "1": "Phones",
         "2": "Computers",
@@ -746,6 +747,51 @@
     "womens-dresses": "Women's Dresses",
     "womens-jewellery": "Women's Jewellery",
     "womens-shoes": "Women's Shoes",
-    "womens-watches": "Women's Watches"
+    "womens-watches": "Women's Watches",
+    "featured": "Featured Categories",
+    "trending_now": "Trending Now",
+    "trending": "Trending",
+    "items": "items",
+    "featured_items": {
+      "electronics": "Electronics",
+      "fashion": "Fashion",
+      "home": "Home & Garden"
+    },
+    "stats": {
+      "total_categories": "Total Categories",
+      "total_products": "Total Products",
+      "new_this_week": "New This Week"
+    },
+    "search_placeholder": "Search categories...",
+    "sort": {
+      "name": "Name",
+      "popular": "Most Popular",
+      "newest": "Newest",
+      "item_count": "Item Count"
+    },
+    "popular_tags": "Popular Tags",
+    "all_categories": "All Categories",
+    "search_results": "Search results for: {{term}}",
+    "newsletter": {
+      "title": "Stay Updated with Latest Categories",
+      "description": "Subscribe to our newsletter to get the latest updates and special offers",
+      "email_placeholder": "Enter your email",
+      "subscribe": "Subscribe",
+      "success": "Successfully subscribed! Thank you."
+    }
+  },
+  "tags": {
+    "electronics": "Electronics",
+    "fashion": "Fashion",
+    "home_garden": "Home & Garden",
+    "sports": "Sports",
+    "beauty": "Beauty",
+    "automotive": "Automotive",
+    "accessories": "Accessories"
+  },
+  "categoryProducts": {
+    "category": "Category",
+    "browseDescription": "Browse all products in {{category}}.",
+    "noProducts": "No products found in this category."
   }
 }

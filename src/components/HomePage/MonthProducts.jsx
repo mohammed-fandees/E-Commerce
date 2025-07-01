@@ -26,7 +26,7 @@ export default function MonthProducts() {
         <div className={`flex justify-between items-center h-[550px] w-full bg-black my-25 lg:ps-15 relative px-4 text-center md:text-left`}>
           <div className="text z-1">
             <p className='text-[#00FF66] font-semibold'>{t("home.monthProducts.bannerCategory")}</p>
-            <h1 className="font-semibold md:text-5xl text-3xl text-white leading-12 lg:leading-15 tracking-[4px] my-8">{t("home.monthProducts.bannerTitle")}</h1>
+            <h1 className="font-semibold md:text-5xl text-3xl text-white leading-12 lg:leading-15 tracking-[4px] my-8 rtl:text-right rtl:xl:text-[38px]">{t("home.monthProducts.bannerTitle")}</h1>
             <div className="flex gap-6 text font-bold-center justify-around md:justify-start">
               {timeUnits.map((unit) => (
                 <div key={unit.label} className="flex gap-1">

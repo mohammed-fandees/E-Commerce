@@ -22,7 +22,7 @@ export default function Featured() {
           <div className="text-box absolute text-white p-8 start-0 w-full bg-[linear-gradient(0deg,_black,_transparent)]">
             <h3 className='text-2xl font-semibold mb-5'>{t("home.featured.cards.one.title")}</h3>
             <p className='text-sm w-60 mb-5'>{t("home.featured.cards.one.description")}</p>
-            <Link to="" className='underline'>{t("common.shopNow")}</Link>
+            <Link to="/products/195" className='underline'>{t("common.shopNow")}</Link>
           </div>
         </div>
         <div className="col-span-1 min-h-[600px] flex flex-col space-y-7">
@@ -30,7 +30,7 @@ export default function Featured() {
             <div className="text-box absolute text-white p-8 start-0 bottom-0">
               <h3 className='text-2xl font-semibold mb-5'>{t("home.featured.cards.two.title")}</h3>
               <p className='text-sm w-60 mb-5'>{t("home.featured.cards.two.description")}</p>
-              <Link to="" className='underline'>{t("common.shopNow")}</Link>
+              <Link to="/products/181" className='underline'>{t("common.shopNow")}</Link>
             </div>
           </div>
           <div className="grid sm:grid-cols-2 grid-cols-1 flex-1 gap-7">
@@ -39,7 +39,7 @@ export default function Featured() {
               <div className="text-box absolute bottom-0 text-white p-8 start-0 w-full">
                 <h3 className='text-2xl font-semibold mb-2'>{t("home.featured.cards.three.title")}</h3>
                 <p className='text-sm w-60 mb-3'>{t("home.featured.cards.three.description")}</p>
-                <Link to="" className='underline'>{t("common.shopNow")}</Link>
+                <Link to="/products/99" className='underline'>{t("common.shopNow")}</Link>
               </div>
             </div>
             <div className="col-span-1 bg-black rounded max-h-[280px] flex items-center justify-center relative">
@@ -47,7 +47,7 @@ export default function Featured() {
               <div className="text-box absolute bottom-0 text-white p-8 start-0 w-full">
                 <h3 className='text-2xl font-semibold mb-2'>{t("home.featured.cards.four.title")}</h3>
                 <p className='text-sm w-60 mb-3'>{t("home.featured.cards.four.description")}</p>
-                <Link to="" className='underline'>{t("common.shopNow")}</Link>
+                <Link to="/products/7" className='underline'>{t("common.shopNow")}</Link>
               </div>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { CATEGORY_LABELS } from "@/data/categoryLabels";
 
 export default function Breadcrumbs() {
   const location = useLocation();
@@ -9,20 +10,23 @@ export default function Breadcrumbs() {
   const pathnames = location.pathname.split("/").filter((x) => x);
 
   const translationMap = {
-    about: t("pages.about"),
-    account: t("pages.account"),
-    cart: t("pages.cart"),
-    checkout: t("pages.checkout"),
-    home: t("pages.home"),
-    wishlist: t("pages.wishlist"),
-    contact: t("pages.contact"),
-    login: t("pages.login"),
-    signup: t("pages.signup"),
-    dashboard: t("pages.dashboard"),
-    profile: t("pages.profile"),
-    settings: t("pages.settings"),
-    orders: t("pages.orders"),
-    products: t("pages.products")
+    about: "pages.about",
+    account: "pages.account",
+    cart: "pages.cart",
+    checkout: "pages.checkout",
+    home: "pages.home",
+    wishlist: "pages.wishlist",
+    contact: "pages.contact",
+    login: "pages.login",
+    signup: "pages.signup",
+    dashboard: "pages.dashboard",
+    profile: "pages.profile",
+    settings: "pages.settings",
+    orders: "pages.orders",
+    products: "pages.products",
+    category: "pages.category",
+    categories: "pages.categories",
+    ...CATEGORY_LABELS
   };
 
   return (
@@ -34,7 +38,7 @@ export default function Breadcrumbs() {
         {pathnames.map((name, index) => {
           const routeTo = `/${pathnames.slice(0, index + 1).join("/")}`;
           const isLast = index === pathnames.length - 1;
-          const translatedName = translationMap[name] || decodeURIComponent(name);
+          const translatedName = t(translationMap[name]) || decodeURIComponent(name);
 
           return (
             <li key={name} className="flex items-center space-x-1 rtl:space-x-reverse">

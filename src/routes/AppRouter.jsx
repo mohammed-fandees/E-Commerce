@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HomePage, WishList, Contact, SignUp, NotFound, Login, ProductDetailsPage, Cart, CheckOut, About, Account, Products, Orders } from '../pages';
+import { HomePage, WishList, Contact, SignUp, NotFound, Login, ProductDetailsPage, Cart, CheckOut, About, Account, Products, Orders, CategoryProducts, AllCategories } from '../pages';
 import { Banner, Header } from '../components';
 import Footer from '@/components/layout/Footer';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -18,7 +18,7 @@ export default function AppRouter() {
     { label: "header.nav.home", path: "/", icon: Home },
     { label: "header.nav.contact", path: "/contact", icon: Phone },
     { label: "header.nav.about", path: "/about", icon: Info },
-    { label: session ? "header.nav.account" : "header.nav.signup", path: session ? "/account" : "/signup", icon: session? User : UserPlus },
+    { label: session ? "header.nav.account" : "header.nav.signup", path: session ? "/account" : "/signup", icon: session ? User : UserPlus },
   ];
 
   return (
@@ -40,6 +40,8 @@ export default function AppRouter() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<CheckOut />} />
         <Route path="/orders" element={<Orders />} />
+        <Route path="/categories" element={<AllCategories />} />
+        <Route path="/categories/:category" element={<CategoryProducts />} />
       </Routes>
       <Footer />
     </Router>

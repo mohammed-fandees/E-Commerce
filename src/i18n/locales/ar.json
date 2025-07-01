@@ -92,7 +92,8 @@
     "cart": "السلة",
     "wishlist": "المفضلة",
     "account": "الحساب",
-    "orders": "طلباتي"
+    "orders": "طلباتي",
+    "categories": "الفئات"
   },
   "banner": {
     "text": "تخفيضات الصيف على جميع بدلات السباحة وتوصيل سريع مجاني - خصم 50%!",
@@ -149,7 +150,7 @@
       }
     },
     "categories": {
-      "title": "الفئات",
+      "title": "جميع الفئات",
       "description": "تصفح الفئات المختلفة",
       "items": {
         "1": "الموبايلات",
@@ -160,6 +161,7 @@
         "6": "قسم الألعاب"
       }
     },
+
     "monthProducts": {
       "title": "منتجات الشهر المميزة",
       "description": "أفضل المنتجات المبيعة لدينا هذا الشهر",
@@ -744,6 +746,51 @@
     "womens-dresses": "فساتين نسائية",
     "womens-jewellery": "مجوهرات نسائية",
     "womens-shoes": "أحذية نسائية",
-    "womens-watches": "ساعات نسائية"
+    "womens-watches": "ساعات نسائية",
+    "featured": "الفئات المميزة",
+    "trending_now": "الأكثر رواجاً الآن",
+    "trending": "رائج",
+    "items": "عنصر",
+    "featured_items": {
+      "electronics": "الإلكترونيات",
+      "fashion": "الأزياء",
+      "home": "المنزل والحديقة"
+    },
+    "stats": {
+      "total_categories": "إجمالي الفئات",
+      "total_products": "إجمالي المنتجات",
+      "new_this_week": "جديد هذا الأسبوع"
+    },
+    "search_placeholder": "ابحث في الفئات...",
+    "sort": {
+      "name": "الاسم",
+      "popular": "الأكثر شيوعاً",
+      "newest": "الأحدث",
+      "item_count": "عدد العناصر"
+    },
+    "popular_tags": "العلامات الشائعة",
+    "all_categories": "جميع الفئات",
+    "search_results": "نتائج البحث عن: {{term}}",
+    "newsletter": {
+      "title": "ابق على اطلاع بأحدث الفئات",
+      "description": "اشترك في نشرتنا الإخبارية للحصول على آخر التحديثات والعروض الخاصة",
+      "email_placeholder": "أدخل بريدك الإلكتروني",
+      "subscribe": "اشتراك",
+      "success": "تم الاشتراك بنجاح! شكراً لك."
+    }
+  },
+  "tags": {
+    "electronics": "إلكترونيات",
+    "fashion": "أزياء",
+    "home_garden": "المنزل والحديقة",
+    "sports": "رياضة",
+    "beauty": "جمال",
+    "automotive": "سيارات",
+    "accessories": "إكسسوارات"
+  },
+  "categoryProducts": {
+    "category": "الفئة",
+    "browseDescription": "تصفح جميع المنتجات في {{category}}.",
+    "noProducts": "لا توجد منتجات في هذه الفئة."
   }
 }

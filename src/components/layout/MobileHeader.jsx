@@ -1,4 +1,5 @@
-import { Heart, Search, ShoppingCart, Menu } from "lucide-react";
+import { Heart, ShoppingCart, Menu } from "lucide-react";
+import SearchInput from "../common/SearchInput";
 import { useTranslation } from "react-i18next";
 import { getCurrentLanguage } from "../../utils/change-lang";
 import { Link } from "react-router-dom";
@@ -48,12 +49,7 @@ export default function MobileHeader({ navLinks }) {
         </div>
 
         <div className="flex items-center space-x-6 mt-5">
-          <div className={`search flex ${isRTL && "flex-row-reverse"} bg-[#F5F5F5] rounded-md overflow-hidden items-center pr-4 w-full`}>
-            <input type="text" placeholder={t("header.searchPlaceholder")} className="px-4 py-2 bg-[#F5F5F5] outline-0 w-full" />
-            <button className="cursor-pointer p-1 hover:bg-gray-200 rounded" aria-label="Search">
-              <Search className="w-5 h-5" />
-            </button>
-          </div>
+          <SearchInput isRTL={isRTL} className="w-full" inputClassName="w-full" onSearchClick={() => { }} />
         </div>
       </header>
 
