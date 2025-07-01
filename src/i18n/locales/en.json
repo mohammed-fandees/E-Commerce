@@ -19,6 +19,13 @@
     "continueShopping": "Continue Shopping",
     "quickView": "Quick View"
   },
+  "search": {
+    "recentSearches": "Recent Searches",
+    "noHistory": "No recent searches yet.",
+    "trending": "Trending",
+    "noResults": "No results found for \"{{query}}\"",
+    "tryDifferent": "Try different keywords or check your spelling"
+  },
   "validation": {
     "firstName": {
       "too_small": "First name is required"

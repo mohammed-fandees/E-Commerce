@@ -19,6 +19,13 @@
     "continueShopping": "متابعة التسوق",
     "quickView": "مشاهدة سريعة"
   },
+  "search": {
+    "recentSearches": "عمليات البحث الأخيرة",
+    "noHistory": "لا يوجد عمليات بحث حديثة بعد.",
+    "trending": "الأكثر رواجًا",
+    "noResults": "لم يتم العثور على نتائج لـ \"{{query}}\"",
+    "tryDifferent": "جرّب كلمات مفتاحية مختلفة أو تحقق من الإملاء"
+  },
   "validation": {
     "firstName": {
       "too_small": "الاسم الأول مطلوب"
