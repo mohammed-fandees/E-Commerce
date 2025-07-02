@@ -63,7 +63,7 @@ export default function HomePage() {
 
             {!loading && (
               <img loading="lazy"
-                src="/products/iphone.jpg"
+                src="/products/iphone.avif"
                 className={`img-fluid rounded-top h-[85%] mx-25 ${isMobile &&
                   "absolute opacity-40 left-1/2 -translate-x-1/2 !m-0 h-[70%]"
                   }`}
