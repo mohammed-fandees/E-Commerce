@@ -7,7 +7,6 @@ import supabase from "@/services/supabase/supabaseClient";
 import { SessionContext } from "@/store/SessionContext";
 import Face4OutlinedIcon from '@mui/icons-material/Face4Outlined';
 import FaceOutlinedIcon from '@mui/icons-material/FaceOutlined';
-import { Links } from "react-router";
 
 export default function MobileSidebar({ isOpen, onClose, navLinks }) {
   const { t } = useTranslation();
