@@ -43,7 +43,7 @@ export default function MonthProducts() {
             </div>
             <Button className="mt-15 !bg-[#00FF66]">{t("common.buyNow")}!</Button>
           </div>
-          <img loading="lazy" src="/products/jbl-outdoor-speaker.png" alt="jpl speaker" className={`w-[55%] mx-25  ${!isRTL && `-scale-x-100`} ${isMobile && "lg:w-[60%] md:w-[70%] w-[80%] h-auto absolute !m-0 left-1/2 -translate-x-1/2 opacity-70"}  [filter:drop-shadow(0px_0px_100px_rgba(255,255,255,_.35))]`} />
+          <img loading="lazy" src="/products/jbl-outdoor-speaker.avif" alt="jpl speaker" className={`w-[55%] mx-25  ${!isRTL && `-scale-x-100`} ${isMobile && "lg:w-[60%] md:w-[70%] w-[80%] h-auto absolute !m-0 left-1/2 -translate-x-1/2 opacity-70"}  [filter:drop-shadow(0px_0px_100px_rgba(255,255,255,_.35))]`} />
         </div>
       </div>
     </div>
