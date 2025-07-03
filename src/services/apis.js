@@ -1,5 +1,13 @@
 import supabase from "./supabase/supabaseClient";
 
+// Fetch products from the database
+
+export async function fetchProducts() {
+  const { data, error } = await supabase.from("products").select("*");
+  if (error) throw error;
+  return data;
+}
+
 // Fetch reviews for a product
 export async function fetchReviews(productId) {
   const { data, error } = await supabase
@@ -52,3 +60,4 @@ export async function getUserReview(productId, userEmail) {
   if (error && error.code !== "PGRST116" && error.code !== "406") throw error; // ignore not found/406
   return data;
 }
+

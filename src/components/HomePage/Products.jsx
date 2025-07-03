@@ -1,15 +1,15 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import SectionHeader from '../common/SectionHeader'
 import { useTranslation } from 'react-i18next'
 import { Grid, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { getCurrentLanguage } from '@/utils/change-lang';
+import { fetchProducts } from '@/services/apis';
 
 import 'swiper/css';
 import 'swiper/css/grid';
 import 'swiper/css/navigation';
 import ProductCard from '../common/ProductCard';
-import data from "../../data/products.json";
 import { breakpoints } from '@/config/Swiper.config';
 import { Link } from 'react-router';
 import Button from '../common/Button';
@@ -19,6 +19,13 @@ export default function Products() {
   const swiperRef = useRef(null);
   const currentLang = getCurrentLanguage();
   const isRTL = currentLang === "ar";
+
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    fetchProducts().then((data) => {
+      setProducts(data || []);
+    });
+  }, []);
 
   const prevButtonClass = 'swiper-button-prev-offers';
   const nextButtonClass = 'swiper-button-next-offers';
@@ -50,16 +57,16 @@ export default function Products() {
             nextEl: `.${nextButtonClass}`,
           }}
         >
-          {data.products?.map((product, i) => (
+          {products?.map((product, i) => (
             <SwiperSlide key={i}>
               <ProductCard
                 id={product.id}
                 image={product.img || null}
                 title={product.title}
                 price={product.price}
-                oldPrice={product.oldPrice || null}
+                oldPrice={product.old_price || product.oldPrice || null}
                 rating={product.rating || 0}
-                reviewsCount={product.reviewsCount || 0}
+                reviewsCount={product.reviews_count || product.reviewsCount || 0}
               />
             </SwiperSlide>
           ))}

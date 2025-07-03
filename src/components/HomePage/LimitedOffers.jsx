@@ -3,7 +3,7 @@ import SectionHeader from "../common/SectionHeader";
 import { useCountdown } from "@/hooks/use-countdown";
 import Button from "../common/Button";
 import ProductsSwiper from "../common/ProductsSwiper";
-import data from "../../data/products.json";
+import { fetchProducts } from "@/services/apis";
 import { getCurrentLanguage } from "@/utils/change-lang";
 import { Skeleton } from "@mui/material";
 import { useEffect, useState } from "react";
@@ -22,13 +22,14 @@ export default function LimitedOffers() {
     { label: "s", value: seconds },
   ];
 
-  const products = data.products.filter((product) => product.oldPrice);
+  const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1000);
-    return () => clearTimeout(timer);
+    fetchProducts().then((data) => {
+      setProducts((data || []).filter((product) => product.old_price || product.oldPrice));
+      setLoading(false);
+    });
   }, []);
 
   return (
@@ -50,22 +51,22 @@ export default function LimitedOffers() {
                 {index < 3 && (<span className="text-[#DB4444] text-[32px] font-bold">:</span>)}
               </div>
             )) : timeUnits.map((unit, index) => (
-                <div key={unit.label} className="flex items-end gap-1">
-                  <div className="flex flex-col">
-                    <span className="text-[12px] font-medium text-center">
-                      {t(`home.offers.countdown.${unit.label}`)}
+              <div key={unit.label} className="flex items-end gap-1">
+                <div className="flex flex-col">
+                  <span className="text-[12px] font-medium text-center">
+                    {t(`home.offers.countdown.${unit.label}`)}
+                  </span>
+                  <span className="countdown font-bold text-[32px]">
+                    <span style={{ "--value": unit.value }}>
+                      {unit.value}
                     </span>
-                    <span className="countdown font-bold text-[32px]">
-                      <span style={{ "--value": unit.value }}>
-                        {unit.value}
-                      </span>
-                    </span>
-                  </div>
-                  {index < timeUnits.length - 1 && (
-                    <span className="text-[#DB4444] text-[32px] font-bold">:</span>
-                  )}
+                  </span>
                 </div>
-              ))}
+                {index < timeUnits.length - 1 && (
+                  <span className="text-[#DB4444] text-[32px] font-bold">:</span>
+                )}
+              </div>
+            ))}
           </div>
         )}
       </SectionHeader>

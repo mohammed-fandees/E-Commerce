@@ -1,8 +1,8 @@
-import React, { useState, useMemo, useCallback } from "react";
+import React, { useState, useMemo, useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuTrigger } from "../ui/navigation-menu";
 import { Link } from "react-router";
-import data from "../../data/products.json";
+import { fetchProducts } from "@/services/apis";
 import { ImageOff } from "lucide-react";
 
 const getRandomProducts = (products, count = 3) => {
@@ -20,20 +20,27 @@ export default function SidebarItems({ items }) {
   const [openMenus, setOpenMenus] = useState({});
   const [hoveredProducts, setHoveredProducts] = useState({});
   const [imgStatuses, setImgStatuses] = useState({});
+  const [allProducts, setAllProducts] = useState([]);
+
+  useEffect(() => {
+    fetchProducts().then((data) => {
+      setAllProducts(data || []);
+    });
+  }, []);
 
   const handleMenuOpen = useCallback((itemIndex, subIndex, sub) => {
     const menuKey = `${itemIndex}-${subIndex}`;
-    const allProducts = data.products?.filter(
+    const allProductsForCat = allProducts?.filter(
       (product) => product.category === sub
     ) || [];
-    const randomProducts = getRandomProducts(allProducts, 3);
+    const randomProducts = getRandomProducts(allProductsForCat, 3);
     setOpenMenus(prev => ({
       ...prev,
       [menuKey]: randomProducts
     }));
     setHoveredProducts(prev => ({ ...prev, [menuKey]: null }));
     setImgStatuses(prev => ({ ...prev, [menuKey]: "loading" }));
-  }, []);
+  }, [allProducts]);
 
   const handleProductHover = useCallback((menuKey, productIndex) => {
     if (productIndex !== null) {
@@ -61,11 +68,11 @@ export default function SidebarItems({ items }) {
             if (openMenus[menuKey]) {
               return openMenus[menuKey];
             }
-            const allProducts = data.products?.filter(
+            const allProductsForCat = allProducts?.filter(
               (product) => product.category === sub
             ) || [];
-            return getRandomProducts(allProducts, 3);
-          }, [openMenus[menuKey], sub]);
+            return getRandomProducts(allProductsForCat, 3);
+          }, [openMenus[menuKey], sub, allProducts]);
 
           const hoveredIdx = hoveredProducts[menuKey];
           const imgStatus = imgStatuses[menuKey] || "loading";
@@ -74,7 +81,7 @@ export default function SidebarItems({ items }) {
             : randomProducts[0];
 
           return (
-            <NavigationMenuContent 
+            <NavigationMenuContent
               key={subIndex}
               onMouseEnter={() => handleMenuOpen(itemIndex, subIndex, sub)}
               className="border border-red-200/60 shadow-xl rounded-xl bg-white/95 backdrop-blur-sm"
@@ -172,36 +179,31 @@ function ListItem({
   return (
     <div {...props}>
       <NavigationMenuLink asChild>
-        <Link 
+        <Link
           to={href}
-          className={`group block select-none rounded-xl p-4 leading-none no-underline outline-none transition-all duration-300 border-2 ${
-            isActive 
-              ? 'bg-gradient-to-r from-red-50 to-rose-50 border-[#db4444]/40 shadow-md scale-[1.02] shadow-red-200/50' 
+          className={`group block select-none rounded-xl p-4 leading-none no-underline outline-none transition-all duration-300 border-2 ${isActive
+              ? 'bg-gradient-to-r from-red-50 to-rose-50 border-[#db4444]/40 shadow-md scale-[1.02] shadow-red-200/50'
               : 'bg-white/80 hover:bg-red-50/30 border-red-200/40 hover:border-[#db4444]/60 hover:shadow-md hover:shadow-red-200/30'
-          }`}
+            }`}
         >
           <div className="flex items-start justify-between mb-2">
-            <div className={`text-sm leading-tight font-semibold transition-colors ${
-              isActive ? 'text-[#db4444]' : 'text-slate-800 group-hover:text-[#db4444]'
-            }`}>
+            <div className={`text-sm leading-tight font-semibold transition-colors ${isActive ? 'text-[#db4444]' : 'text-slate-800 group-hover:text-[#db4444]'
+              }`}>
               {title}
             </div>
             {price && (
-              <span className={`text-sm font-bold ml-2 transition-colors ${
-                isActive ? 'text-[#db4444]' : 'text-slate-600 group-hover:text-[#db4444]'
-              }`}>
+              <span className={`text-sm font-bold ml-2 transition-colors ${isActive ? 'text-[#db4444]' : 'text-slate-600 group-hover:text-[#db4444]'
+                }`}>
                 ${price}
               </span>
             )}
           </div>
-          <p className={`line-clamp-2 text-sm leading-relaxed transition-colors ${
-            isActive ? 'text-slate-700' : 'text-slate-600 group-hover:text-slate-700'
-          }`}>
+          <p className={`line-clamp-2 text-sm leading-relaxed transition-colors ${isActive ? 'text-slate-700' : 'text-slate-600 group-hover:text-slate-700'
+            }`}>
             {children}
           </p>
-          <div className={`mt-3 h-1 rounded-full transition-all duration-300 ${
-            isActive ? 'bg-gradient-to-r from-[#db4444] to-red-500' : 'bg-red-200/40 group-hover:bg-[#db4444]/60'
-          }`} />
+          <div className={`mt-3 h-1 rounded-full transition-all duration-300 ${isActive ? 'bg-gradient-to-r from-[#db4444] to-red-500' : 'bg-red-200/40 group-hover:bg-[#db4444]/60'
+            }`} />
         </Link>
       </NavigationMenuLink>
     </div>

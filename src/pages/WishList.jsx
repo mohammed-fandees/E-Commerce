@@ -1,5 +1,4 @@
 import Button from "@/components/common/Button";
-import data from "../data/products.json";
 import { useTranslation } from "react-i18next";
 import SectionHeader from "@/components/common/SectionHeader";
 import ProductCard from "@/components/common/ProductCard";
@@ -10,13 +9,22 @@ import { toast } from "sonner";
 import { Heart } from "lucide-react";
 import { Link } from "react-router";
 import Breadcrumbs from "@/components/common/Breadcrumbs ";
+import { useEffect, useState } from "react";
+import { fetchProducts } from "@/services/apis";
 
 export default function WishList() {
   const { t } = useTranslation();
   const { items: wishlistItems, getWishlistCount, moveAllToCart } = useWishlist();
   const { addItem: addToCart } = useCart();
 
-  const forYou = data.products
+  const [allProducts, setAllProducts] = useState([]);
+  useEffect(() => {
+    fetchProducts().then((data) => {
+      setAllProducts(data || []);
+    });
+  }, []);
+
+  const forYou = allProducts
     .filter(product => !wishlistItems.some(wishItem => wishItem.id === product.id))
     .slice(0, 4);
 

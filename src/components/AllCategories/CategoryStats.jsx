@@ -1,12 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Skeleton } from "@mui/material";
 import { Grid, Star, TrendingUp } from "lucide-react";
-import data from "@/data/products.json";
+import { fetchProducts } from "@/services/apis";
 
 const CategoryStats = ({ t, totalCategories, loading }) => {
+  const [ products, setProducts ] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetchProducts();
+        if (response) {
+          setProducts(response);
+        }
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+    fetchData();
+  }, []);
+
   const stats = [
     { label: t("categories.stats.total_categories"), value: loading ? <Skeleton width={50} className='mx-auto' /> : totalCategories.toString(), icon: Grid },
-    { label: t("categories.stats.total_products"), value: loading ? <Skeleton width={50} className='mx-auto' /> : data.products.length, icon: Star },
+    { label: t("categories.stats.total_products"), value: loading ? <Skeleton width={50} className='mx-auto' /> : products.length, icon: Star },
     { label: t("categories.stats.new_this_week"), value: loading ? <Skeleton width={50} className='mx-auto' /> : "15", icon: TrendingUp },
   ];
 

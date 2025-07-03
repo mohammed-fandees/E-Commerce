@@ -1,40 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Search, X, Clock, TrendingUp } from "lucide-react";
+import { Search, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import productsData from "@/data/products.json";
 import { CATEGORY_LABELS } from "@/data/categoryLabels";
 import { useNavigate } from "react-router-dom";
 import SearchResultRow from "./SearchResultRow";
-
-
-// Trending: Top 4 products by rating and reviews
-const getTrendingProducts = (products) => {
-  return [...products]
-    .filter(p => typeof p === 'object' && p.rating && p.reviewsCount)
-    .sort((a, b) => (b.rating * b.reviewsCount) - (a.rating * a.reviewsCount))
-    .slice(0, 4);
-};
-
-const SuggestionRow = ({ text, icon: Icon, onClick, searchQuery }) => {
-  const highlightText = (text, query) => {
-    if (!query) return text;
-    const regex = new RegExp(`(${query})`, 'gi');
-    const parts = text.split(regex);
-    return parts.map((part, index) =>
-      regex.test(part) ? <span key={index} className="font-semibold">{part}</span> : part
-    );
-  };
-
-  return (
-    <div
-      className="flex items-center gap-3 px-4 py-2 cursor-pointer hover:bg-gray-50 text-sm"
-      onClick={() => onClick(text)}
-    >
-      <Icon className="w-4 h-4 text-gray-400 flex-shrink-0" />
-      <span className="text-gray-700">{highlightText(text, searchQuery)}</span>
-    </div>
-  );
-};
+import { fetchProducts } from "@/services/apis";
 
 const SearchInput = ({ className = "", inputClassName = "", isRTL = false, ...props }) => {
   const { t, i18n } = useTranslation();
@@ -44,9 +14,42 @@ const SearchInput = ({ className = "", inputClassName = "", isRTL = false, ...pr
   const [showDropdown, setShowDropdown] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [showHistory, setShowHistory] = useState(false);
+  const [ products, setProducts ] = useState([]);
   const inputRef = useRef(null);
   const dropdownRef = useRef(null);
   const navigate = useNavigate();
+
+  // Cache for products
+  const productsCache = useRef({});
+
+  const getTrendingProducts = (products) => {
+    return [...products]
+      .filter(p => typeof p === 'object' && p.rating && (p.reviews_count || p.reviewsCount))
+      .sort((a, b) => ((b.rating * (b.reviews_count || b.reviewsCount)) - (a.rating * (a.reviews_count || a.reviewsCount))))
+      .slice(0, 4);
+  };
+
+  // Fetch and cache products
+  const fetchAndCacheProducts = async (searchQuery = '') => {
+    if (productsCache.current[searchQuery]) {
+      setProducts(productsCache.current[searchQuery]);
+      return;
+    }
+    try {
+      const response = await fetchProducts(searchQuery);
+      if (response) {
+        productsCache.current[searchQuery] = response;
+        setProducts(response);
+      }
+    } catch (error) {
+      console.error('Error fetching products:', error);
+    }
+  };
+
+  useEffect(() => {
+    // Initial fetch (all products)
+    fetchAndCacheProducts('');
+  }, []);
 
   // Map category key to localized label
   const getCategoryLabel = (catKey) => {
@@ -58,29 +61,6 @@ const SearchInput = ({ className = "", inputClassName = "", isRTL = false, ...pr
     }
   };
 
-  // Support both ESM and CommonJS/JSON import structures
-  const getProducts = () => {
-    try {
-      if (Array.isArray(productsData)) {
-        return productsData;
-      }
-      if (productsData.products && Array.isArray(productsData.products)) {
-        return productsData.products;
-      }
-      if (productsData.default && Array.isArray(productsData.default.products)) {
-        return productsData.default.products;
-      }
-      if (productsData.default && Array.isArray(productsData.default)) {
-        return productsData.default;
-      }
-      return [];
-    } catch (error) {
-      console.error("Error accessing products data:", error);
-      return [];
-    }
-  };
-
-  const products = getProducts();
 
   // --- Search History (localStorage) ---
   const SEARCH_HISTORY_KEY = 'searchHistoryV2';
@@ -89,7 +69,9 @@ const SearchInput = ({ className = "", inputClassName = "", isRTL = false, ...pr
     try {
       const raw = localStorage.getItem(SEARCH_HISTORY_KEY);
       if (raw) setSearchHistory(JSON.parse(raw));
-    } catch { }
+    } catch (error) {
+      console.error("Error loading search history:", error);
+    }
   }, []);
 
   const addToSearchHistory = (product) => {
@@ -142,11 +124,17 @@ const SearchInput = ({ className = "", inputClassName = "", isRTL = false, ...pr
       return;
     }
 
+    if (!productsCache.current[searchQuery]) {
+      fetchAndCacheProducts(searchQuery);
+      return;
+    }
+
     const q = searchQuery.toLowerCase().trim();
     const words = q.split(/\s+/).filter(Boolean);
+    const cachedProducts = productsCache.current[searchQuery] || products;
 
     // 1. Match if any word in query is found in product title (word boundary sensitive)
-    let matchedProducts = products.filter(product => {
+    let matchedProducts = cachedProducts.filter(product => {
       if (!product || typeof product !== 'object') return false;
       const title = (product.title || '').toLowerCase();
       return words.some(word => title.split(/\W+/).includes(word));
@@ -155,7 +143,7 @@ const SearchInput = ({ className = "", inputClassName = "", isRTL = false, ...pr
     // 2. If less than 5, match if any word in query is found in category label (word boundary sensitive)
     if (matchedProducts.length < 5) {
       const needed = 5 - matchedProducts.length;
-      const extra = products.filter(product => {
+      const extra = cachedProducts.filter(product => {
         if (!product || typeof product !== 'object') return false;
         const categoryLabel = getCategoryLabel(product.category || '').toLowerCase();
         return words.some(word => categoryLabel.split(/\W+/).includes(word));
@@ -166,7 +154,7 @@ const SearchInput = ({ className = "", inputClassName = "", isRTL = false, ...pr
     // 3. If still less than 5, match if any word in query is found anywhere in title or category (substring, fallback)
     if (matchedProducts.length < 5) {
       const needed = 5 - matchedProducts.length;
-      const extra = products.filter(product => {
+      const extra = cachedProducts.filter(product => {
         if (!product || typeof product !== 'object') return false;
         const title = (product.title || '').toLowerCase();
         const categoryLabel = getCategoryLabel(product.category || '').toLowerCase();

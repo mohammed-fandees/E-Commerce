@@ -1,15 +1,22 @@
 import Breadcrumbs from '@/components/common/Breadcrumbs '
 import Container from '@/routes/Container'
-import React from 'react'
-import data from '@/data/products.json';
+import React, { useEffect, useState } from 'react'
+import { fetchProducts } from '@/services/apis';
 import { CATEGORY_LABELS } from '@/data/categoryLabels';
 import SectionHeader from '@/components/common/SectionHeader';
 import { useTranslation } from 'react-i18next';
 import ProductsSwiper from '@/components/common/ProductsSwiper';
 
 export default function Products() {
-  const products = data.products;
+  const [products, setProducts] = useState([]);
   const { t } = useTranslation();
+
+  useEffect(() => {
+    fetchProducts().then((data) => {
+      setProducts(data || []);
+    });
+  }, []);
+
   return (
     <Container>
       <Breadcrumbs />

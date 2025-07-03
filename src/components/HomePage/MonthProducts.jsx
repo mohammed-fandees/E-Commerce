@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import SectionHeader from '../common/SectionHeader'
 import { useTranslation } from 'react-i18next'
-import data from "../../data/products.json";
+import { fetchProducts } from '@/services/apis';
 import ProductsSwiper from '../common/ProductsSwiper';
 import { getCurrentLanguage } from '@/utils/change-lang';
 import { useCountdown } from "@/hooks/use-countdown";
@@ -16,12 +16,19 @@ export default function MonthProducts() {
   const { days, hours, minutes, seconds } = useCountdown(targetDate);
   const timeUnits = [{ label: "d", value: days }, { label: "h", value: hours }, { label: "m", value: minutes }, { label: "s", value: seconds }];
 
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    fetchProducts().then((data) => {
+      setProducts(data || []);
+    });
+  }, []);
+
   return (
     <div>
       <SectionHeader title={t("home.monthProducts.title")} description={t("home.monthProducts.description")} action="view"></SectionHeader>
       <div className="body">
         <div className="products flex gap-6 overflow-auto">
-          <ProductsSwiper products={data.products.slice(0, 4)} />
+          <ProductsSwiper products={products.slice(0, 4)} />
         </div>
         <div className={`flex justify-between items-center h-[550px] w-full bg-black my-25 lg:ps-15 relative px-4 text-center md:text-left`}>
           <div className="text z-1">

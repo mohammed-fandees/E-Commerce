@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import data from "../data/products.json";
+import { fetchProducts } from "@/services/apis";
 import Breadcrumbs from "@/components/common/Breadcrumbs ";
 import SectionHeader from "../components/common/SectionHeader";
 import VirtualProductCard from "../components/common/VirtualProductCard";
@@ -10,7 +10,13 @@ import { useTranslation } from "react-i18next";
 export default function CategoryProducts() {
   const { t } = useTranslation();
   const { category } = useParams();
-  const products = data.products?.filter((p) => p.category === category);
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetchProducts().then((data) => {
+      setProducts((data || []).filter((p) => p.category === category));
+    });
+  }, [category]);
 
   return (
     <Container>
@@ -25,9 +31,9 @@ export default function CategoryProducts() {
             image={product.img || null}
             title={product.title}
             price={product.price}
-            oldPrice={product.oldPrice || null}
+            oldPrice={product.old_price || product.oldPrice || null}
             rating={product.rating || 0}
-            reviewsCount={product.reviewsCount || 0}
+            reviewsCount={product.reviews_count || product.reviewsCount || 0}
           />
         ))}
       </div>

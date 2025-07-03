@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import { useCart } from './useCart';
-import { useWishlist } from './useWishlist';
-import { toast } from 'sonner';
-import data from "../data/products.json";
+import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { useCart } from "./useCart";
+import { useWishlist } from "./useWishlist";
+import { toast } from "sonner";
+import { fetchProducts } from "@/services/apis";
 
 export const useProductDetails = () => {
   const { id } = useParams();
@@ -12,7 +12,7 @@ export const useProductDetails = () => {
   const { t } = useTranslation();
   const { addItem } = useCart();
   const { addToWishlist, isInWishlist } = useWishlist();
-  
+
   const [product, setProduct] = useState(null);
   const [relatedProducts, setRelatedProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -26,31 +26,33 @@ export const useProductDetails = () => {
     const loadProduct = async () => {
       setLoading(true);
       try {
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 500));
-        
-        const foundProduct = data.products.find(p => p.id === parseInt(id));
+        const allProducts = await fetchProducts();
+        const foundProduct = allProducts.find((p) => p.id === parseInt(id));
         if (foundProduct) {
           setProduct(foundProduct);
           setSelectedColor(foundProduct.colors?.[0] || null);
-          setSelectedSize(foundProduct.sizes?.find(s => s.available) || null);
-          
+          setSelectedSize(foundProduct.sizes?.find((s) => s.available) || null);
+
           // Get related products (exclude current product)
-          const related = data.products.filter(p => p.category == foundProduct.category).slice(0, 4);
+          const related = allProducts
+            .filter(
+              (p) =>
+                p.category == foundProduct.category && p.id !== foundProduct.id
+            )
+            .slice(0, 4);
           setRelatedProducts(related);
+        } else {
+          setProduct(null);
+          setRelatedProducts([]);
         }
       } catch (error) {
-        console.error('Error loading product:', error);
-        toast.error(t('product.errors.loadFailed'));
-      } finally {
-        setLoading(false);
+        setProduct(null);
+        setRelatedProducts([]);
       }
+      setLoading(false);
     };
-
-    if (id) {
-      loadProduct();
-    }
-  }, [id, t]);
+    loadProduct();
+  }, [id]);
 
   const handleImageSelect = (index) => {
     setSelectedImage(index);
@@ -85,16 +87,16 @@ export const useProductDetails = () => {
       price: product.price,
       quantity: quantity,
       selectedColor: selectedColor?.name,
-      selectedSize: selectedSize?.name
+      selectedSize: selectedSize?.name,
     };
 
     addItem(cartItem);
-    toast.success(t('product.addedToCart', { name: product.title }));
+    toast.success(t("product.addedToCart", { name: product.title }));
   };
 
   const handleBuyNow = () => {
     handleAddToCart();
-    navigate('/checkout');
+    navigate("/checkout");
   };
 
   const handleAddToWishlist = () => {
@@ -107,15 +109,15 @@ export const useProductDetails = () => {
       price: product.price,
       oldPrice: product.oldPrice,
       rating: product.rating,
-      reviewsCount: product.reviewsCount
+      reviewsCount: product.reviewsCount,
     };
 
     addToWishlist(wishlistItem);
-    toast.success(t('product.addedToWishlist', { name: product.title }));
+    toast.success(t("product.addedToWishlist", { name: product.title }));
   };
 
   // Calculate discount percentage
-  const discountPercentage = product?.oldPrice 
+  const discountPercentage = product?.oldPrice
     ? Math.round(((product.oldPrice - product.price) / product.oldPrice) * 100)
     : 0;
 
@@ -132,11 +134,11 @@ export const useProductDetails = () => {
     quantity,
     discountPercentage,
     isWishlistItem,
-    
+
     // State
     loading,
     imageLoading,
-    
+
     // Actions
     handleImageSelect,
     handleColorSelect,
@@ -145,6 +147,6 @@ export const useProductDetails = () => {
     handleAddToCart,
     handleBuyNow,
     handleAddToWishlist,
-    setImageLoading
+    setImageLoading,
   };
 };
