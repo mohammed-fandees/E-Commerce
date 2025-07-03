@@ -460,6 +460,23 @@
     "errors": {
       "loadFailed": "Failed to load product. Please try again."
     },
+    "productReviews": {
+      "customerReviews": "Customer Reviews",
+      "shareExperience": "Share your experience with this product",
+      "rateProduct": "Rate this product",
+      "yourReview": "Your Review",
+      "submitReview": "Submit Review",
+      "thankYou": "Thank you for your review!",
+      "alreadyReviewed": "You have already reviewed this product. Here's your review:",
+      "onlyOnce": "Reviews can only be submitted once per product to maintain authenticity.",
+      "purchaseRequired": "Purchase Required",
+      "needToPurchase": "You need to purchase this product first to leave a review.",
+      "onlyVerified": "Only verified customers can share their experiences.",
+      "noReviewsYet": "No reviews yet",
+      "beFirst": "Be the first to share your experience!",
+      "showLess": "Show Less Reviews",
+      "showMore": "Show More Reviews"
+    },
 
     "addedToCart": "{{name}} added to cart successfully!",
     "addedToWishlist": "{{name}} added to wishlist successfully!"

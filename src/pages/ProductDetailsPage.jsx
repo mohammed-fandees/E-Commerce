@@ -5,10 +5,18 @@ import { useProductDetails } from '@/hooks/useProductDetails';
 import ImageGallery from '@/components/ProductDetails/ImageGallery';
 import ProductInfo from '@/components/ProductDetails/ProductInfo';
 import RelatedProducts from '@/components/ProductDetails/RelatedProducts';
+import ProductReviews from '@/components/ProductDetails/ProductReviews';
 import LoadingSpinner from '@/components/ui/LoadingSpinner';
+import { useContext } from 'react';
+import { SessionContext } from '@/store/SessionContext';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 export default function ProductDetailsPage() {
   const { t } = useTranslation();
+  const { session } = useContext(SessionContext);
+  const user = session?.user ? { email: session.user.email, name: session.user.user_metadata?.name || session.user.email } : null;
+  const isMobile = useIsMobile(1024);
+
   const {
     // Data
     product,
@@ -19,11 +27,11 @@ export default function ProductDetailsPage() {
     quantity,
     discountPercentage,
     isWishlistItem,
-    
+
     // State
     loading,
     imageLoading,
-    
+
     // Actions
     handleImageSelect,
     handleColorSelect,
@@ -63,7 +71,7 @@ export default function ProductDetailsPage() {
             <p className="text-gray-600 mb-4">
               {t('product.notFound.message')}
             </p>
-            <button 
+            <button
               onClick={() => window.history.back()}
               className="bg-[#db4444] text-white px-6 py-2 rounded hover:bg-red-600 transition-colors"
             >
@@ -79,19 +87,22 @@ export default function ProductDetailsPage() {
     <Container>
       <div className="min-h-screen">
         <Breadcrumbs />
-        
+
         <div className="pt-4 sm:pt-8 pb-8 sm:pb-16">
           <div className="max-w-7xl mx-auto">
             <div className="mb-8 sm:mb-16">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
-                <ImageGallery
-                  product={product}
-                  selectedImage={selectedImage}
-                  onImageSelect={handleImageSelect}
-                  imageLoading={imageLoading}
-                  onImageLoad={() => setImageLoading(false)}
-                  discountPercentage={discountPercentage}
-                />
+                <div>
+                  <ImageGallery
+                    product={product}
+                    selectedImage={selectedImage}
+                    onImageSelect={handleImageSelect}
+                    imageLoading={imageLoading}
+                    onImageLoad={() => setImageLoading(false)}
+                    discountPercentage={discountPercentage}
+                  />
+                  {!isMobile && <ProductReviews productId={product.id} user={user} />}
+                </div>
 
                 <ProductInfo
                   product={product}
@@ -110,6 +121,7 @@ export default function ProductDetailsPage() {
               </div>
             </div>
 
+            {isMobile && <ProductReviews productId={product.id} user={user} />}
             <RelatedProducts products={relatedProducts} />
           </div>
         </div>
