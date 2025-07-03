@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { CATEGORY_LABELS } from "@/data/categoryLabels";
+import { useProductTitle } from '@/hooks/useProductTitle';
 
 export default function Breadcrumbs() {
   const location = useLocation();
@@ -8,6 +9,13 @@ export default function Breadcrumbs() {
   const isRTL = i18n.dir() === "rtl";
 
   const pathnames = location.pathname.split("/").filter((x) => x);
+
+  // Detect if last part is a product id (number) after /products
+  let productId = null;
+  if (pathnames.length >= 2 && pathnames[pathnames.length - 2] === "products" && /^\d+$/.test(pathnames[pathnames.length - 1])) {
+    productId = pathnames[pathnames.length - 1];
+  }
+  const productTitle = useProductTitle(productId);
 
   const translationMap = {
     about: "pages.about",
@@ -38,8 +46,11 @@ export default function Breadcrumbs() {
         {pathnames.map((name, index) => {
           const routeTo = `/${pathnames.slice(0, index + 1).join("/")}`;
           const isLast = index === pathnames.length - 1;
-          const translatedName = t(translationMap[name]) || decodeURIComponent(name);
-
+          let translatedName = t(translationMap[name]) || decodeURIComponent(name);
+          // If this is the product id, show product title
+          if (productId && name === productId && productTitle) {
+            translatedName = productTitle;
+          }
           return (
             <li key={name} className="flex items-center space-x-1 rtl:space-x-reverse">
               <span className="mx-1">{isRTL ? "\\" : "/"}</span>
