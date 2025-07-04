@@ -12,7 +12,7 @@ const RelatedProducts = ({ products }) => {
   return (
     <div className="mt-16 pt-8 border-t border-gray-200">
       <SectionHeader title={t("product.relatedItems")} />
-      
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
         {products.map((product) => (
           <div key={product.id} className="relative">
@@ -33,7 +33,7 @@ const RelatedProducts = ({ products }) => {
       <div className="text-center">
         <button
           onClick={() => window.location.href = '/products'}
-          className="bg-[#db4444] hover:bg-red-700 text-white px-12 py-4 rounded font-medium transition-all duration-200 border-0 cursor-pointer hover:-translate-y-0.5 hover:shadow-lg"
+          className="bg-[#db4444] hover:bg-red-700 text-white px-12 py-4 rounded font-medium transition-all duration-200 border-0  hover:-translate-y-0.5 hover:shadow-lg"
         >
           {t('product.viewAllProducts')}
         </button>

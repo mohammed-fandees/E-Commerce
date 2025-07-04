@@ -46,7 +46,7 @@ const OrdersEmpty = () => {
         <div className="space-y-3">
           <button
             onClick={handleViewWishlist}
-            className="w-full flex items-center justify-center space-x-2 px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors cursor-pointer"
+            className="w-full flex items-center justify-center space-x-2 px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors "
           >
             <Heart className="h-4 w-4" />
             <span>{t('orders.empty.viewWishlist')}</span>
@@ -54,7 +54,7 @@ const OrdersEmpty = () => {
 
           <button
             onClick={handleViewCart}
-            className="w-full flex items-center justify-center space-x-2 px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors cursor-pointer"
+            className="w-full flex items-center justify-center space-x-2 px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors "
           >
             <ShoppingBag className="h-4 w-4" />
             <span>{t('orders.empty.viewCart')}</span>
@@ -77,7 +77,7 @@ const OrdersEmpty = () => {
             </h4>
             <p>{t('orders.empty.step1Desc')}</p>
           </div>
-          
+
           <div className="text-center">
             <div className="w-12 h-12 mx-auto bg-green-100 rounded-full flex items-center justify-center mb-3">
               <span className="text-2xl">💳</span>
@@ -87,7 +87,7 @@ const OrdersEmpty = () => {
             </h4>
             <p>{t('orders.empty.step2Desc')}</p>
           </div>
-          
+
           <div className="text-center">
             <div className="w-12 h-12 mx-auto bg-purple-100 rounded-full flex items-center justify-center mb-3">
               <span className="text-2xl">📦</span>

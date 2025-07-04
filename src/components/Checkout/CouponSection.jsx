@@ -69,7 +69,7 @@ const CouponSection = ({
           <div className="text-center">
             <button
               onClick={handleRemoveCoupon}
-              className="text-sm text-blue-600 hover:text-blue-800 underline cursor-pointer"
+              className="text-sm text-blue-600 hover:text-blue-800 underline "
             >
               {t('checkout.coupon.changeCoupon')}
             </button>

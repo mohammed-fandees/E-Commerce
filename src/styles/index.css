@@ -109,6 +109,10 @@ input {
   text-overflow: ellipsis;
 }
 
+button {
+  cursor: pointer;
+}
+
 @theme inline {
   --container-8xl: 80rem;
   --radius-sm: calc(var(--radius) - 4px);

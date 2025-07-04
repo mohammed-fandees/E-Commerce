@@ -29,7 +29,7 @@ export default function Banner() {
           </h2>
           {!isMobile && (
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex gap-2 cursor-pointer outline-0">
+              <DropdownMenuTrigger className="flex gap-2  outline-0">
                 {isRTL ? t("banner.menu.ar") : t("banner.menu.en")}
                 <ChevronDown />
               </DropdownMenuTrigger>

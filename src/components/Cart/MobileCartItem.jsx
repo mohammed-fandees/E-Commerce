@@ -34,7 +34,7 @@ export default function MobileCartItem({ id, img, name, price, quantity, onQuant
 
             <div className="flex items-center border border-gray-300 rounded overflow-hidden bg-gray-50">
               <button onClick={() => handleQuantityChange(quantity - 1)} disabled={quantity <= 1}
-                className="cursor-pointer w-8 h-8 flex items-center justify-center text-gray-600 hover:bg-gray-100 transition-colors"
+                className=" w-8 h-8 flex items-center justify-center text-gray-600 hover:bg-gray-100 transition-colors"
               >
                 <span className="text-lg font-medium">−</span>
               </button>
@@ -44,7 +44,7 @@ export default function MobileCartItem({ id, img, name, price, quantity, onQuant
               </div>
 
               <button onClick={() => handleQuantityChange(quantity + 1)}
-                className="cursor-pointer w-8 h-8 flex items-center justify-center text-gray-600 hover:bg-gray-100 transition-colors"
+                className=" w-8 h-8 flex items-center justify-center text-gray-600 hover:bg-gray-100 transition-colors"
               >
                 <span className="text-lg font-medium">+</span>
               </button>
@@ -52,11 +52,11 @@ export default function MobileCartItem({ id, img, name, price, quantity, onQuant
 
 
             <div className="flex items-center gap-2 text-sm">
-              <button onClick={() => onRemove(id)} className="text-[#db4444] cursor-pointer hover:underline font-medium">
+              <button onClick={() => onRemove(id)} className="text-[#db4444]  hover:underline font-medium">
                 {t("common.delete")}
               </button>
               <span className="text-gray-300">|</span>
-              <button className="text-[#db4444] cursor-pointer hover:underline font-medium">
+              <button className="text-[#db4444]  hover:underline font-medium">
                 {t("cart.saveForLater")}
               </button>
             </div>

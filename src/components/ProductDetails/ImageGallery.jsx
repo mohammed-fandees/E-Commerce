@@ -23,11 +23,11 @@ const ImageGallery = ({ product, selectedImage, onImageSelect, imageLoading, onI
 
   const handleMouseMove = (e) => {
     if (!isZoomed) return;
-    
+
     const rect = e.currentTarget.getBoundingClientRect();
     const x = ((e.clientX - rect.left) / rect.width) * 100;
     const y = ((e.clientY - rect.top) / rect.height) * 100;
-    
+
     setZoomPosition({ x, y });
   };
 
@@ -42,7 +42,7 @@ const ImageGallery = ({ product, selectedImage, onImageSelect, imageLoading, onI
                 key={index}
                 onClick={() => onImageSelect(index)}
                 className={`
-                  flex-shrink-0 w-20 h-20 border-2 border-transparent rounded-lg overflow-hidden cursor-pointer transition-all duration-200 bg-gray-50
+                  flex-shrink-0 w-20 h-20 border-2 border-transparent rounded-lg overflow-hidden  transition-all duration-200 bg-gray-50
                   hover:border-[#db4444] 
                   ${index === selectedImage ? 'border-[#db4444]' : ''}
                 `}
@@ -70,7 +70,7 @@ const ImageGallery = ({ product, selectedImage, onImageSelect, imageLoading, onI
           )}
 
           {/* Zoom Button */}
-          <button 
+          <button
             onClick={() => setIsZoomed(!isZoomed)}
             className="absolute top-4 right-4 bg-white/80 hover:bg-white p-2 rounded-full transition-colors z-10 opacity-0 group-hover:opacity-100"
           >
@@ -96,7 +96,7 @@ const ImageGallery = ({ product, selectedImage, onImageSelect, imageLoading, onI
           )}
 
           {/* Main Image */}
-          <div 
+          <div
             className={`
               relative w-full h-[300px] md:h-[500px] overflow-hidden transition-all duration-300
               ${isZoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}

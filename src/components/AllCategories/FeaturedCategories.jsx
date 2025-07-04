@@ -21,7 +21,7 @@ const FeaturedCategories = ({ t }) => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {featuredCategories.map((category) => (
-          <Link key={category.id} to={`/categories/${category.key}`} className="relative group cursor-pointer">
+          <Link key={category.id} to={`/categories/${category.key}`} className="relative group ">
             <div className="relative overflow-hidden rounded-lg h-48">
               <div className={`w-full h-full bg-gradient-to-br ${category.gradient} group-hover:scale-105 transition-transform duration-300 flex items-center justify-center`}>
                 {iconMap[category.key] && React.cloneElement(iconMap[category.key], { size: 80, className: "text-white opacity-20" })}

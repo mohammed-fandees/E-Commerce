@@ -31,7 +31,7 @@ const PaymentMethods = ({ selectedMethod, onMethodChange }) => {
         {paymentMethods.map((method) => (
           <label
             key={method.id}
-            className="flex items-center space-x-3 cursor-pointer group justify-between"
+            className="flex items-center space-x-3  group justify-between"
           >
             <div className='flex items-center gap-2'>
               <input type="radio" name="paymentMethod" value={method.id} checked={selectedMethod === method.id}

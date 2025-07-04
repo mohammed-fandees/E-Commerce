@@ -31,13 +31,13 @@ export default function Header({ navLinks }) {
               {getWishlistCount() ?
                 <p className="absolute text-sm bg-[#db4444] w-fit p-1 h-4 rounded-full text-white flex items-center justify-center -top-1 -end-1">{getWishlistCount()}</p>
                 : ""}
-              <Heart className="cursor-pointer" />
+              <Heart className="" />
             </Link>
             <Link to="/cart" className="relative">
               {itemCount ?
                 <p className="absolute text-sm bg-[#db4444] w-fit p-1 h-4 rounded-full text-white flex items-center justify-center -top-1 -end-1">{itemCount}</p>
                 : ""}
-              <ShoppingCart className="cursor-pointer" />
+              <ShoppingCart className="" />
             </Link>
             {session && <Account />}
           </div>

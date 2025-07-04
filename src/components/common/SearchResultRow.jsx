@@ -9,7 +9,7 @@ const SearchResultRow = ({ product, categoryLabel, searchQuery, onClick, isLast 
     if (!query || !text) return text;
     const regex = new RegExp(`(${query})`, 'gi');
     const parts = text.split(regex);
-    return parts.map((part, index) => 
+    return parts.map((part, index) =>
       regex.test(part) ? <span key={index} className="bg-yellow-200 font-semibold">{part}</span> : part
     );
   };
@@ -36,7 +36,7 @@ const SearchResultRow = ({ product, categoryLabel, searchQuery, onClick, isLast 
 
   return (
     <div
-      className={`flex items-center gap-3 px-4 py-3 cursor-pointer hover:bg-gray-50 transition-colors ${!isLast ? 'border-b border-gray-100' : ''} focus:outline-none focus:bg-gray-50`}
+      className={`flex items-center gap-3 px-4 py-3  hover:bg-gray-50 transition-colors ${!isLast ? 'border-b border-gray-100' : ''} focus:outline-none focus:bg-gray-50`}
       onClick={handleClick}
       onKeyDown={handleKeyDown}
       tabIndex={0}
@@ -52,13 +52,13 @@ const SearchResultRow = ({ product, categoryLabel, searchQuery, onClick, isLast 
           e.target.src = 'https://via.placeholder.com/64x64?text=No+Image';
         }}
       />
-      
+
       {/* Product Details */}
       <div className="flex-1 min-w-0">
         <div className="font-medium text-sm text-gray-900 mb-1 leading-tight">
           {highlightText(product.title || 'Untitled Product', searchQuery)}
         </div>
-        
+
         {/* Rating and Category */}
         <div className="flex items-center gap-2 mb-1">
           {product.rating && (
@@ -76,7 +76,7 @@ const SearchResultRow = ({ product, categoryLabel, searchQuery, onClick, isLast 
             <span className="text-xs text-gray-600">{categoryLabel}</span>
           )}
         </div>
-        
+
         {/* Price */}
         {product.price && (
           <div className="text-lg font-bold text-[#db4444]">

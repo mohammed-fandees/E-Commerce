@@ -19,7 +19,7 @@ const PopularTags = ({ t, onTagClick }) => {
           <button
             key={index}
             onClick={() => onTagClick(tag.key)}
-            className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-gray-100 text-gray-700 hover:bg-[#db4444] hover:text-white transition-colors duration-200 cursor-pointer"
+            className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-gray-100 text-gray-700 hover:bg-[#db4444] hover:text-white transition-colors duration-200 "
           >
             {tag.name}
             <span className="ms-1 text-xs opacity-75">({tag.count})</span>

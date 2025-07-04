@@ -193,7 +193,7 @@ export default function ProductReviews({ productId = "1", user = { name: "John D
         {[1, 2, 3, 4, 5].map((star) => (
           <Star
             key={star}
-            className={`${size} transition-colors cursor-pointer ${star <= (interactive ? hoverRating || rating : value)
+            className={`${size} transition-colors  ${star <= (interactive ? hoverRating || rating : value)
               ? 'fill-yellow-400 text-yellow-400'
               : 'text-gray-300'
               }`}

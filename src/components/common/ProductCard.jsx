@@ -9,7 +9,7 @@ import { useInView } from "react-intersection-observer";
 
 export default function ProductCard({ id, title, image, price, oldPrice, rating, wish = false, reviewsCount, showAsWishlistItem = false }) {
   const [imgError, setImgError] = useState(false);
-    const [imgLoaded, setImgLoaded] = useState(false);
+  const [imgLoaded, setImgLoaded] = useState(false);
   const [animationState, setAnimationState] = useState(""); // Track animation state
   const { t } = useTranslation();
   const { addItem } = useCart();
@@ -36,7 +36,7 @@ export default function ProductCard({ id, title, image, price, oldPrice, rating,
       setAnimationState("removing");
       removeFromWishlist(id);
       toast.success(t("wishlist.itemRemoved"));
-      
+
       setTimeout(() => {
         setAnimationState("");
       }, 100);
@@ -45,7 +45,7 @@ export default function ProductCard({ id, title, image, price, oldPrice, rating,
       const product = { id, title, image, price, oldPrice, rating, reviewsCount };
       addToWishlist(product);
       toast.success(t("wishlist.itemAdded"));
-      
+
       setTimeout(() => {
         setAnimationState("");
       }, 800);
@@ -53,16 +53,16 @@ export default function ProductCard({ id, title, image, price, oldPrice, rating,
   };
 
   const getWishlistButtonClasses = () => {
-    let classes = "cursor-pointer bg-white p-1 rounded-full shadow wishlist-button";
-    
+    let classes = " bg-white p-1 rounded-full shadow wishlist-button";
+
     if (animationState) {
       classes += ` ${animationState}`;
     }
-    
+
     if (isWishlistItem) {
       classes += " active";
     }
-    
+
     return classes;
   };
 
@@ -76,12 +76,12 @@ export default function ProductCard({ id, title, image, price, oldPrice, rating,
 
       <div className="absolute top-2 right-2 flex flex-col gap-2 z-5">
         {wish ? (
-          <button className="cursor-pointer bg-white p-1 rounded-full shadow">
+          <button className=" bg-white p-1 rounded-full shadow">
             <Trash2 size="24" />
           </button>
         ) : (
           <button onClick={handleWishlistToggle} className={getWishlistButtonClasses()}>
-            <Heart  size="24"  fill={isInWishlist(id) ? "currentColor" : "none"}  className="heart-icon" />
+            <Heart size="24" fill={isInWishlist(id) ? "currentColor" : "none"} className="heart-icon" />
           </button>
         )}
       </div>
@@ -93,22 +93,22 @@ export default function ProductCard({ id, title, image, price, oldPrice, rating,
               <ImageOff size="68" color="#aaa" />
             </div>
           </Link>
-          
+
           {inView && !imgError && (
             <Link to={`/products/${id}`}>
               <div className="rounded-sm h-[250px] mb-4 overflow-hidden flex items-center justify-center ">
-                <img 
-                  loading="lazy" 
-                  src={image} 
-                  alt={title} 
+                <img
+                  loading="lazy"
+                  src={image}
+                  alt={title}
                   onLoad={() => setImgLoaded(true)}
-                  onError={() => setImgError(true)} 
+                  onError={() => setImgError(true)}
                   className={`object-contain w-[80%] h-[75%] transition-opacity duration-300 ${imgLoaded ? 'opacity-100' : 'opacity-0'}`}
                 />
               </div>
             </Link>
           )}
-          
+
         </div>
         <button
           onClick={handleAddToCart}

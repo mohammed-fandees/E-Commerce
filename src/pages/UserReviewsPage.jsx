@@ -25,15 +25,15 @@ export default function UserReviewsPage() {
     const fetchUserAndReviews = async () => {
       try {
         setLoading(true);
-        
+
         const { data: { user }, error: userError } = await supabase.auth.getUser();
         if (userError || !user) {
           toast.error(t('reviews.errors.loginRequired'));
           return;
         }
-        
+
         setUser(user);
-        
+
         const { data: reviewsData, error: reviewsError } = await supabase
           .from('reviews')
           .select(`*,  products (
@@ -82,14 +82,14 @@ export default function UserReviewsPage() {
         .update({
           text: editText,
           rating: editRating,
-          created_at: new Date().toISOString() 
+          created_at: new Date().toISOString()
         })
         .eq('id', reviewId);
 
       if (error) throw error;
 
-      setReviews(reviews.map(review => 
-        review.id === reviewId 
+      setReviews(reviews.map(review =>
+        review.id === reviewId
           ? { ...review, text: editText, rating: editRating, created_at: new Date().toISOString() }
           : review
       ));
@@ -134,11 +134,10 @@ export default function UserReviewsPage() {
         {[1, 2, 3, 4, 5].map((star) => (
           <Star
             key={star}
-            className={`${size} transition-colors ${interactive ? 'cursor-pointer' : ''} ${
-              star <= (interactive ? hoverRating || editRating : value)
+            className={`${size} transition-colors ${interactive ? '' : ''} ${star <= (interactive ? hoverRating || editRating : value)
                 ? 'fill-yellow-400 text-yellow-400'
                 : 'text-gray-300'
-            }`}
+              }`}
             onMouseEnter={() => interactive && setHoverRating(star)}
             onMouseLeave={() => interactive && setHoverRating(0)}
             onClick={() => interactive && setEditRating(star)}
@@ -180,7 +179,7 @@ export default function UserReviewsPage() {
               <Skeleton variant="text" width={300} height={40} className="mb-4" />
               <Skeleton variant="text" width={500} height={24} />
             </div>
-            
+
             {/* Reviews Grid Skeleton */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {Array.from({ length: 4 }).map((_, index) => (
@@ -218,7 +217,7 @@ export default function UserReviewsPage() {
     <Container>
       <div className="min-h-screen">
         <Breadcrumbs />
-        
+
         <div className="pt-8">
           {/* Header */}
           <div className="mb-8">
@@ -235,7 +234,7 @@ export default function UserReviewsPage() {
                 </p>
               </div>
             </div>
-            
+
             {/* Stats */}
             <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-xl p-6 border border-gray-100">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -282,8 +281,8 @@ export default function UserReviewsPage() {
                     <div className="flex items-start gap-4 mb-4">
                       <div className="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden">
                         {review.products?.images?.[0] ? (
-                          <img 
-                            src={review.products.images[0]} 
+                          <img
+                            src={review.products.images[0]}
                             alt={review.products.title}
                             className="w-full h-full object-cover"
                           />
@@ -327,7 +326,7 @@ export default function UserReviewsPage() {
                           />
                         </div>
                         <div className="flex gap-2">
-                          <Button 
+                          <Button
                             onClick={() => handleSaveEdit(review.id)}
                             className="flex-1"
                           >
@@ -361,7 +360,7 @@ export default function UserReviewsPage() {
                               })}
                             </span>
                           </div>
-                          
+
                           <div className="flex gap-2">
                             <button
                               onClick={() => handleEditReview(review)}

@@ -92,7 +92,7 @@ export default function Signup() {
               <input type={showPassword ? "text" : "password"} name="password" placeholder={t('auth.signup.password')} value={formData.password} onChange={handleChange}
                 className={`w-full p-3 border-b ${errors.password ? 'border-[#db4444]' : 'border-gray-300'} focus:outline-none focus:border-[#db4444] pr-10`}
               />
-              <button type="button" onClick={() => setShowPassword((prev) => !prev)} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 cursor-pointer outline-0">
+              <button type="button" onClick={() => setShowPassword((prev) => !prev)} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500  outline-0">
                 {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
               </button>
               {errors.password && <p className="text-[#db4444] text-sm mt-1">{errors.password}</p>}
@@ -102,7 +102,7 @@ export default function Signup() {
               <Button type="submit" disabled={isSubmitting}>
                 {isSubmitting ? t('auth.signup.creating') : t('auth.signup.button')}
               </Button>
-              <button type="button" onClick={handleGoogleSignup} className="px-12 py-4 rounded-sm text-black border border-[#B2B2B2] hover:bg-gray-100 cursor-pointer flex gap-3 justify-center">
+              <button type="button" onClick={handleGoogleSignup} className="px-12 py-4 rounded-sm text-black border border-[#B2B2B2] hover:bg-gray-100  flex gap-3 justify-center">
                 <img loading="lazy" src="/assets/Icon-Google.png" alt="google" />
                 {t('auth.signup.google')}
               </button>

@@ -14,7 +14,7 @@ const SearchInput = ({ className = "", inputClassName = "", isRTL = false, ...pr
   const [showDropdown, setShowDropdown] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [showHistory, setShowHistory] = useState(false);
-  const [ products, setProducts ] = useState([]);
+  const [products, setProducts] = useState([]);
   const inputRef = useRef(null);
   const dropdownRef = useRef(null);
   const navigate = useNavigate();
@@ -292,7 +292,7 @@ const SearchInput = ({ className = "", inputClassName = "", isRTL = false, ...pr
           {query && (
             <button
               onClick={handleClearSearch}
-              className="cursor-pointer absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+              className=" absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
             >
               <X className="w-4 h-4" />
             </button>
@@ -300,7 +300,7 @@ const SearchInput = ({ className = "", inputClassName = "", isRTL = false, ...pr
         </div>
         <button
           onClick={() => handleSearch()}
-          className="px-4 py-2 text-gray-800 cursor-pointer active:scale-95 rounded-r-md transition-colors"
+          className="px-4 py-2 text-gray-800  active:scale-95 rounded-r-md transition-colors"
         >
           <Search className="w-5 h-5" />
         </button>
@@ -355,7 +355,7 @@ const SearchInput = ({ className = "", inputClassName = "", isRTL = false, ...pr
                   {suggestions.map((suggestion, index) => (
                     <div
                       key={`suggestion-${index}`}
-                      className={`px-4 py-2 cursor-pointer text-sm ${selectedIndex === index ? 'bg-gray-100' : 'hover:bg-gray-50'
+                      className={`px-4 py-2  text-sm ${selectedIndex === index ? 'bg-gray-100' : 'hover:bg-gray-50'
                         }`}
                       onClick={() => handleSearch(suggestion)}
                     >

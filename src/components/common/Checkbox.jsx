@@ -5,7 +5,7 @@ const Checkbox = ({ name, checked, onChange, label }) => {
     <div className="flex items-center gap-2">
       <div className="relative h-5">
         <input type="checkbox" id={name} name={name} checked={checked} onChange={onChange} className={`
-            appearance-none w-5 h-5 rounded bg-white border border-gray-300 checked:bg-[#db4444] checked:border-[#db4444] transition-all cursor-pointer`}
+            appearance-none w-5 h-5 rounded bg-white border border-gray-300 checked:bg-[#db4444] checked:border-[#db4444] transition-all `}
         />
         {checked && (
           <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -16,7 +16,7 @@ const Checkbox = ({ name, checked, onChange, label }) => {
         )}
       </div>
       {label && (
-        <label htmlFor={name} className="text-sm text-gray-700 cursor-pointer">
+        <label htmlFor={name} className="text-sm text-gray-700 ">
           {label}
         </label>
       )}

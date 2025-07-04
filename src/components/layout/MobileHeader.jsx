@@ -25,7 +25,7 @@ export default function MobileHeader({ navLinks }) {
         <div className="flex justify-between items-center container mx-auto lg:px-4 max-w-[1440px]">
           <div className="flex gap-3 items-center">
             {isMobile && (
-              <button className="cursor-pointer p-1 hover:bg-gray-100 rounded" onClick={handleSidebarToggle} aria-label="Toggle menu" >
+              <button className=" p-1 hover:bg-gray-100 rounded" onClick={handleSidebarToggle} aria-label="Toggle menu" >
                 <Menu className="w-6 h-6" />
               </button>
             )}
@@ -37,13 +37,13 @@ export default function MobileHeader({ navLinks }) {
               {getWishlistCount() ?
                 <p className="absolute text-sm bg-[#db4444] w-fit p-1 h-4 rounded-full text-white flex items-center justify-center -top-1 -end-1">{getWishlistCount()}</p>
                 : ""}
-              <Heart className="cursor-pointer" />
+              <Heart className="" />
             </Link>
             <Link to="/cart" className="relative">
               {itemCount ?
                 <p className="absolute text-sm bg-[#db4444] w-fit p-1 h-4 rounded-full text-white flex items-center justify-center -top-1 -end-1">{itemCount}</p>
                 : ""}
-              <ShoppingCart className="cursor-pointer" />
+              <ShoppingCart className="" />
             </Link>
           </div>
         </div>

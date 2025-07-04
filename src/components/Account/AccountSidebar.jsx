@@ -42,7 +42,7 @@ const AccountSidebar = ({ activeSection = 'profile', onSectionChange }) => {
           <ul className="space-y-1 ps-6">
             {section.items.map((item, index) => (
               <li key={index}>
-                <button onClick={() => item.href ? navigate(item.href) : handleItemClick(item.id)} className={`text-sm cursor-pointer hover:text-[#db4444] transition-colors ${activeSection === item.id
+                <button onClick={() => item.href ? navigate(item.href) : handleItemClick(item.id)} className={`text-sm  hover:text-[#db4444] transition-colors ${activeSection === item.id
                   ? 'text-[#db4444] font-medium' : 'text-[#909090] font-light'}`}
                 >
                   {item.label}

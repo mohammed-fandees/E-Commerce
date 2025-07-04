@@ -93,12 +93,12 @@ export default function Cart() {
 
         <div className="flex flex-col gap-4 sm:flex-row justify-between items-center mt-6">
           <button onClick={handleReturnToShop}
-            className="w-100 sm:w-fit cursor-pointer px-12 py-4 border border-gray-300 rounded text-sm font-medium hover:bg-gray-50 transition-colors"
+            className="w-100 sm:w-fit  px-12 py-4 border border-gray-300 rounded text-sm font-medium hover:bg-gray-50 transition-colors"
           >
             {t("cart.returnToShop")}
           </button>
           <button onClick={handleUpdateCart}
-            className="w-100 sm:w-fit cursor-pointer px-12 py-4 border border-gray-300 rounded text-sm font-medium hover:bg-gray-50 transition-colors"
+            className="w-100 sm:w-fit  px-12 py-4 border border-gray-300 rounded text-sm font-medium hover:bg-gray-50 transition-colors"
           >
             {t("cart.updateCart")}
           </button>

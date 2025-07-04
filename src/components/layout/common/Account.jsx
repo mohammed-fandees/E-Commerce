@@ -50,7 +50,7 @@ export default function Account() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className="flex gap-2 cursor-pointer outline-0">
+      <DropdownMenuTrigger className="flex gap-2  outline-0">
         <div className="rounded-full w-10 h-10 flex justify-center items-center overflow-hidden border p-[2px] bg-white">
           {avatar ? (
             <img loading="lazy" src={avatar} alt="User Avatar" className="w-full h-full object-cover rounded-full" referrerPolicy="no-referrer" />

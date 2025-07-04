@@ -71,7 +71,7 @@ const OrderItemCard = ({ item }) => {
         <div className="order-item-actions mt-3">
           <Button
             onClick={handleReorderItem}
-            className="cursor-pointer buy-again-button inline-flex items-center space-x-1 px-2 sm:px-3 py-1 text-xs sm:text-sm bg-yellow-400 hover:bg-yellow-500 text-black rounded-md font-medium transition-colors touch-target"
+            className=" buy-again-button inline-flex items-center space-x-1 px-2 sm:px-3 py-1 text-xs sm:text-sm bg-yellow-400 hover:bg-yellow-500 text-black rounded-md font-medium transition-colors touch-target"
           >
             <RotateCcw className="h-3 w-3" />
             <span>{t('orders.item.buyAgain')}</span>
@@ -84,7 +84,7 @@ const OrderItemCard = ({ item }) => {
 
           </Link>
           <Link to={`/products/${item.product_id}`}>
-            <button className="cursor-pointer inline-flex items-center space-x-1 px-2 sm:px-3 py-1 text-xs sm:text-sm text-blue-600 hover:text-blue-800 transition-colors touch-target">
+            <button className=" inline-flex items-center space-x-1 px-2 sm:px-3 py-1 text-xs sm:text-sm text-blue-600 hover:text-blue-800 transition-colors touch-target">
               <MessageCircle className="h-3 w-3" />
               <span>{t('orders.item.viewProduct')}</span>
             </button>

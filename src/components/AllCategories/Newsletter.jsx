@@ -37,7 +37,7 @@ const Newsletter = ({ t }) => {
           />
           <button
             type="submit"
-            className="px-6 py-2 cursor-pointer bg-white text-[#db4444] rounded-lg font-medium hover:bg-gray-100 transition-colors duration-200"
+            className="px-6 py-2  bg-white text-[#db4444] rounded-lg font-medium hover:bg-gray-100 transition-colors duration-200"
           >
             {t("categories.newsletter.subscribe")}
           </button>

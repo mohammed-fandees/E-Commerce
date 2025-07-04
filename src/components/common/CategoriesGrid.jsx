@@ -87,9 +87,9 @@ export default function CategoriesGrid({ loading, searchTerm = '', sortBy = 'nam
           <li key={item.key}>
             <Link
               to={`/categories/${item.key}`}
-              className={`border-1 hover:border-0 hover:bg-[#DB4444] hover:text-white transition-[background-color, color, border-color] duration-200 border-[#0000004D] p-4 rounded-sm cursor-pointer flex gap-3 items-center shrink-0 w-full hover:shadow-lg ${viewMode === 'grid'
-                  ? 'flex-col justify-center h-36'
-                  : 'flex-row justify-start h-20'
+              className={`border-1 hover:border-0 hover:bg-[#DB4444] hover:text-white transition-[background-color, color, border-color] duration-200 border-[#0000004D] p-4 rounded-sm  flex gap-3 items-center shrink-0 w-full hover:shadow-lg ${viewMode === 'grid'
+                ? 'flex-col justify-center h-36'
+                : 'flex-row justify-start h-20'
                 }`}
             >
               <div className={viewMode === 'list' ? 'flex-shrink-0' : ''}>

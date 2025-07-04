@@ -12,7 +12,7 @@ export default function CartItem({ id, img, name, price, quantity, onQuantityCha
           <div className="img relative">
             <img src={img} alt={name} className="w-[70px] h-[70px] object-contain" />
             <button onClick={() => onRemove(id)}
-              className="remove-cart-item hidden cursor-pointer absolute top-0 -left-2 items-center justify-center bg-[#db4444] text-white w-6 h-6 rounded-full text-xl" title="Remove">
+              className="remove-cart-item hidden  absolute top-0 -left-2 items-center justify-center bg-[#db4444] text-white w-6 h-6 rounded-full text-xl" title="Remove">
               ×
             </button>
           </div>
@@ -31,8 +31,8 @@ export default function CartItem({ id, img, name, price, quantity, onQuantityCha
               className="w-10 text-center text-sm py-2 outline-none"
             />
             <div className="flex flex-col">
-              <button onClick={() => handleQuantityChange(quantity + 1)} className="cursor-pointer px-2 py-1 text-xs hover:bg-gray-100">▲</button>
-              <button onClick={() => handleQuantityChange(quantity - 1)} className="cursor-pointer px-2 py-1 text-xs hover:bg-gray-100">▼</button>
+              <button onClick={() => handleQuantityChange(quantity + 1)} className=" px-2 py-1 text-xs hover:bg-gray-100">▲</button>
+              <button onClick={() => handleQuantityChange(quantity - 1)} className=" px-2 py-1 text-xs hover:bg-gray-100">▼</button>
             </div>
           </div>
         </div>

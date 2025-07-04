@@ -96,7 +96,7 @@ export default function Login() {
               <button
                 type="button"
                 onClick={() => setShowPassword((prev) => !prev)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 cursor-pointer outline-0"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500  outline-0"
                 aria-label="Toggle password visibility"
               >
                 {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
@@ -113,7 +113,7 @@ export default function Login() {
               <Button type="submit" disabled={isSubmitting}>
                 {isSubmitting ? t('auth.login.loggingIn') : t('auth.login.button')}
               </Button>
-              <button type="button" onClick={handleGoogleLogin} className="px-12 py-4 rounded-sm text-black border border-[#B2B2B2] hover:bg-gray-100 cursor-pointer flex gap-3 justify-center">
+              <button type="button" onClick={handleGoogleLogin} className="px-12 py-4 rounded-sm text-black border border-[#B2B2B2] hover:bg-gray-100  flex gap-3 justify-center">
                 <img loading="lazy" src="/assets/Icon-Google.png" alt="google" />
                 {t('auth.login.google')}
               </button>

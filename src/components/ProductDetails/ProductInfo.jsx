@@ -84,14 +84,14 @@ const ProductInfo = ({
                 onClick={() => onColorSelect(color)}
                 disabled={!color.available}
                 className={`
-                  relative w-5 h-5 border-2 border-gray-200 rounded-full cursor-pointer transition-all duration-200 flex items-center justify-center
+                  relative w-5 h-5 border-2 border-gray-200 rounded-full  transition-all duration-200 flex items-center justify-center
                   hover:border-[#db4444] hover:scale-110
                   ${selectedColor?.name === color.name ? 'border-[#db4444]' : ''}
                   ${!color.available ? 'opacity-30 cursor-not-allowed hover:scale-100 hover:border-gray-200' : ''}
                 `}
                 title={color.name}
               >
-                <div 
+                <div
                   className="w-3 h-3 rounded-full"
                   style={{ backgroundColor: color.value }}
                 />
@@ -115,7 +115,7 @@ const ProductInfo = ({
                 onClick={() => onSizeSelect(size)}
                 disabled={!size.available}
                 className={`
-                  px-4 py-2 border border-gray-300 rounded bg-white text-gray-700 cursor-pointer transition-all duration-200 text-sm font-medium min-w-[48px] text-center
+                  px-4 py-2 border border-gray-300 rounded bg-white text-gray-700  transition-all duration-200 text-sm font-medium min-w-[48px] text-center
                   hover:border-[#db4444] hover:text-[#db4444]
                   ${selectedSize?.name === size.name ? '!bg-[#db4444] !border-[#db4444] !text-white' : ''}
                   ${!size.available ? 'opacity-30 cursor-not-allowed bg-gray-100 hover:border-gray-300 hover:text-gray-700' : ''}
@@ -135,7 +135,7 @@ const ProductInfo = ({
           <button
             onClick={() => onQuantityChange(quantity - 1)}
             disabled={quantity <= 1}
-            className="px-3 py-3 bg-white border-0 cursor-pointer transition-colors duration-200 flex items-center justify-center min-w-[44px] h-[50px]
+            className="px-3 py-3 bg-white border-0  transition-colors duration-200 flex items-center justify-center min-w-[44px] h-[50px]
              hover:bg-gray-100 disabled:opacity-30 disabled:cursor-not-allowed focus:bg-[#db4444] focus:text-white"
           >
             <Minus className="h-4 w-4" />
@@ -146,7 +146,7 @@ const ProductInfo = ({
           <button
             onClick={() => onQuantityChange(quantity + 1)}
             disabled={quantity >= (product.stockCount || 99)}
-            className="px-3 py-3 bg-white cursor-pointer transition-colors duration-200 flex items-center justify-center min-w-[44px] h-[50px]
+            className="px-3 py-3 bg-white  transition-colors duration-200 flex items-center justify-center min-w-[44px] h-[50px]
             hover:bg-gray-100 disabled:opacity-30 disabled:cursor-not-allowed focus:bg-[#db4444] focus:text-white"
           >
             <Plus className="h-4 w-4" />
@@ -161,10 +161,10 @@ const ProductInfo = ({
           <Button onClick={onAddToCart} disabled={!product.inStock} className="flex-1 !px-2">
             {t('common.addToCart')}
           </Button>
-          
+
           <button onClick={onAddToWishlist} title={t('product.addToWishlist')}
             className={`
-              w-12 h-12 border border-gray-300 rounded bg-white text-gray-500 cursor-pointer transition-all duration-200 flex items-center justify-center flex-shrink-0
+              w-12 h-12 border border-gray-300 rounded bg-white text-gray-500  transition-all duration-200 flex items-center justify-center flex-shrink-0
               hover:border-[#db4444] hover:text-[#db4444] hover:-translate-y-0.5
               ${isWishlistItem ? 'bg-[#db4444] border-[#db4444]' : ''}
             `}

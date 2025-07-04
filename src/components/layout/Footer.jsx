@@ -21,7 +21,7 @@ export default function Footer() {
             <p className='text-sm mb-3'>{t("footer.col-1.discount")}</p>
             <form onSubmit={(e) => e.preventDefault()} className={`input bg-black border-1 border-white rounded ${isRTL && "flex-row-reverse"}`}>
               <input type="email" placeholder={t("footer.col-1.placeholder")} className="" />
-              <button type='submit' className='cursor-pointer'>
+              <button type='submit' className=''>
                 <SendHorizontal />
               </button>
             </form>
