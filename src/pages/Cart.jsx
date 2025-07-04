@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from "react-i18next";
 import Breadcrumbs from "@/components/common/Breadcrumbs ";
 import Container from "@/routes/Container";
@@ -12,9 +12,13 @@ import MobileCartItem from '@/components/Cart/MobileCartItem';
 
 export default function Cart() {
   const { t } = useTranslation();
-  const [couponCode, setCouponCode] = useState('');
-  const { items: cartItems, updateQuantity, removeItem, subtotal, total, applyCoupon, shipping } = useCart();
+  const { items: cartItems, updateQuantity, removeItem, subtotal, total, applyCoupon, shipping, coupon } = useCart();
+  const [couponCode, setCouponCode] = useState(coupon?.code || '');
   const isMobile = useIsMobile()
+
+  useEffect(() => {
+    setCouponCode(coupon?.code || '');
+  }, [coupon?.code]);
 
   const handleQuantityChange = (id, newQuantity) => updateQuantity(id, newQuantity);
   const handleReturnToShop = () => window.location.href = '/';
@@ -67,7 +71,7 @@ export default function Cart() {
 
   return (
     <Container>
-        <Breadcrumbs />
+      <Breadcrumbs />
       <div className="pb-20">
         <div className="mt-8 bg-white rounded space-y-6">
           {!isMobile && (
@@ -114,7 +118,7 @@ export default function Cart() {
             <div className="space-y-4 mb-5">
               <div className="flex justify-between items-center py-2 border-b border-gray-200">
                 <span className="text-sm">{t("cart.subtotal")}:</span>
-                <span className="text-sm font-medium">${subtotal}</span>
+                <span className="text-sm font-medium">${subtotal?.toFixed(2)}</span>
               </div>
 
               <div className="flex justify-between items-center py-2 border-b border-gray-200">
@@ -124,7 +128,7 @@ export default function Cart() {
 
               <div className="flex justify-between items-center py-2">
                 <span className="text-sm font-medium">{t("cart.total")}:</span>
-                <span className="text-sm font-medium">${total}</span>
+                <span className="text-sm font-medium">${total?.toFixed(2)}</span>
               </div>
             </div>
 

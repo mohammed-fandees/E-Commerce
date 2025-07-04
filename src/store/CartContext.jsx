@@ -22,7 +22,6 @@ const cartReducer = (state, action) => {
   switch (action.type) {
     case CART_ACTIONS.ADD_ITEM: {
       const existingItem = state.items.find(item => item.id === action.payload.id);
-
       if (existingItem) {
         return {
           ...state,
@@ -33,7 +32,6 @@ const cartReducer = (state, action) => {
           )
         };
       }
-
       return {
         ...state,
         items: [...state.items, { ...action.payload, quantity: action.payload.quantity || 1 }]
@@ -59,7 +57,8 @@ const cartReducer = (state, action) => {
     case CART_ACTIONS.CLEAR_CART:
       return {
         ...state,
-        items: []
+        items: [],
+        coupon: null // 🟢 clear coupon in state too
       };
 
     case CART_ACTIONS.APPLY_COUPON:
@@ -79,16 +78,17 @@ const cartReducer = (state, action) => {
   }
 };
 
+// ✅ Load coupon from localStorage if exists
 const initialState = {
   items: [],
-  coupon: null
+  coupon: typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('cart_coupon')) || null : null
 };
 
 export const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(cartReducer, initialState);
   const [loading, setLoading] = React.useState(true);
 
-  // Load cart from Supabase on mount
+  // Load cart items on mount
   useEffect(() => {
     setLoading(true);
     fetchCartItems()
@@ -131,20 +131,22 @@ export const CartProvider = ({ children }) => {
   const clearCart = async () => {
     await clearCartItems();
     dispatch({ type: CART_ACTIONS.CLEAR_CART });
+    localStorage.removeItem('cart_coupon'); // ✅ remove coupon when clearing cart
   };
 
   const applyCoupon = (coupon) => {
     dispatch({ type: CART_ACTIONS.APPLY_COUPON, payload: coupon });
+    localStorage.setItem('cart_coupon', JSON.stringify(coupon)); // ✅ save to localStorage
   };
 
   const removeCoupon = () => {
     dispatch({ type: CART_ACTIONS.REMOVE_COUPON });
+    localStorage.removeItem('cart_coupon'); // ✅ remove from localStorage
   };
 
   // Computed values
   const itemCount = state.items.reduce((total, item) => total + item.quantity, 0);
   const subtotal = state.items.reduce((total, item) => total + (item.price * item.quantity), 0);
-
   const discount = state.coupon ? (subtotal * state.coupon.percentage) / 100 : 0;
   const shipping = subtotal > 140 ? 0 : 25;
   const total = subtotal - discount + shipping;

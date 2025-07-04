@@ -6,12 +6,12 @@ const PriceSummary = ({ subtotal, discount, shipping, total }) => {
   const summaryItems = [
     {
       label: t('checkout.summary.subtotal'),
-      value: `${subtotal.toFixed(2)}`,
+      value: `$${subtotal.toFixed(2)}`,
       className: 'text-gray-600'
     },
     ...(discount > 0 ? [{
       label: t('checkout.summary.discount'),
-      value: `-${discount.toFixed(2)}`,
+      value: `-$${discount.toFixed(2)}`,
       className: 'text-green-600'
     }] : []),
     {
