@@ -12,7 +12,7 @@ export default function MonthProducts() {
   const { t } = useTranslation();
   const isRTL = getCurrentLanguage() == "ar";
   const isMobile = useIsMobile(1280);
-  const targetDate = new Date("2025-07-01T12:00:00Z");
+  const targetDate = new Date("2025-08-09T23:30:00Z");
   const { days, hours, minutes, seconds } = useCountdown(targetDate);
   const timeUnits = [{ label: "d", value: days }, { label: "h", value: hours }, { label: "m", value: minutes }, { label: "s", value: seconds }];
 

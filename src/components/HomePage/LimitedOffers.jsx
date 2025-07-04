@@ -13,7 +13,7 @@ import { Link } from "react-router";
 export default function LimitedOffers() {
   const { t } = useTranslation();
   const isRTL = getCurrentLanguage() == "ar";
-  const targetDate = new Date("2025-07-01T12:00:00Z");
+  const targetDate = new Date("2025-08-01T12:00:00Z");
   const { days, hours, minutes, seconds, isEnded } = useCountdown(targetDate);
   const timeUnits = [
     { label: "d", value: days },
