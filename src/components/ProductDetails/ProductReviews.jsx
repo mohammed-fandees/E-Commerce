@@ -7,10 +7,51 @@ import { fetchReviews, addReview, getUserReview } from '@/services/apis';
 import { toast } from 'sonner';
 import { useTranslation } from 'react-i18next';
 
-const getOrdersFromLocalStorage = () => {
-  const stored = localStorage.getItem('orders');
-  return stored ? JSON.parse(stored) : [];
-};
+async function hasPurchasedProduct(productId) {
+  const { data: { user }, error: userError } = await supabase.auth.getUser();
+  if (userError || !user) {
+    console.error('User not authenticated.');
+    return false;
+  }
+
+  const userId = user.id;
+
+  const { data: orders, error: ordersError } = await supabase
+    .from('orders')
+    .select('id')
+    .eq('status', 'completed')
+    .eq('user_id', userId);
+
+  if (ordersError) {
+    console.error('Error fetching orders:', ordersError);
+    return false;
+  }
+
+  if (!orders || orders.length === 0) {
+    return false;
+  }
+
+  const orderIds = orders.map(o => o.id);
+
+  const { data: items, error: itemsError } = await supabase
+    .from('order_items')
+    .select('order_id, product_id')
+    .in('order_id', orderIds);
+
+  if (itemsError) {
+    console.error('Error fetching order items:', itemsError);
+    return false;
+  }
+
+  if (!items || items.length === 0) {
+    return false;
+  }
+
+  return items.some(item => String(item.product_id) === String(productId));
+}
+
+
+
 
 export default function ProductReviews({ productId = "1", user = { name: "John Doe", email: "john@example.com" } }) {
   const { t } = useTranslation();
@@ -57,15 +98,11 @@ export default function ProductReviews({ productId = "1", user = { name: "John D
     }
 
     setUserReviewLoading(true);
-    const orders = getOrdersFromLocalStorage();
-    const hasPurchased = orders.some(order =>
-      order.status === 'completed' &&
-      order.items.some(item => String(item.id) === String(productId)) &&
-      order.billing?.emailAddress === user.email
-    );
-    setCanReview(hasPurchased);
 
-    // Check if user has already reviewed this product in Supabase
+    hasPurchasedProduct(productId, user.email).then(hasPurchased => {
+      setCanReview(hasPurchased);
+    });
+
     getUserReview(productId, user.email).then(existingReview => {
       if (existingReview) {
         setHasReviewed(true);
@@ -81,17 +118,6 @@ export default function ProductReviews({ productId = "1", user = { name: "John D
       setUserReviewLoading(false);
     });
   }, [user, productId, reviews]);
-
-  useEffect(() => {
-    if (!user) return setCanReview(false);
-    const orders = getOrdersFromLocalStorage();
-    const hasPurchased = orders.some(order =>
-      order.status === 'completed' &&
-      order.items.some(item => String(item.id) === String(productId)) &&
-      order.billing?.emailAddress === user.email
-    );
-    setCanReview(hasPurchased);
-  }, [user, productId]);
 
   useEffect(() => {
     const fetchUserAvatar = async () => {
