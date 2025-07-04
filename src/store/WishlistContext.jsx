@@ -1,4 +1,10 @@
-import React, { createContext, useReducer, useEffect, useRef } from 'react';
+import React, { createContext, useReducer, useEffect } from 'react';
+import {
+  fetchWishlist,
+  addToWishlist as apiAddToWishlist,
+  removeFromWishlist as apiRemoveFromWishlist,
+  clearWishlist as apiClearWishlist
+} from '@/services/wishlistApi';
 
 // Wishlist Actions
 const WISHLIST_ACTIONS = {
@@ -27,15 +33,17 @@ function wishlistReducer(state, action) {
 
     case WISHLIST_ACTIONS.ADD_ITEM:
       // Check if item already exists
-      { const existingItem = state.items.find(item => item.id === action.payload.id);
-      if (existingItem) {
-        return state; // Item already in wishlist
+      {
+        const existingItem = state.items.find(item => item.id === action.payload.id);
+        if (existingItem) {
+          return state; // Item already in wishlist
+        }
+
+        return {
+          ...state,
+          items: [...state.items, action.payload]
+        };
       }
-      
-      return {
-        ...state,
-        items: [...state.items, action.payload]
-      }; }
 
     case WISHLIST_ACTIONS.REMOVE_ITEM:
       return {
@@ -63,63 +71,44 @@ function wishlistReducer(state, action) {
 // Create context
 export const WishlistContext = createContext();
 
+
 // Wishlist Provider Component
 export function WishlistProvider({ children }) {
   const [state, dispatch] = useReducer(wishlistReducer, initialState);
-  const isInitialMount = useRef(true);
 
-  // Load wishlist from localStorage on mount
+  // Load wishlist from Supabase on mount
   useEffect(() => {
-    try {
-      const savedWishlist = localStorage.getItem('wishlist');
-      if (savedWishlist) {
-        const parsedWishlist = JSON.parse(savedWishlist);
-        dispatch({ type: WISHLIST_ACTIONS.LOAD_WISHLIST, payload: parsedWishlist });
-      } else {
-        // If no saved wishlist, mark as loaded with empty array
-        dispatch({ type: WISHLIST_ACTIONS.LOAD_WISHLIST, payload: [] });
-      }
-    } catch (error) {
-      console.error('Error loading wishlist from localStorage:', error);
-      // Even if there's an error, mark as loaded to prevent infinite loops
-      dispatch({ type: WISHLIST_ACTIONS.LOAD_WISHLIST, payload: [] });
-    }
+    let mounted = true;
+    fetchWishlist()
+      .then((productIds) => {
+        if (!mounted) return;
+        // items: array of {id: productId}
+        dispatch({ type: WISHLIST_ACTIONS.LOAD_WISHLIST, payload: productIds.map(id => ({ id })) });
+      })
+      .catch(() => {
+        if (mounted) dispatch({ type: WISHLIST_ACTIONS.LOAD_WISHLIST, payload: [] });
+      });
+    return () => { mounted = false; };
   }, []);
 
-  // Save to localStorage whenever wishlist changes (but only after initial load)
-  useEffect(() => {
-    // Skip saving on initial mount and before data is loaded
-    if (isInitialMount.current) {
-      isInitialMount.current = false;
-      return;
-    }
-
-    // Only save if data has been loaded from localStorage
-    if (!state.isLoaded) {
-      return;
-    }
-
-    try {
-      localStorage.setItem('wishlist', JSON.stringify(state.items));
-    } catch (error) {
-      console.error('Error saving wishlist to localStorage:', error);
-    }
-  }, [state.items, state.isLoaded]);
 
   // Action creators
-  const addToWishlist = (product) => {
+  const addToWishlist = async (product) => {
+    await apiAddToWishlist(product.id);
     dispatch({ type: WISHLIST_ACTIONS.ADD_ITEM, payload: product });
   };
 
-  const removeFromWishlist = (productId) => {
+  const removeFromWishlist = async (productId) => {
+    await apiRemoveFromWishlist(productId);
     dispatch({ type: WISHLIST_ACTIONS.REMOVE_ITEM, payload: productId });
   };
 
-  const clearWishlist = () => {
+  const clearWishlist = async () => {
+    await apiClearWishlist();
     dispatch({ type: WISHLIST_ACTIONS.CLEAR_WISHLIST });
   };
 
-  const moveAllToCart = (addToCartFunction) => {
+  const moveAllToCart = async (addToCartFunction) => {
     // Add all wishlist items to cart
     state.items.forEach(item => {
       addToCartFunction({
@@ -130,8 +119,8 @@ export function WishlistProvider({ children }) {
         quantity: 1
       });
     });
-    
-    // Clear wishlist
+    // Clear wishlist in Supabase
+    await apiClearWishlist();
     dispatch({ type: WISHLIST_ACTIONS.MOVE_ALL_TO_CART });
   };
 

@@ -1,4 +1,11 @@
 import React, { createContext, useReducer, useEffect } from 'react';
+import {
+  fetchCartItems,
+  addOrUpdateCartItem,
+  removeCartItem,
+  updateCartItemQuantity,
+  clearCartItems
+} from '@/services/cartApi';
 
 const CartContext = createContext();
 
@@ -15,7 +22,7 @@ const cartReducer = (state, action) => {
   switch (action.type) {
     case CART_ACTIONS.ADD_ITEM: {
       const existingItem = state.items.find(item => item.id === action.payload.id);
-      
+
       if (existingItem) {
         return {
           ...state,
@@ -26,19 +33,19 @@ const cartReducer = (state, action) => {
           )
         };
       }
-      
+
       return {
         ...state,
         items: [...state.items, { ...action.payload, quantity: action.payload.quantity || 1 }]
       };
     }
-    
+
     case CART_ACTIONS.REMOVE_ITEM:
       return {
         ...state,
         items: state.items.filter(item => item.id !== action.payload)
       };
-    
+
     case CART_ACTIONS.UPDATE_QUANTITY:
       return {
         ...state,
@@ -48,25 +55,25 @@ const cartReducer = (state, action) => {
             : item
         )
       };
-    
+
     case CART_ACTIONS.CLEAR_CART:
       return {
         ...state,
         items: []
       };
-    
+
     case CART_ACTIONS.APPLY_COUPON:
       return {
         ...state,
         coupon: action.payload
       };
-    
+
     case CART_ACTIONS.REMOVE_COUPON:
       return {
         ...state,
         coupon: null
       };
-    
+
     default:
       return state;
   }
@@ -79,48 +86,50 @@ const initialState = {
 
 export const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(cartReducer, initialState);
+  const [loading, setLoading] = React.useState(true);
 
-  // Load cart from localStorage on mount
+  // Load cart from Supabase on mount
   useEffect(() => {
-    const savedCart = localStorage.getItem('cart');
-    if (savedCart) {
-      try {
-        const parsedCart = JSON.parse(savedCart);
-        parsedCart.items.forEach(item => {
-          dispatch({ type: CART_ACTIONS.ADD_ITEM, payload: item });
+    setLoading(true);
+    fetchCartItems()
+      .then((items) => {
+        items.forEach(item => {
+          dispatch({
+            type: CART_ACTIONS.ADD_ITEM, payload: {
+              ...item,
+              id: item.product_id,
+              image: item.img || item.image,
+              title: item.name
+            }
+          });
         });
-        if (parsedCart.coupon) {
-          dispatch({ type: CART_ACTIONS.APPLY_COUPON, payload: parsedCart.coupon });
-        }
-      } catch (error) {
-        console.error('Error loading cart from localStorage:', error);
-      }
-    }
+        setLoading(false);
+      })
+      .catch(() => setLoading(false));
   }, []);
 
-  // Save cart to localStorage whenever state changes
-  useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(state));
-  }, [state]);
-
   // Cart actions
-  const addItem = (product) => {
+  const addItem = async (product) => {
+    await addOrUpdateCartItem(product, product.quantity || 1);
     dispatch({ type: CART_ACTIONS.ADD_ITEM, payload: product });
   };
 
-  const removeItem = (id) => {
+  const removeItem = async (id) => {
+    await removeCartItem(id);
     dispatch({ type: CART_ACTIONS.REMOVE_ITEM, payload: id });
   };
 
-  const updateQuantity = (id, quantity) => {
+  const updateQuantity = async (id, quantity) => {
+    await updateCartItemQuantity(id, quantity);
     if (quantity <= 0) {
-      removeItem(id);
+      dispatch({ type: CART_ACTIONS.REMOVE_ITEM, payload: id });
     } else {
       dispatch({ type: CART_ACTIONS.UPDATE_QUANTITY, payload: { id, quantity } });
     }
   };
 
-  const clearCart = () => {
+  const clearCart = async () => {
+    await clearCartItems();
     dispatch({ type: CART_ACTIONS.CLEAR_CART });
   };
 
@@ -135,7 +144,7 @@ export const CartProvider = ({ children }) => {
   // Computed values
   const itemCount = state.items.reduce((total, item) => total + item.quantity, 0);
   const subtotal = state.items.reduce((total, item) => total + (item.price * item.quantity), 0);
-  
+
   const discount = state.coupon ? (subtotal * state.coupon.percentage) / 100 : 0;
   const shipping = subtotal > 140 ? 0 : 25;
   const total = subtotal - discount + shipping;
@@ -152,7 +161,8 @@ export const CartProvider = ({ children }) => {
     updateQuantity,
     clearCart,
     applyCoupon,
-    removeCoupon
+    removeCoupon,
+    loading
   };
 
   return (

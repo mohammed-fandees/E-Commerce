@@ -9,7 +9,6 @@ export { default as PaymentMethods } from './Checkout/PaymentMethods';
 export { default as CouponSection } from './Checkout/CouponSection';
 export { default as OrdersHeader } from './Orders/OrdersHeader';
 export { default as OrdersFilters } from './Orders/OrdersFilters';
-export { default as OrdersStats } from './Orders/OrdersStats';
 export { default as OrdersList } from './Orders/OrdersList';
 export { default as OrderCard } from './Orders/OrderCard';
 export { default as OrderStatusBadge } from './Orders/OrderStatusBadge';

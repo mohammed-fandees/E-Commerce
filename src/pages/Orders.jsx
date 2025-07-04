@@ -4,7 +4,6 @@ import Breadcrumbs from '@/components/common/Breadcrumbs ';
 import { useOrders } from '@/hooks/useOrders';
 import OrdersHeader from '@/components/Orders/OrdersHeader';
 import OrdersFilters from '@/components/Orders/OrdersFilters';
-import OrdersStats from '@/components/Orders/OrdersStats';
 import OrdersList from '@/components/Orders/OrdersList';
 import OrdersEmpty from '@/components/Orders/OrdersEmpty';
 import LoadingSpinner from '@/components/ui/LoadingSpinner';
@@ -20,7 +19,6 @@ export default function Orders() {
     statusFilter,
     dateFilter,
     expandedOrders,
-    statistics,
     
     // Actions
     setSearchQuery,
@@ -78,7 +76,6 @@ export default function Orders() {
                     hasActiveFilters={searchQuery || statusFilter !== 'all' || dateFilter !== 'all'}
                   />
                   
-                  <OrdersStats statistics={statistics} />
                 </div>
 
                 {/* Orders List */}
