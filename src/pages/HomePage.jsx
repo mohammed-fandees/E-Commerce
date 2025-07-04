@@ -55,7 +55,7 @@ export default function HomePage() {
                 <h2 className="text-5xl leading-[60px] tracking-[2px] mb-4">
                   {t("home.landing.description")}
                 </h2>
-                <Link to="" className="flex gap-3 underline">
+                <Link to="/products/123" className="flex gap-3 underline">
                   {t("common.shopNow")} {isRTL ? <ArrowLeft /> : <ArrowRight />}
                 </Link>
               </div>
