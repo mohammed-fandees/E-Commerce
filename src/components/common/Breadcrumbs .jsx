@@ -34,6 +34,7 @@ export default function Breadcrumbs() {
     products: "pages.products",
     category: "pages.category",
     categories: "pages.categories",
+    reviews: "pages.reviews",
     ...CATEGORY_LABELS
   };
 

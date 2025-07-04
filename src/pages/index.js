@@ -13,3 +13,4 @@ export { default as Products } from "./Products";
 export { default as Orders } from "./Orders";
 export { default as CategoryProducts } from "./CategoryProducts";
 export { default as AllCategories } from "./AllCategories";
+export { default as UserReviewsPage } from "./UserReviewsPage";

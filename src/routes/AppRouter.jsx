@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HomePage, WishList, Contact, SignUp, NotFound, Login, ProductDetailsPage, Cart, CheckOut, About, Account, Products, Orders, CategoryProducts, AllCategories } from '../pages';
+import { HomePage, WishList, Contact, SignUp, NotFound, Login, ProductDetailsPage, Cart, CheckOut, About, Account, Products, Orders, CategoryProducts, AllCategories, UserReviewsPage } from '../pages';
 import { Banner, Header } from '../components';
 import Footer from '@/components/layout/Footer';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -41,7 +41,9 @@ export default function AppRouter() {
         <Route path="/checkout" element={<CheckOut />} />
         <Route path="/orders" element={<Orders />} />
         <Route path="/categories" element={<AllCategories />} />
+        <Route path="/categories" element={<AllCategories />} />
         <Route path="/categories/:category" element={<CategoryProducts />} />
+        <Route path="/reviews" element={<UserReviewsPage />} />
       </Routes>
       <Footer />
     </Router>

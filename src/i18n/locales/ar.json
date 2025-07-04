@@ -100,7 +100,8 @@
     "wishlist": "المفضلة",
     "account": "الحساب",
     "orders": "طلباتي",
-    "categories": "الفئات"
+    "categories": "الفئات",
+    "reviews": "التقييمات"
   },
   "banner": {
     "text": "تخفيضات الصيف على جميع بدلات السباحة وتوصيل سريع مجاني - خصم 50%!",
@@ -649,6 +650,50 @@
     "statusUpdated": "تم تحديث حالة الطلب بنجاح",
     "orderDeleted": "تم حذف الطلب بنجاح",
     "trackingInfo": "معلومات التتبع للطلب {{orderNumber}} غير متوفرة بعد."
+  },
+  "reviews": {
+    "title": "تقييماتي",
+    "subtitle": "إدارة وعرض جميع تقييمات المنتجات الخاصة بك",
+    "productNotFound": "المنتج غير موجود",
+    "confirmDelete": "هل أنت متأكد من أنك تريد حذف هذا التقييم؟",
+    "loadMore": "تحميل المزيد من التقييمات ({{count}} متبقية)",
+    "stats": {
+      "totalReviews": "إجمالي التقييمات",
+      "averageRating": "متوسط التقييم",
+      "productsReviewed": "المنتجات المُقيّمة"
+    },
+    "empty": {
+      "title": "لا توجد تقييمات بعد",
+      "description": "لم تكتب أي تقييمات بعد. ابدأ التسوق وشارك تجربتك!",
+      "browseProducts": "تصفح المنتجات"
+    },
+    "loginRequired": {
+      "title": "يرجى تسجيل الدخول",
+      "description": "تحتاج إلى تسجيل الدخول لعرض تقييماتك"
+    },
+    "form": {
+      "rating": "التقييم",
+      "review": "المراجعة",
+      "placeholder": "قم بتحديث تقييمك..."
+    },
+    "actions": {
+      "edit": "تعديل",
+      "delete": "حذف",
+      "saveChanges": "حفظ التغييرات",
+      "cancel": "إلغاء"
+    },
+    "errors": {
+      "loginRequired": "يرجى تسجيل الدخول لعرض تقييماتك",
+      "loadFailed": "فشل في تحميل التقييمات",
+      "general": "حدث خطأ ما",
+      "emptyText": "يرجى إدخال نص التقييم",
+      "updateFailed": "فشل في تحديث التقييم",
+      "deleteFailed": "فشل في حذف التقييم"
+    },
+    "success": {
+      "updated": "تم تحديث التقييم بنجاح",
+      "deleted": "تم حذف التقييم بنجاح"
+    }
   },
   "contact": {
     "info": {
