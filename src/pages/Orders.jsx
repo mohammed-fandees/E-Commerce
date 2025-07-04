@@ -86,7 +86,6 @@ export default function Orders() {
                   onReorder={reorderItems}
                   onStatusChange={changeOrderStatus}
                   onCancel={cancelOrder}
-                  onRemove={removeOrder}
                   onTrack={trackOrder}
                   noResultsMessage={orders.length === 0 && allOrders.length > 0}
                 />

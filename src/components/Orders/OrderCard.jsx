@@ -24,7 +24,6 @@ const OrderCard = ({
   onToggleExpanded,
   onStatusChange,
   onCancel,
-  onRemove, 
 }) => {
   const { t } = useTranslation();
   const canCancel = order.status === 'pending';
@@ -219,11 +218,6 @@ const OrderCard = ({
                 <span>{t('orders.actions.cancel')}</span>
               </Button>
             )}
-            
-            <Button onClick={() => onRemove()} className="btn-responsive touch-target">
-              <X className="h-4 w-4" />
-              <span>{t('orders.actions.remove')}</span>
-            </Button>
 
             <Button
               onClick={handleDownloadInvoice}

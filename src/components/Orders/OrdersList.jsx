@@ -74,7 +74,6 @@ const OrdersList = ({
             onReorder={() => onReorder(order)}
             onStatusChange={(status) => onStatusChange(order.id, status)}
             onCancel={() => onCancel(order.id)}
-            onRemove={() => onRemove(order.id)}
             onTrack={() => onTrack(order)}
           />
         ))}
