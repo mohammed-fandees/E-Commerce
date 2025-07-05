@@ -6,6 +6,7 @@ import { CATEGORY_LABELS } from '@/data/categoryLabels';
 import SectionHeader from '@/components/common/SectionHeader';
 import { useTranslation } from 'react-i18next';
 import ProductsSwiper from '@/components/common/ProductsSwiper';
+import LoadingSpinner from '@/components/ui/LoadingSpinner';
 
 export default function Products() {
   const [products, setProducts] = useState([]);
@@ -17,6 +18,8 @@ export default function Products() {
     });
   }, []);
 
+  if (!products.length) return <LoadingSpinner />;
+  
   return (
     <Container>
       <Breadcrumbs />

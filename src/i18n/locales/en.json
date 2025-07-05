@@ -325,7 +325,11 @@
     "removeFromWishlist": "Remove from wishlist",
     "movedAllToCart": "All items moved to cart",
     "cleared": "Wishlist cleared",
-    "emptyWishlist": "Your wishlist is empty"
+    "emptyWishlist": "Your wishlist is empty",
+    "errorRemovingItem": "Error while removing item from wishlist, try again.",
+    "removingItem": "Removing from wishlist...",
+    "errorAddingItem": "Error while adding to wishlist, try again.",
+    "addingItem": "Adding to wishlist..."
   },
   "cart": {
     "product": "Product",
@@ -362,7 +366,9 @@
     "emptyCartTitle": "Your cart is empty",
     "emptyCartMessage": "Looks like you haven't added any items to your cart yet. Start shopping to fill it up!",
     "itemsInCart": "{{count}} item in cart",
-    "itemsInCart_plural": "{{count}} items in cart"
+    "itemsInCart_plural": "{{count}} items in cart",
+    "addingItem": "Adding to cart...",
+    "errorAddingItem": "Error while adding to cart, try again."
   },
   "checkout": {
     "title": "Checkout",
@@ -371,7 +377,6 @@
     "emptyCart": "Your cart is empty",
     "placeOrder": "Place Order",
     "orderSuccess": "Order placed successfully! Check your orders page to track progress.",
-
     "billing": {
       "title": "Billing Details",
       "firstName": "First Name",
@@ -390,7 +395,6 @@
       "emailAddressPlaceholder": "Enter your email address",
       "saveInfo": "Save this information for faster check-out next time"
     },
-
     "summary": {
       "subtotal": "Subtotal",
       "discount": "Discount",
@@ -398,14 +402,12 @@
       "total": "Total",
       "free": "Free"
     },
-
     "payment": {
       "title": "Payment Method",
       "bank": "Bank",
       "cashOnDelivery": "Cash on delivery",
       "acceptedCards": "We accept"
     },
-
     "coupon": {
       "placeholder": "Coupon Code",
       "apply": "Apply Coupon",
@@ -414,12 +416,10 @@
       "changeCoupon": "Use a different coupon",
       "validCoupons": "Try: SAVE10, SAVE20, WELCOME, FIRST20"
     },
-
     "security": {
       "title": "Secure Checkout",
       "description": "Your payment information is encrypted and secure. We never store your card details."
     },
-
     "errors": {
       "missingFields": "Please fill in all required fields",
       "invalidEmail": "Please enter a valid email address",
@@ -429,7 +429,6 @@
       "emptyCart": "Your cart is empty. Add some items before checkout.",
       "orderFailed": "Failed to place order. Please try again."
     },
-
     "couponApplied": "Coupon {{code}} applied successfully!"
   },
   "product": {
@@ -451,13 +450,11 @@
     "relatedItems": "Related Item",
     "sale": "Sale",
     "viewAllProducts": "View All Products",
-
     "notFound": {
       "title": "Product Not Found",
       "message": "The product you're looking for doesn't exist or has been removed.",
       "goBack": "Go Back"
     },
-
     "errors": {
       "loadFailed": "Failed to load product. Please try again."
     },
@@ -478,21 +475,17 @@
       "showLess": "Show Less Reviews",
       "showMore": "Show More Reviews"
     },
-
     "addedToCart": "{{name}} added to cart successfully!",
     "addedToWishlist": "{{name}} added to wishlist successfully!"
   },
-
   "orders": {
     "title": "My Orders",
     "subtitle": "Track and manage your orders",
     "ordersCount": "orders",
-
     "search": {
       "placeholder": "Search by order number or product name...",
       "help": "Search for orders by order number, product name, or item details"
     },
-
     "actions": {
       "export": "Export",
       "downloadInvoices": "Download Invoices",
@@ -509,7 +502,6 @@
       "invoice": "Invoice",
       "downloadInvoice": "Download Invoice"
     },
-
     "filters": {
       "title": "Filter Orders",
       "clear": "Clear Filters",
@@ -530,14 +522,12 @@
         "year": "Past Year"
       }
     },
-
     "status": {
       "pending": "Pending",
       "completed": "Completed",
       "cancelled": "Cancelled",
       "unknown": "Unknown"
     },
-
     "stats": {
       "total": "Total Orders",
       "pending": "Pending",
@@ -545,7 +535,6 @@
       "cancelled": "Cancelled",
       "totalSpent": "Total Spent"
     },
-
     "list": {
       "title": "Your Orders",
       "sortBy": "Sort by",
@@ -557,7 +546,6 @@
         "lowest": "Lowest Total"
       }
     },
-
     "card": {
       "orderNumber": "Order Number",
       "orderDate": "Order Date",
@@ -577,7 +565,6 @@
       "shipping": "Shipping",
       "free": "Free"
     },
-
     "item": {
       "quantity": "Qty",
       "total": "Total",
@@ -586,7 +573,6 @@
       "viewProduct": "View Product",
       "delivered": "Delivered"
     },
-
     "empty": {
       "title": "You haven't placed any orders yet",
       "description": "When you do, their status will appear here. In the meantime, explore our amazing products and find something you love!",
@@ -601,13 +587,11 @@
       "step3Title": "Track & Enjoy",
       "step3Desc": "Monitor your order and enjoy your purchase"
     },
-
     "noResults": {
       "title": "No orders found",
       "message": "Try adjusting your search or filter criteria",
       "refresh": "Refresh Page"
     },
-
     "help": {
       "title": "Need Help with Your Orders?",
       "description": "Find answers to common questions about orders, shipping, and returns.",
@@ -616,7 +600,6 @@
       "returnsTitle": "Returns & Exchanges",
       "returnsDesc": "Easy returns within 30 days of delivery"
     },
-
     "export": {
       "processing": "Processing export...",
       "noOrders": "No orders available to export",
@@ -632,12 +615,10 @@
       "jsonSuccess": "Orders exported to JSON successfully!",
       "jsonError": "Failed to export JSON. Please try again."
     },
-
     "invoice": {
       "generated": "Invoice generated successfully!",
       "error": "Failed to generate invoice. Please try again."
     },
-
     "errors": {
       "loadFailed": "Failed to load orders. Please try again.",
       "reorderFailed": "Failed to add items to cart. Please try again.",
@@ -645,7 +626,6 @@
       "cancelFailed": "Failed to cancel order.",
       "deleteFailed": "Failed to delete order."
     },
-
     "reorderSuccess": "Items added to cart successfully!",
     "statusUpdated": "Order status updated successfully",
     "orderDeleted": "Order removed successfully",
@@ -695,7 +675,6 @@
       "deleted": "Review deleted successfully"
     }
   },
-
   "contact": {
     "info": {
       "callUs": "Call Us",

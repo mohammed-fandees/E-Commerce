@@ -13,7 +13,7 @@ export default function DropdownMenuItems({ items, iconsMap }) {
         return (
           <DropdownMenuItem key={index} onClick={() => {
             item.func && item.func()
-          }} className={isRTL && "flex-row-reverse"}>
+          }} className={`cursor-pointer ${isRTL && "flex-row-reverse"}`}>
             {item?.icon && <IconComponent />}
             {t(item.text)}
           </DropdownMenuItem>

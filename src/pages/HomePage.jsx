@@ -12,7 +12,6 @@ import { getCurrentLanguage } from "@/utils/change-lang";
 import Container from "@/routes/Container";
 import { Skeleton } from "@mui/material";
 import { useEffect, useState } from "react";
-// import LoadingSpinner from "../components/ui/LoadingSpinner";
 
 export default function HomePage() {
   const { t } = useTranslation();
@@ -24,8 +23,6 @@ export default function HomePage() {
     const timer = setTimeout(() => setLoading(false), 1000);
     return () => clearTimeout(timer);
   }, []);
-
-  // if (loading) return <LoadingSpinner />;
 
   return (
     <Container>

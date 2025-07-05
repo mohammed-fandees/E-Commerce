@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ImageOff, Eye, Heart, Trash2 } from "lucide-react";
+import { ImageOff, Heart, Trash2 } from "lucide-react";
 import { Link } from "react-router";
 import { useTranslation } from "react-i18next";
 import { useCart } from "@/hooks/useCart";
@@ -25,7 +25,29 @@ export default function ProductCard({ id, title, image, price, oldPrice, rating,
 
     addItem(product);
 
-    toast.success(t("cart.itemAdded"))
+    toast.promise(
+      addItem(product),
+      {
+        success: t("cart.itemAdded"),
+        error: t("cart.errorAddingItem"),
+        loading: t("cart.addingItem"),
+      },
+      { duration: 2000 }
+    );
+  };
+
+  const handleRemoveFromWishlist = (id) => {
+    removeFromWishlist(id);
+    toast.promise(
+      removeFromWishlist(id),
+      {
+        success: t("wishlist.itemRemoved"),
+        error: t("wishlist.errorRemovingItem"),
+        loading: t("wishlist.removingItem"),
+      },
+      { duration: 2000 }
+    );
+    setAnimationState("removing");
   };
 
   const handleWishlistToggle = (e) => {
@@ -35,7 +57,15 @@ export default function ProductCard({ id, title, image, price, oldPrice, rating,
     if (isWishlistItem) {
       setAnimationState("removing");
       removeFromWishlist(id);
-      toast.success(t("wishlist.itemRemoved"));
+      toast.promise(
+        removeFromWishlist(id),
+        {
+          success: t("wishlist.itemRemoved"),
+          error: t("wishlist.errorRemovingItem"),
+          loading: t("wishlist.removingItem"),
+        },
+        { duration: 2000 }
+      );
 
       setTimeout(() => {
         setAnimationState("");
@@ -44,7 +74,15 @@ export default function ProductCard({ id, title, image, price, oldPrice, rating,
       setAnimationState("adding");
       const product = { id, title, image, price, oldPrice, rating, reviewsCount };
       addToWishlist(product);
-      toast.success(t("wishlist.itemAdded"));
+      toast.promise(
+        addToWishlist(product),
+        {
+          success: t("wishlist.itemAdded"),
+          error: t("wishlist.errorAddingItem"),
+          loading: t("wishlist.addingItem"),
+        },
+        { duration: 2000 }
+      );
 
       setTimeout(() => {
         setAnimationState("");
@@ -76,8 +114,8 @@ export default function ProductCard({ id, title, image, price, oldPrice, rating,
 
       <div className="absolute top-2 right-2 flex flex-col gap-2 z-5">
         {wish ? (
-          <button className=" bg-white p-1 rounded-full shadow">
-            <Trash2 size="24" />
+          <button onClick={() => handleRemoveFromWishlist(id)} className=" bg-white p-1 rounded-full shadow stroke-black hover:stroke-red-500 transition-stroke duration-100">
+            <Trash2 size="24" className="stroke-inherit" />
           </button>
         ) : (
           <button onClick={handleWishlistToggle} className={getWishlistButtonClasses()}>
