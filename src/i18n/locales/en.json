@@ -329,7 +329,9 @@
     "errorRemovingItem": "Error while removing item from wishlist, try again.",
     "removingItem": "Removing from wishlist...",
     "errorAddingItem": "Error while adding to wishlist, try again.",
-    "addingItem": "Adding to wishlist..."
+    "addingItem": "Adding to wishlist...",
+    "errorMovingItems": "Error while moving items to cart, try again.",
+    "movingItems": "Moving items to cart..."
   },
   "cart": {
     "product": "Product",

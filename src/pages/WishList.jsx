@@ -39,8 +39,15 @@ export default function WishList() {
       return;
     }
 
-    moveAllToCart(addToCart);
-    toast.success(t("wishlist.movedAllToCart"));
+    toast.promise(
+      moveAllToCart(addToCart),
+      {
+        success: t("wishlist.movedAllToCart"),
+        error: t("wishlist.errorMovingItems"),
+        loading: t("wishlist.movingItems"),
+      },
+      { duration: 2000 }
+    );
   };
 
   // Map wishlistItems (ids only) to full product objects
