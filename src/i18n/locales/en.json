@@ -370,7 +370,8 @@
     "itemsInCart": "{{count}} item in cart",
     "itemsInCart_plural": "{{count}} items in cart",
     "addingItem": "Adding to cart...",
-    "errorAddingItem": "Error while adding to cart, try again."
+    "errorAddingItem": "Error while adding to cart, try again.",
+    "clearCart": "Clear Cart"
   },
   "checkout": {
     "title": "Checkout",

@@ -48,7 +48,7 @@ const OrdersFilters = ({
             <select
               value={statusFilter}
               onChange={(e) => onStatusChange(e.target.value)}
-              className="filter-select border border-gray-300 rounded px-2 sm:px-3 py-1 sm:py-2 text-xs sm:text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focusable"
+              className="filter-select border border-gray-300 rounded px-2 sm:px-3 py-1 sm:py-2 text-xs sm:text-sm focus:ring-2 focus:!ring-[#db4444] focus:border-[#db4444] focusable cursor-pointer"
             >
               {statusOptions.map(option => (
                 <option key={option.value} value={option.value}>
@@ -66,7 +66,7 @@ const OrdersFilters = ({
             <select
               value={dateFilter}
               onChange={(e) => onDateChange(e.target.value)}
-              className="filter-select border border-gray-300 rounded px-2 sm:px-3 py-1 sm:py-2 text-xs sm:text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focusable"
+              className="filter-select border border-gray-300 rounded px-2 sm:px-3 py-1 sm:py-2 text-xs sm:text-sm focus:ring-2 focus:!ring-[#db4444] focus:border-[#db4444] focusable cursor-pointer"
             >
               {dateOptions.map(option => (
                 <option key={option.value} value={option.value}>

@@ -22,8 +22,12 @@ export default function Cart() {
 
   const handleQuantityChange = (id, newQuantity) => updateQuantity(id, newQuantity);
   const handleReturnToShop = () => window.location.href = '/';
-  const handleUpdateCart = () => toast.success(t("cart.cartUpdated"));
   const handleProceedToCheckout = () => window.location.href = '/checkout';
+  
+  const handleClearCart = () => {
+    cartItems.forEach(item => removeItem(item.id));
+    toast.success(t("cart.cartCleared"));
+  }
 
   const handleRemoveItem = (id) => {
     removeItem(id)
@@ -97,10 +101,10 @@ export default function Cart() {
           >
             {t("cart.returnToShop")}
           </button>
-          <button onClick={handleUpdateCart}
+          <button onClick={handleClearCart}
             className="w-100 sm:w-fit  px-12 py-4 border border-gray-300 rounded text-sm font-medium hover:bg-gray-50 transition-colors"
           >
-            {t("cart.updateCart")}
+            {t("cart.clearCart")}
           </button>
         </div>
 

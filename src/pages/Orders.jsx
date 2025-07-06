@@ -28,7 +28,6 @@ export default function Orders() {
     reorderItems,
     changeOrderStatus,
     cancelOrder,
-    removeOrder,
     trackOrder,
     clearFilters
   } = useOrders();

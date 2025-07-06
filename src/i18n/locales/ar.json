@@ -369,7 +369,8 @@
     "itemsInCart": "عنصر واحد في السلة",
     "itemsInCart_plural": "{{count}} عناصر في السلة",
     "addingItem": "جاري الإضافة إلى العربة...",
-    "errorAddingItem": "خطأ أثناء الإضافة إلى العربة ، حاول مرة أخرى."
+    "errorAddingItem": "خطأ أثناء الإضافة إلى العربة ، حاول مرة أخرى.",
+    "clearCart": "إفراغ السلة"
   },
   "checkout": {
     "title": "الدفع",
