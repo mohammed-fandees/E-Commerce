@@ -275,7 +275,7 @@ const SearchInput = ({ className = "", inputClassName = "", isRTL = false, ...pr
   return (
     <div className={`relative ${className}`} ref={dropdownRef}>
       {/* Search Input */}
-      <div className={`relative flex items-center rounded-md bg-[#F5F5F5] ${isRTL ? "flex-row-reverse" : ""}`}>
+      <div className={`relative flex items-center rounded-md bg-[#F5F5F5] focus:outline-none border focus:!border-[#db4444] transition-colors ${isRTL ? "flex-row-reverse" : ""}`}>
         <div className="relative flex-1">
           <input
             ref={inputRef}
@@ -285,7 +285,7 @@ const SearchInput = ({ className = "", inputClassName = "", isRTL = false, ...pr
             onFocus={handleInputFocus}
             onKeyDown={handleKeyDown}
             placeholder={t("header.searchPlaceholder") || "Search products..."}
-            className={`w-full px-4 py-2 pr-12  focus:outline-none ${inputClassName}`}
+            className={`w-full px-4 py-2 pr-12  focus:outline-none  ${inputClassName}`}
             autoComplete="off"
             {...props}
           />
@@ -308,7 +308,7 @@ const SearchInput = ({ className = "", inputClassName = "", isRTL = false, ...pr
 
       {/* Dropdown */}
       {showDropdown && (
-        <div className="absolute top-full left-0 right-0 bg-white border border-[#db444440] scrollbar-none overflow-auto rounded-b-md shadow-2xl z-50 max-h-96 overflow-y-auto">
+        <div className="absolute top-full left-0 right-0 bg-white border border-gray-200 scrollbar-none overflow-auto rounded-b-md shadow-2xl z-50 max-h-96 overflow-y-auto">
           {showHistory && !query.trim() && (
             <div>
               {/* Search History */}

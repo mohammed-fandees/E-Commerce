@@ -3,6 +3,7 @@ import { z } from 'zod';
 import { useTranslation } from 'react-i18next';
 import Button from '../common/Button';
 import { toast } from 'sonner';
+import FormField from '../Account/FormField';
 
 export default function Form() {
   const { t } = useTranslation();
@@ -64,11 +65,7 @@ export default function Form() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
         {fields.map(({ name, type, placeholder }) => (
           <div key={name}>
-            <label htmlFor={name} className="sr-only">{placeholder}</label>
-            <input type={type} id={name} name={name} placeholder={placeholder} value={formData[name]} onChange={handleChange}
-              className={`w-full p-3 bg-[#F5F5F5] ${errors[name] && 'border border-red-500'} rounded-md focus:outline-none`}
-            />
-            {errors[name] && <p className="text-red-500 text-sm mt-1">{errors[name]}</p>}
+            <FormField type={type} id={name} name={name} placeholder={placeholder} label={placeholder} value={formData[name]} error={errors[name]} onChange={handleChange} />
           </div>
         ))}
       </div>
@@ -76,7 +73,7 @@ export default function Form() {
       <div className="mb-6">
         <label htmlFor="message" className="sr-only">{t('contact.form.message')}</label>
         <textarea id="message" name="message" placeholder={t('contact.form.message')} rows="6" value={formData.message} onChange={handleChange}
-          className={`w-full p-3 bg-[#F5F5F5] ${errors.message && 'border border-red-500'} rounded-md focus:outline-none resize-y`}
+          className={`w-full p-3 bg-[#F5F5F5] rounded-md focus:outline-none border ${errors.message ? 'border-[#db4444]' : 'border-gray-300'} focus:border-[#db4444] transition-colors resize-y`}
         />
         {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
       </div>
