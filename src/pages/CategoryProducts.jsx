@@ -6,6 +6,7 @@ import SectionHeader from "../components/common/SectionHeader";
 import VirtualProductCard from "../components/common/VirtualProductCard";
 import Container from "@/routes/Container";
 import { useTranslation } from "react-i18next";
+import LoadingSpinner from "@/components/ui/LoadingSpinner";
 
 export default function CategoryProducts() {
   const { t } = useTranslation();
@@ -17,6 +18,8 @@ export default function CategoryProducts() {
       setProducts((data || []).filter((p) => p.category === category));
     });
   }, [category]);
+
+  if(!products.length) return <LoadingSpinner />
 
   return (
     <Container>
