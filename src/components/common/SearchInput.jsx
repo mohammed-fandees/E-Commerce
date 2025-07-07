@@ -115,32 +115,18 @@ const SearchInput = ({ className = "", inputClassName = "", isRTL = false, ...pr
     return Array.from(suggestions).slice(0, 4);
   };
 
-
-  // Enhanced search: word-sensitive and category-matching (first 5 results)
-  const performSearch = (searchQuery) => {
-    if (!searchQuery.trim()) {
-      setResults([]);
-      setSuggestions([]);
-      return;
-    }
-
-    if (!productsCache.current[searchQuery]) {
-      fetchAndCacheProducts(searchQuery);
-      return;
-    }
-
+  const performLocalSearch = (searchQuery) => {
     const q = searchQuery.toLowerCase().trim();
     const words = q.split(/\s+/).filter(Boolean);
-    const cachedProducts = productsCache.current[searchQuery] || products;
 
-    // 1. Match if any word in query is found in product title (word boundary sensitive)
+    const cachedProducts = products; // فقط من اللي عندك حاليًا
+
     let matchedProducts = cachedProducts.filter(product => {
       if (!product || typeof product !== 'object') return false;
       const title = (product.title || '').toLowerCase();
       return words.some(word => title.split(/\W+/).includes(word));
     });
 
-    // 2. If less than 5, match if any word in query is found in category label (word boundary sensitive)
     if (matchedProducts.length < 5) {
       const needed = 5 - matchedProducts.length;
       const extra = cachedProducts.filter(product => {
@@ -148,10 +134,52 @@ const SearchInput = ({ className = "", inputClassName = "", isRTL = false, ...pr
         const categoryLabel = getCategoryLabel(product.category || '').toLowerCase();
         return words.some(word => categoryLabel.split(/\W+/).includes(word));
       }).filter(p => !matchedProducts.includes(p)).slice(0, needed);
+
       matchedProducts = matchedProducts.concat(extra);
     }
 
-    // 3. If still less than 5, match if any word in query is found anywhere in title or category (substring, fallback)
+    matchedProducts = matchedProducts.slice(0, 5);
+    const suggestionResults = generateSuggestions(searchQuery);
+
+    setResults(matchedProducts);
+    setSuggestions(suggestionResults);
+  };
+
+
+  useEffect(() => {
+    if (query.trim()) {
+      performLocalSearch(query);
+    } else {
+      setResults([]);
+      setSuggestions([]);
+    }
+  }, [query, i18n.language]);
+
+
+  // Enhanced search: word-sensitive and category-matching (first 5 results)
+  const performSearch = (searchQuery) => {
+    const q = searchQuery.toLowerCase().trim();
+    const words = q.split(/\s+/).filter(Boolean);
+
+    const cachedProducts = productsCache.current[searchQuery] || products;
+
+    let matchedProducts = cachedProducts.filter(product => {
+      if (!product || typeof product !== 'object') return false;
+      const title = (product.title || '').toLowerCase();
+      return words.some(word => title.split(/\W+/).includes(word));
+    });
+
+    if (matchedProducts.length < 5) {
+      const needed = 5 - matchedProducts.length;
+      const extra = cachedProducts.filter(product => {
+        if (!product || typeof product !== 'object') return false;
+        const categoryLabel = getCategoryLabel(product.category || '').toLowerCase();
+        return words.some(word => categoryLabel.split(/\W+/).includes(word));
+      }).filter(p => !matchedProducts.includes(p)).slice(0, needed);
+
+      matchedProducts = matchedProducts.concat(extra);
+    }
+
     if (matchedProducts.length < 5) {
       const needed = 5 - matchedProducts.length;
       const extra = cachedProducts.filter(product => {
@@ -160,21 +188,17 @@ const SearchInput = ({ className = "", inputClassName = "", isRTL = false, ...pr
         const categoryLabel = getCategoryLabel(product.category || '').toLowerCase();
         return words.some(word => title.includes(word) || categoryLabel.includes(word));
       }).filter(p => !matchedProducts.includes(p)).slice(0, needed);
+
       matchedProducts = matchedProducts.concat(extra);
     }
 
     matchedProducts = matchedProducts.slice(0, 5);
-
-    // Generate suggestions
     const suggestionResults = generateSuggestions(searchQuery);
 
     setResults(matchedProducts);
     setSuggestions(suggestionResults);
   };
 
-  useEffect(() => {
-    performSearch(query);
-  }, [query, i18n.language]);
 
   // Handle outside click
   useEffect(() => {
@@ -210,15 +234,22 @@ const SearchInput = ({ className = "", inputClassName = "", isRTL = false, ...pr
     }
   };
 
-  const handleSearch = (searchTerm = query) => {
-    if (searchTerm.trim()) {
-      setQuery(searchTerm);
-      setShowDropdown(false);
-      setShowHistory(false);
-      // You can add navigation to search results page here
-      console.log('Searching for:', searchTerm);
+  const handleSearch = async (searchTerm = query) => {
+    const searchQuery = searchTerm.trim();
+    if (!searchQuery) return;
+
+    setQuery(searchQuery);
+    setShowDropdown(true);
+    setShowHistory(false);
+
+    if (!productsCache.current[searchQuery]) {
+      await fetchAndCacheProducts(searchQuery);
     }
+
+    performSearch(searchQuery);
   };
+
+
 
   const handleProductClick = (productId) => {
     setShowDropdown(false);
@@ -392,7 +423,7 @@ const SearchInput = ({ className = "", inputClassName = "", isRTL = false, ...pr
               {query.trim() && suggestions.length === 0 && results.length === 0 && (
                 <div className="px-4 py-8 text-center text-gray-500">
                   <Search className="w-12 h-12 text-gray-300 mx-auto mb-2" />
-                  <p>{t("search.noResults") || `No results found for "${query}"`}</p>
+                  <p>{t("search.noResults", { query }) || `No results found for "${query}"`}</p>
                   <p className="text-sm mt-1">
                     {t("search.tryDifferent") || "Try different keywords or check your spelling"}
                   </p>
