@@ -9,7 +9,7 @@ import { toast } from "sonner";
 import { Heart } from "lucide-react";
 import { Link } from "react-router";
 import Breadcrumbs from "@/components/common/Breadcrumbs ";
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState } from "react";
 import { fetchProducts } from "@/services/apis";
 import VirtualProductCard from "@/components/common/VirtualProductCard";
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
@@ -21,14 +21,18 @@ export default function WishList() {
 
   const [allProducts, setAllProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     setLoading(true);
-    fetchProducts().then((data) => {
-      setAllProducts(data || []);
-      setLoading(false);
-    }).catch(() => setLoading(false));
+    fetchProducts()
+      .then((data) => {
+        setAllProducts(data || []);
+        setLoading(false);
+      })
+      .catch(() => setLoading(false));
   }, []);
 
+  // Products you may like
   const forYou = allProducts
     .filter(product => !wishlistItems.some(wishItem => wishItem.id === product.id))
     .slice(0, 4);
@@ -49,23 +53,6 @@ export default function WishList() {
       { duration: 2000 }
     );
   };
-
-  // Map wishlistItems (ids only) to full product objects
-  const wishlistProducts = useMemo(() => {
-    return wishlistItems
-      .map(wishItem => {
-        const product = allProducts.find(p => p.id === wishItem.id);
-        // fallback for image field (img or image)
-        if (product) {
-          return {
-            ...product,
-            image: product.image || product.img || null
-          };
-        }
-        return null;
-      })
-      .filter(Boolean);
-  }, [wishlistItems, allProducts]);
 
   if (loading) {
     return <LoadingSpinner />;
@@ -88,7 +75,7 @@ export default function WishList() {
           </Button>
         </div>
 
-        {wishlistProducts.length === 0 ? (
+        {wishlistItems.length === 0 ? (
           <div className="text-center py-20">
             <div className="mb-4">
               <Heart size="64" className="mx-auto text-gray-300" />
@@ -107,13 +94,13 @@ export default function WishList() {
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-            {wishlistProducts.map((product) => (
+            {wishlistItems.map((product) => (
               <VirtualProductCard
                 wish={true}
                 key={product.id}
                 showAsWishlistItem={true}
                 id={product.id}
-                image={product.image}
+                image={product.image || product.img || null}
                 title={product.title}
                 price={product.price}
                 oldPrice={product.oldPrice || null}
@@ -139,7 +126,7 @@ export default function WishList() {
                 <ProductCard
                   key={product.id}
                   id={product.id}
-                  image={product.img || null}
+                  image={product.img || product.image || null}
                   title={product.title}
                   price={product.price}
                   oldPrice={product.oldPrice || null}

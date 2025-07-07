@@ -12,13 +12,56 @@ export async function getCurrentUserId() {
 export async function fetchWishlist() {
   const userId = await getCurrentUserId();
   if (!userId) return [];
+
   const { data, error } = await supabase
     .from("wishlists")
-    .select("product_id")
+    .select(`
+      product_id,
+      products (
+        id,
+        title,
+        description,
+        img,
+        images,
+        price,
+        oldPrice,
+        rating,
+        reviewsCount,
+        inStock,
+        stockCount,
+        category,
+        brand,
+        sku,
+        specifications,
+        colors,
+        sizes
+      )
+    `)
     .eq("user_id", userId);
+
   if (error) throw error;
-  return data?.map((row) => row.product_id) || [];
+
+  return data?.map((row) => ({
+    id: row.products.id,
+    title: row.products.title,
+    description: row.products.description,
+    img: row.products.img,
+    images: row.products.images,
+    price: row.products.price,
+    oldPrice: row.products.oldPrice,
+    rating: row.products.rating,
+    reviewsCount: row.products.reviewsCount,
+    inStock: row.products.inStock,
+    stockCount: row.products.stockCount,
+    category: row.products.category,
+    brand: row.products.brand,
+    sku: row.products.sku,
+    specifications: row.products.specifications,
+    colors: row.products.colors,
+    sizes: row.products.sizes
+  })) || [];
 }
+
 
 // Add product to wishlist
 export async function addToWishlist(productId) {

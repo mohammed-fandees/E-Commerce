@@ -80,16 +80,16 @@ export function WishlistProvider({ children }) {
   useEffect(() => {
     let mounted = true;
     fetchWishlist()
-      .then((productIds) => {
+      .then((products) => {
         if (!mounted) return;
-        // items: array of {id: productId}
-        dispatch({ type: WISHLIST_ACTIONS.LOAD_WISHLIST, payload: productIds.map(id => ({ id })) });
+        dispatch({ type: WISHLIST_ACTIONS.LOAD_WISHLIST, payload: products });
       })
       .catch(() => {
         if (mounted) dispatch({ type: WISHLIST_ACTIONS.LOAD_WISHLIST, payload: [] });
       });
     return () => { mounted = false; };
   }, []);
+
 
 
   // Action creators
