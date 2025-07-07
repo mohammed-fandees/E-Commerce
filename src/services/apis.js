@@ -8,6 +8,26 @@ export async function fetchProducts() {
   return data;
 }
 
+export const getProductById = async (id) => {
+  try {
+    const { data, error } = await supabase
+      .from("products")
+      .select("*")
+      .eq("id", id)
+      .single();
+
+    if (error) {
+      console.error("Supabase error:", error);
+      return null;
+    }
+
+    return data;
+  } catch (err) {
+    console.error("getProductById error:", err);
+    return null;
+  }
+};
+
 // Fetch reviews for a product
 export async function fetchReviews(productId) {
   const { data, error } = await supabase
