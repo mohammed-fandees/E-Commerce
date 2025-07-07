@@ -73,6 +73,13 @@ export default function Cart() {
     );
   }
 
+
+  const formatCurrency = (value) => {
+    if (typeof value !== 'number' || isNaN(value)) return '0.00';
+    return value.toFixed(2);
+  };
+
+
   return (
     <Container>
       <Breadcrumbs />
@@ -122,7 +129,7 @@ export default function Cart() {
             <div className="space-y-4 mb-5">
               <div className="flex justify-between items-center py-2 border-b border-gray-200">
                 <span className="text-sm">{t("cart.subtotal")}:</span>
-                <span className="text-sm font-medium">${subtotal?.toFixed(2)}</span>
+                <span className="text-sm font-medium">${formatCurrency(subtotal)}</span>
               </div>
 
               <div className="flex justify-between items-center py-2 border-b border-gray-200">
@@ -132,7 +139,7 @@ export default function Cart() {
 
               <div className="flex justify-between items-center py-2">
                 <span className="text-sm font-medium">{t("cart.total")}:</span>
-                <span className="text-sm font-medium">${total?.toFixed(2)}</span>
+                <span className="text-sm font-medium">${formatCurrency(total)}</span>
               </div>
             </div>
 

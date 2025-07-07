@@ -5,6 +5,12 @@ export default function CartItem({ id, img, name, price, quantity, onQuantityCha
     }
   };
 
+  const formatCurrency = (value) => {
+    if (typeof value !== 'number' || isNaN(value)) return '0.00';
+    return value.toFixed(2);
+  };
+
+
   return (
     <div className="cart-item bg-white rounded shadow p-4 [box-shadow:0px_1px_13px_0px_#0000001A]">
       <div className="flex flex-col sm:grid sm:grid-cols-4 sm:gap-4 sm:items-center">
@@ -22,7 +28,7 @@ export default function CartItem({ id, img, name, price, quantity, onQuantityCha
         </div>
 
         <div className="sm:col-span-1 mb-4 sm:mb-0 text-center">
-          <span className="text-sm font-medium">${price}</span>
+          <span className="text-sm font-medium">${formatCurrency(price)}</span>
         </div>
 
         <div className="sm:col-span-1 mb-4 sm:mb-0 flex justify-center">
@@ -38,7 +44,7 @@ export default function CartItem({ id, img, name, price, quantity, onQuantityCha
         </div>
 
         <div className="pe-4 sm:col-span-1 text-sm font-medium flex justify-end items-end">
-          ${price * quantity}
+          ${formatCurrency(price * quantity)}
         </div>
       </div>
     </div>
