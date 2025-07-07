@@ -27,7 +27,7 @@ const cartReducer = (state, action) => {
           ...state,
           items: state.items.map(item =>
             item.id === action.payload.id
-              ? { ...item, quantity: item.quantity + (action.payload.quantity || 1) }
+              ? { ...item, quantity: action.payload.quantity }
               : item
           )
         };
@@ -37,6 +37,7 @@ const cartReducer = (state, action) => {
         items: [...state.items, { ...action.payload, quantity: action.payload.quantity || 1 }]
       };
     }
+
 
     case CART_ACTIONS.REMOVE_ITEM:
       return {
@@ -58,7 +59,7 @@ const cartReducer = (state, action) => {
       return {
         ...state,
         items: [],
-        coupon: null // 🟢 clear coupon in state too
+        coupon: null // clear coupon in state too
       };
 
     case CART_ACTIONS.APPLY_COUPON:
@@ -78,7 +79,7 @@ const cartReducer = (state, action) => {
   }
 };
 
-// ✅ Load coupon from localStorage if exists
+// Load coupon from localStorage if exists
 const initialState = {
   items: [],
   coupon: typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('cart_coupon')) || null : null
@@ -131,17 +132,17 @@ export const CartProvider = ({ children }) => {
   const clearCart = async () => {
     await clearCartItems();
     dispatch({ type: CART_ACTIONS.CLEAR_CART });
-    localStorage.removeItem('cart_coupon'); // ✅ remove coupon when clearing cart
+    localStorage.removeItem('cart_coupon'); // remove coupon when clearing cart
   };
 
   const applyCoupon = (coupon) => {
     dispatch({ type: CART_ACTIONS.APPLY_COUPON, payload: coupon });
-    localStorage.setItem('cart_coupon', JSON.stringify(coupon)); // ✅ save to localStorage
+    localStorage.setItem('cart_coupon', JSON.stringify(coupon)); // save to localStorage
   };
 
   const removeCoupon = () => {
     dispatch({ type: CART_ACTIONS.REMOVE_COUPON });
-    localStorage.removeItem('cart_coupon'); // ✅ remove from localStorage
+    localStorage.removeItem('cart_coupon'); // remove from localStorage
   };
 
   // Computed values
