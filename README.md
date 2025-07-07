@@ -348,9 +348,9 @@ This project is licensed under the MIT License.
 
 ## 📢 Credits
 
-- [Next.js](https://nextjs.org/)
-- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [React.js](https://react.dev/)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [Shadcn UI](https://ui.shadcn.com/)
 - [Vercel](https://vercel.com/)
 
 ---
